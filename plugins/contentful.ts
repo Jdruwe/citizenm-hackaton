@@ -1,4 +1,4 @@
-import 'dotenv/config'
+import process from 'node:process'
 import { type CreateClientParams, createClient } from 'contentful'
 
 if (process.env.CTF_SPACE_ID === undefined || process.env.CTF_CDA_ACCESS_TOKEN === undefined) {
