@@ -14,10 +14,10 @@ npm install
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+Start the development server on `http://localhost:3000` + open browser automatically:
 
 ```bash
-npm run dev
+npm run dev -- -o
 ```
 
 ## Production
