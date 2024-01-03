@@ -7,16 +7,24 @@
     "dev": "nuxt dev -o",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "cf-export": "dotenv -e ./.env -- bash -c 'contentful space export --config contentful/export-config.json --mt $CTF_CMA_ACCESS_TOKEN --space-id $CTF_SPACE_ID --environment-id $CTF_ENVIRONMENT'",
+    "cf-generate-types": "cf-content-types-generator --v10 contentful/export.json --out types/contentful"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.1",
+    "@nuxtjs/tailwindcss": "^6.10.3",
+    "contentful-cli": "^3.1.37",
     "eslint": "^8.56.0",
     "nuxt": "^3.9.0",
     "vue": "^3.4.3",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "contentful": "^10.6.15"
+    "cf-content-types-generator": "^2.13.0",
+    "contentful": "^10.6.15",
+    "contentful-management": "^11.7.3",
+    "dotenv-cli": "^7.3.0",
+    "flowbite": "^2.2.1"
   }
 }
