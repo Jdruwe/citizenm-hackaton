@@ -25,7 +25,6 @@
     "contentful": "^10.6.15",
     "contentful-management": "^11.7.3",
     "dotenv-cli": "^7.3.0",
-    "flowbite": "^2.2.1",
-    "flowbite-vue": "^0.1.2"
+    "flowbite": "^2.2.1"
   }
 }

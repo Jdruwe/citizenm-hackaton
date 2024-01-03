@@ -6,11 +6,12 @@ export default {
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
     './nuxt.config.{js,ts}',
-    './node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx,vue}',
     './node_modules/flowbite/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ['Chalet-NewYorkNineteenSixty', 'ui-sans-serif', 'system-ui'],
+    },
   },
   plugins: [
     require('flowbite/plugin'),

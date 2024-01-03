@@ -1,3 +1,25 @@
+@font-face {
+    font-family: 'Chalet-NewYorkNineteenSixty';
+    src: url('/fonts/Chalet-LondonNineteenSixty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    html {
+        @apply h-full scroll-smooth bg-white antialiased;
+    }
+
+    body {
+        @apply h-full;
+    }
+
+    #__nuxt {
+        @apply flex h-full flex-col
+    }
+}
