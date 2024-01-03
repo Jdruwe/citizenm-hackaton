@@ -10,7 +10,7 @@ onMounted(() => {
 
 <template>
   <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900 drop-shadow">
-    <div class="flex flex-wrap justify-between md:justify-normal items-center mx-auto max-w-screen-xl p-4 md:space-x-14">
+    <div class="flex flex-wrap justify-between md:justify-normal items-center mx-auto max-w-screen-xl p-4 px-6 md:space-x-14">
       <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="/img/citizenm-logo-black.svg" class="h-8" alt="CitizenM Logo">
       </a>
