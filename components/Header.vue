@@ -77,11 +77,11 @@ onMounted(() => {
       class="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600 hidden"
     >
       <ul class="max-w-screen-xl px-6 py-5 mx-auto text-gray-900 dark:text-white">
-        <li class="flex flex-col mt-10">
+        <li class="flex flex-col mt-3">
           <p class="text-sm text-gray-500 border-b border-gray-400 pb-1 self-start">
             Europa
           </p>
-          <ul class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-3">
+          <ul class="grid grid-cols-2 md:grid-cols-4 mt-2 gap-3">
             <li>
               <ul>
                 <li class="text-sm font-semibold">
