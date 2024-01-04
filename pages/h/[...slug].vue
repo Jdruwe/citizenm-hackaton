@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import PageContent from '~/content/components/page/page-content.vue'
+import HotelDetailPage from '~/components/hotel-detail-page.vue'
 </script>
 
 <template>
-  <PageContent :slug="$route.params.slug" />
+  <HotelDetailPage :slug="$route.params.slug" />
 </template>

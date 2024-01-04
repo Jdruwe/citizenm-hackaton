@@ -8,8 +8,10 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "cf-export": "dotenv -e ./.env -- bash -c 'contentful space export --config contentful/export-config.json --mt $CTF_CMA_ACCESS_TOKEN --space-id $CTF_SPACE_ID --environment-id $CTF_ENVIRONMENT'",
-    "cf-generate-types": "cf-content-types-generator --v10 contentful/export.json --out types/contentful"
+    "cf-export-marketing": "dotenv -e ./.env -- bash -c 'contentful space export --config contentful/export-config.json --content-file marketing-export.json --mt $CTF_CMA_ACCESS_TOKEN --space-id $CTF_MARKETING_SPACE_ID --environment-id $CTF_ENVIRONMENT'",
+    "cf-export-masterdata": "dotenv -e ./.env -- bash -c 'contentful space export --config contentful/export-config.json --content-file masterdata-export.json --mt $CTF_CMA_ACCESS_TOKEN --space-id $CTF_MASTER_DATA_SPACE_ID --environment-id $CTF_ENVIRONMENT'",
+    "cf-generate-types-marketing": "cf-content-types-generator --typeguard --v10 contentful/marketing-export.json --out types/contentful/marketing",
+    "cf-generate-types-masterdata": "cf-content-types-generator --typeguard --v10 contentful/masterdata-export.json --out types/contentful/masterdata"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.1",
@@ -21,6 +23,7 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@nuxt/image": "^1.1.0",
     "cf-content-types-generator": "^2.13.0",
     "contentful": "^10.6.15",
     "contentful-management": "^11.7.3",
