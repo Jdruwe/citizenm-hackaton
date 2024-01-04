@@ -3,6 +3,6 @@
 
 <template>
   <NuxtLayout>
-    <p>TODO: add content here!</p>
+    <NuxtPage />
   </NuxtLayout>
 </template>
