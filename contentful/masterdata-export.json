@@ -258,7 +258,7 @@
         "id": "hotel",
         "type": "ContentType",
         "createdAt": "2024-01-04T08:21:19.952Z",
-        "updatedAt": "2024-01-04T08:50:15.150Z",
+        "updatedAt": "2024-01-05T12:25:56.472Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -266,8 +266,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-01-04T08:50:15.150Z",
+        "publishedVersion": 9,
+        "publishedAt": "2024-01-05T12:25:56.472Z",
         "firstPublishedAt": "2024-01-04T08:21:20.290Z",
         "createdBy": {
           "sys": {
@@ -283,8 +283,8 @@
             "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 5,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -433,6 +433,50 @@
           "disabled": false,
           "omitted": false,
           "linkType": "Entry"
+        },
+        {
+          "id": "artCollection",
+          "name": "Art collection",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "art"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "faqs",
+          "name": "Faqs",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "faq"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
         }
       ]
     },
@@ -641,9 +685,439 @@
           "omitted": false
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "art",
+        "type": "ContentType",
+        "createdAt": "2024-01-05T10:23:00.818Z",
+        "updatedAt": "2024-01-05T10:25:50.098Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-05T10:25:50.098Z",
+        "firstPublishedAt": "2024-01-05T10:23:01.198Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "🎨 Art",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkContentType": [
+                "name"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "artist",
+          "name": "Artist",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkContentType": [
+                "artist"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "artist",
+        "type": "ContentType",
+        "createdAt": "2024-01-05T10:25:25.554Z",
+        "updatedAt": "2024-01-05T10:25:25.879Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-01-05T10:25:25.879Z",
+        "firstPublishedAt": "2024-01-05T10:25:25.879Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "🎨 Artist",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "artistName",
+          "name": "Artist name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "artistDescription",
+          "name": "Artist description",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "table",
+                "embedded-asset-block"
+              ],
+              "message": "Only heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, table, and asset nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "faq",
+        "type": "ContentType",
+        "createdAt": "2024-01-05T12:17:14.335Z",
+        "updatedAt": "2024-01-05T12:17:14.664Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-01-05T12:17:14.664Z",
+        "firstPublishedAt": "2024-01-05T12:17:14.664Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "❓ Faq",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "question",
+          "name": "Question",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "answer",
+          "name": "Answer",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline"
+              ],
+              "message": "Only bold, italic, and underline marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 2, heading 3, heading 4, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "tags": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "faq-global",
+        "type": "Tag",
+        "createdAt": "2024-01-05T12:20:08.549Z",
+        "updatedAt": "2024-01-05T12:20:08.549Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "faq:global"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "hotel-nyt",
+        "type": "Tag",
+        "createdAt": "2024-01-05T12:30:35.398Z",
+        "updatedAt": "2024-01-05T12:30:35.398Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "hotel:nyt"
+    }
   ],
   "editorInterfaces": [
     {
@@ -829,7 +1303,7 @@
             "linkType": "Space"
           }
         },
-        "version": 6,
+        "version": 10,
         "createdAt": "2024-01-04T08:21:20.404Z",
         "createdBy": {
           "sys": {
@@ -838,7 +1312,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-04T08:50:16.003Z",
+        "updatedAt": "2024-01-05T12:25:57.352Z",
         "updatedBy": {
           "sys": {
             "id": "22SIYlNyBUO3I2yPIQP7Vr",
@@ -895,6 +1369,21 @@
         {
           "fieldId": "heroImage",
           "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "artCollection",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": false
+          },
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "faqs",
+          "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -1027,6 +1516,194 @@
         {
           "fieldId": "altText",
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "fzp55rkrsa7v",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2024-01-05T10:23:01.388Z",
+        "createdBy": {
+          "sys": {
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-05T10:25:50.815Z",
+        "updatedBy": {
+          "sys": {
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "art",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "artist",
+          "widgetId": "entryCardEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "fzp55rkrsa7v",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-01-05T10:25:26.023Z",
+        "createdBy": {
+          "sys": {
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-05T10:25:26.583Z",
+        "updatedBy": {
+          "sys": {
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "artist",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "artistName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "artistDescription",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "fzp55rkrsa7v",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-01-05T12:17:14.818Z",
+        "createdBy": {
+          "sys": {
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-05T12:17:15.536Z",
+        "updatedBy": {
+          "sys": {
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "faq",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "question",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "answer",
+          "widgetId": "richTextEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -1255,6 +1932,13 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "hotel-nyt"
+            }
+          }
         ]
       },
       "sys": {
@@ -1268,7 +1952,7 @@
         "id": "29noBR271L5quL2NSnvacr",
         "type": "Entry",
         "createdAt": "2024-01-04T09:39:38.175Z",
-        "updatedAt": "2024-01-04T09:41:44.795Z",
+        "updatedAt": "2024-01-05T12:30:53.216Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1276,8 +1960,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 8,
-        "publishedAt": "2024-01-04T09:41:44.795Z",
+        "publishedVersion": 10,
+        "publishedAt": "2024-01-05T12:30:53.216Z",
         "firstPublishedAt": "2024-01-04T09:41:44.795Z",
         "createdBy": {
           "sys": {
@@ -1290,16 +1974,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 1,
-        "version": 9,
+        "publishedCounter": 2,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
         "automationTags": [
@@ -1342,6 +2026,13 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "hotel-nyt"
+            }
+          }
         ]
       },
       "sys": {
@@ -1355,7 +2046,7 @@
         "id": "7GrJJ8g9v9Mq7xtL9wIs1f",
         "type": "Entry",
         "createdAt": "2024-01-04T09:41:50.576Z",
-        "updatedAt": "2024-01-04T09:46:35.545Z",
+        "updatedAt": "2024-01-05T12:30:53.368Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1363,8 +2054,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 10,
-        "publishedAt": "2024-01-04T09:46:35.545Z",
+        "publishedVersion": 18,
+        "publishedAt": "2024-01-05T12:30:53.368Z",
         "firstPublishedAt": "2024-01-04T09:46:35.545Z",
         "createdBy": {
           "sys": {
@@ -1377,16 +2068,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 1,
-        "version": 11,
+        "publishedCounter": 5,
+        "version": 19,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
         "automationTags": [
@@ -1401,7 +2092,7 @@
       },
       "fields": {
         "name": {
-          "en-US": "New York Times Square"
+          "en-US": "Hotel - NYT - New York Times Square"
         },
         "code": {
           "en-US": "NYT"
@@ -1459,12 +2150,41 @@
               "id": "5Xa92Ipgul6QhsQJZ3lbgX"
             }
           }
+        },
+        "artCollection": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2HnGO4MLLe2iBU6RJbLaBp"
+              }
+            }
+          ]
+        },
+        "faqs": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4V98NDsbiGXvSwGYbM3vQw"
+              }
+            }
+          ]
         }
       }
     },
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "hotel-nyt"
+            }
+          }
         ]
       },
       "sys": {
@@ -1478,7 +2198,7 @@
         "id": "6TIOUyfy5yqpgdz8OdwJE6",
         "type": "Entry",
         "createdAt": "2024-01-04T09:44:02.293Z",
-        "updatedAt": "2024-01-04T09:45:16.757Z",
+        "updatedAt": "2024-01-05T12:30:53.390Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1486,8 +2206,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-01-04T09:45:16.757Z",
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-05T12:30:53.390Z",
         "firstPublishedAt": "2024-01-04T09:45:16.757Z",
         "createdBy": {
           "sys": {
@@ -1500,16 +2220,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 2,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
         "automationTags": [
@@ -1543,6 +2263,13 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "hotel-nyt"
+            }
+          }
         ]
       },
       "sys": {
@@ -1556,7 +2283,7 @@
         "id": "5Xa92Ipgul6QhsQJZ3lbgX",
         "type": "Entry",
         "createdAt": "2024-01-04T09:45:26.001Z",
-        "updatedAt": "2024-01-04T09:46:52.400Z",
+        "updatedAt": "2024-01-05T12:30:53.164Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1564,8 +2291,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2024-01-04T09:46:52.400Z",
+        "publishedVersion": 9,
+        "publishedAt": "2024-01-05T12:30:53.164Z",
         "firstPublishedAt": "2024-01-04T09:46:31.579Z",
         "createdBy": {
           "sys": {
@@ -1578,16 +2305,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 2,
-        "version": 8,
+        "publishedCounter": 3,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
         "automationTags": [
@@ -1615,6 +2342,680 @@
         },
         "altText": {
           "en-US": "Picture of hotel NYT hotel facade"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "6okvrJuRzYEGBUiRxc02ol",
+        "type": "Entry",
+        "createdAt": "2024-01-05T10:27:24.754Z",
+        "updatedAt": "2024-01-05T10:27:41.276Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-05T10:27:41.276Z",
+        "firstPublishedAt": "2024-01-05T10:27:41.276Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "name"
+          }
+        }
+      },
+      "fields": {
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3Pn22MYHe6sZ048hWiIUpF"
+            }
+          }
+        },
+        "name": {
+          "en-US": "Queen Beatrix of The Netherlands"
+        },
+        "altText": {
+          "en-US": "Queen Beatrix of The Netherlands 1985 c Andy Warhol"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "4kbzSw1z0003Q6OocpnwoI",
+        "type": "Entry",
+        "createdAt": "2024-01-05T10:27:54.520Z",
+        "updatedAt": "2024-01-05T10:28:28.093Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-05T10:28:28.093Z",
+        "firstPublishedAt": "2024-01-05T10:28:28.093Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artist"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Artist - Andy Warhol"
+        },
+        "artistName": {
+          "en-US": "Andy Warhol"
+        },
+        "artistDescription": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Andy Warhol needs little introduction. He’s the Pop Art pioneer that brought us some of the twentieth century’s most iconic images: the Marilyn Diptych (1962), Self Portrait (1986) and, of course, Campbell’s Soup Cans (1962). Across prints, photos, films and books he explored the celebrity culture, advertising and artistic expression as each flourished in the 1960s. Today, his works accounts for some of the most expensive paintings ever sold: ‘Silver Car Crash (Double Disaster)’ (1963) raked in an eye-watering $105 million.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "hotel-nyt"
+            }
+          }
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "2HnGO4MLLe2iBU6RJbLaBp",
+        "type": "Entry",
+        "createdAt": "2024-01-05T10:28:35.350Z",
+        "updatedAt": "2024-01-05T12:30:53.270Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-05T12:30:53.270Z",
+        "firstPublishedAt": "2024-01-05T10:29:21.321Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "art"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Art - NYT - Andy Warhol Queen Beatrix of the Netherlands"
+        },
+        "title": {
+          "en-US": "Queen Beatrix of the Netherlands"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6okvrJuRzYEGBUiRxc02ol"
+            }
+          }
+        },
+        "artist": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4kbzSw1z0003Q6OocpnwoI"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "faq-global"
+            }
+          }
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "vWAcAkzgAGGAJvRY6boTm",
+        "type": "Entry",
+        "createdAt": "2024-01-05T12:17:32.395Z",
+        "updatedAt": "2024-01-05T12:22:26.057Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 12,
+        "publishedAt": "2024-01-05T12:22:26.057Z",
+        "firstPublishedAt": "2024-01-05T12:19:16.361Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Faq - Global - Book, modify, cancel reservation"
+        },
+        "question": {
+          "en-US": "How do I book, modify, cancel a reservation?"
+        },
+        "answer": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "heading-4",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "How do I book?",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "We like to make things quick and easy for you – that's why all citizenM reservations are done online. You'll find our best rates and availability here. Just a few clicks and you're done! No phone calls or emails necessary.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-4",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "How do I change the dates of the booking via citizenM?",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Did you book a prepay rate via the citizenM website or app?",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "When you book the prepay rate, there is a 24-hour cancellation window and a full refund will be given. You can then book a new stay. After 24 hours pass, no refunds or changes are possible. You can change dates until 72 hours before arrival (11.59 PM local hotel time); guest name and hotel are not changeable. If the new rate is higher, the difference is paid at check-in. If lower, guests forfeit the difference. To change, contact our customer service team via the chat box, or via WhatsApp at +44 744 417 1707 (text only).",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "Did you book a flexible, long stay, mycitizenM or mycitizenM+ rate via the citizenM website or app?",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "If you booked a flexible, long stay, mycitizenM or mycitizenM+ rate directly on our website, you can cancel your reservation via 'my booking', and then book a new stay.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-4",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "How do I change the dates of the booking if I did not book via citizenM?",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "For all third-party bookings (these are all bookings not made via the citizenM website or app), any cancellations or modifications must be done via that channel. Please check your confirmation email for details and terms of your booking, and contact your channel directly.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-4",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "How can I cancel the booking if I booked via citizenM?",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "It's too bad you cannot make it, we were looking forward to seeing you! If you have booked directly through the citizenM website, you can cancel your booking yourself via my booking page. Depending on the rate type you chose, you may or may not be charged. You can also contact our customer service team via the chat box, or via WhatsApp at +44 744 417 1707 (text only).",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-4",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "How can I cancel the booking if I booked elsewhere?",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "It's too bad you cannot make it, we were looking forward to seeing you! If you booked through a third party (for example, another website, your travel agent, etc), you will need to cancel the reservation directly with them. You will likely find their contact details in the reservation confirmation email. Depending on the rate type chosen at time of booking, you may or may not be charged.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "hotel-nyt"
+            }
+          }
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "4V98NDsbiGXvSwGYbM3vQw",
+        "type": "Entry",
+        "createdAt": "2024-01-05T12:22:30.524Z",
+        "updatedAt": "2024-01-05T12:30:53.442Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 21,
+        "publishedAt": "2024-01-05T12:30:53.442Z",
+        "firstPublishedAt": "2024-01-05T12:23:43.018Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 22,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Faq - NYT - How do I get to the hotel"
+        },
+        "question": {
+          "en-US": "How do I get to the hotel?"
+        },
+        "answer": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "What's your address?",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-4"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "29noBR271L5quL2NSnvacr",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Do you have a shuttle?",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-4"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Unfortunately, citizenM does not provide shuttles. But feel free to arrange your own. Most airports provide these services.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
         }
       }
     }
@@ -1763,6 +3164,80 @@
               }
             },
             "fileName": "New_York_Times_Square-NewYorkTimesSquare_EXT_01_high-2560x1440.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "3Pn22MYHe6sZ048hWiIUpF",
+        "type": "Asset",
+        "createdAt": "2024-01-05T10:26:43.417Z",
+        "updatedAt": "2024-01-05T10:27:17.341Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-05T10:27:17.341Z",
+        "firstPublishedAt": "2024-01-05T10:27:17.341Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Queen Beatrix of The Netherlands 1985 c Andy Warhol"
+        },
+        "description": {
+          "en-US": "Queen Beatrix of The Netherlands 1985 c Andy Warhol"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/fzp55rkrsa7v/3Pn22MYHe6sZ048hWiIUpF/9279deade1ffb8aba6dda6d3d9a00a68/Queen_Beatrix_of_The_Netherlands__1985__c__Andy_Warhol.jpg",
+            "details": {
+              "size": 44299,
+              "image": {
+                "width": 460,
+                "height": 585
+              }
+            },
+            "fileName": "Queen_Beatrix_of_The_Netherlands__1985__c__Andy_Warhol.jpg",
             "contentType": "image/jpeg"
           }
         }

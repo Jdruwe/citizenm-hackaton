@@ -12,7 +12,7 @@
         "id": "page",
         "type": "ContentType",
         "createdAt": "2024-01-02T12:01:37.129Z",
-        "updatedAt": "2024-01-04T11:44:05.519Z",
+        "updatedAt": "2024-01-05T12:50:11.488Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2024-01-04T11:44:05.519Z",
+        "publishedVersion": 13,
+        "publishedAt": "2024-01-05T12:50:11.488Z",
         "firstPublishedAt": "2024-01-02T12:01:37.336Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 6,
-        "version": 12,
+        "publishedCounter": 7,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -150,8 +150,8 @@
             {
               "linkContentType": [
                 "newsArticle",
-                "experienceContent",
-                "hotel"
+                "hotel",
+                "contentCanvas"
               ]
             }
           ],
@@ -3555,149 +3555,10 @@
             "id": "o3fhy4qi3ji7"
           }
         },
-        "id": "experienceContent",
-        "type": "ContentType",
-        "createdAt": "2024-01-03T09:10:44.020Z",
-        "updatedAt": "2024-01-03T09:11:36.907Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2024-01-03T09:11:36.907Z",
-        "firstPublishedAt": "2024-01-03T09:10:44.372Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
-          }
-        }
-      },
-      "displayField": "name",
-      "name": "💡 Experience Content",
-      "description": "",
-      "fields": [
-        {
-          "id": "name",
-          "name": "Internal name",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "unique": true
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "hero",
-          "name": "Hero",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "hero"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        },
-        {
-          "id": "content",
-          "name": "Content",
-          "type": "Array",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-              {
-                "linkContentType": [
-                  "section"
-                ]
-              }
-            ],
-            "linkType": "Entry"
-          }
-        }
-      ],
-      "metadata": {
-        "annotations": {
-          "ContentType": [
-            {
-              "sys": {
-                "id": "Contentful:AggregateRoot",
-                "type": "Link",
-                "linkType": "Annotation"
-              }
-            }
-          ],
-          "ContentTypeField": {
-            "content": [
-              {
-                "sys": {
-                  "id": "Contentful:AggregateComponent",
-                  "type": "Link",
-                  "linkType": "Annotation"
-                }
-              }
-            ],
-            "hero": [
-              {
-                "sys": {
-                  "id": "Contentful:AggregateComponent",
-                  "type": "Link",
-                  "linkType": "Annotation"
-                }
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "o3fhy4qi3ji7"
-          }
-        },
         "id": "automatedCollection",
         "type": "ContentType",
         "createdAt": "2024-01-03T10:07:14.560Z",
-        "updatedAt": "2024-01-05T09:16:36.252Z",
+        "updatedAt": "2024-01-05T12:03:31.775Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3705,8 +3566,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 15,
-        "publishedAt": "2024-01-05T09:16:36.252Z",
+        "publishedVersion": 17,
+        "publishedAt": "2024-01-05T12:03:31.775Z",
         "firstPublishedAt": "2024-01-03T10:07:14.920Z",
         "createdBy": {
           "sys": {
@@ -3722,8 +3583,8 @@
             "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 8,
-        "version": 16,
+        "publishedCounter": 9,
+        "version": 18,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3746,6 +3607,17 @@
             {
               "unique": true
             }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "collectionTitle",
+          "name": "Collection title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
           ],
           "disabled": false,
           "omitted": false
@@ -3894,7 +3766,7 @@
         "id": "curatedCollection",
         "type": "ContentType",
         "createdAt": "2024-01-05T09:08:24.881Z",
-        "updatedAt": "2024-01-05T10:38:36.130Z",
+        "updatedAt": "2024-01-05T13:15:45.450Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3902,8 +3774,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2024-01-05T10:38:36.130Z",
+        "publishedVersion": 15,
+        "publishedAt": "2024-01-05T13:15:45.450Z",
         "firstPublishedAt": "2024-01-05T09:08:25.186Z",
         "createdBy": {
           "sys": {
@@ -3919,8 +3791,8 @@
             "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 6,
-        "version": 12,
+        "publishedCounter": 8,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3948,6 +3820,17 @@
           "omitted": false
         },
         {
+          "id": "collectionTitle",
+          "name": "Collection title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
           "id": "items",
           "name": "Items",
           "type": "Array",
@@ -3963,7 +3846,6 @@
               {
                 "linkContentType": [
                   "hotel",
-                  "experienceContent",
                   "contentCard",
                   "art"
                 ]
@@ -4078,6 +3960,145 @@
           ]
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "contentCanvas",
+        "type": "ContentType",
+        "createdAt": "2024-01-05T12:46:39.459Z",
+        "updatedAt": "2024-01-05T12:59:22.939Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-05T12:59:22.939Z",
+        "firstPublishedAt": "2024-01-05T12:46:39.787Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "💡 Content canvas",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Internal name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "hero",
+          "name": "Hero",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "hero"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "section"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ],
+      "metadata": {
+        "annotations": {
+          "ContentType": [
+            {
+              "sys": {
+                "id": "Contentful:AggregateRoot",
+                "type": "Link",
+                "linkType": "Annotation"
+              }
+            }
+          ],
+          "ContentTypeField": {
+            "content": [
+              {
+                "sys": {
+                  "id": "Contentful:AggregateComponent",
+                  "type": "Link",
+                  "linkType": "Annotation"
+                }
+              }
+            ],
+            "hero": [
+              {
+                "sys": {
+                  "id": "Contentful:AggregateComponent",
+                  "type": "Link",
+                  "linkType": "Annotation"
+                }
+              }
+            ]
+          }
+        }
+      }
     }
   ],
   "tags": [
@@ -4094,7 +4115,7 @@
             "linkType": "Space"
           }
         },
-        "version": 12,
+        "version": 14,
         "createdAt": "2024-01-02T12:01:37.516Z",
         "createdBy": {
           "sys": {
@@ -4103,7 +4124,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-04T11:44:06.183Z",
+        "updatedAt": "2024-01-05T12:50:12.371Z",
         "updatedBy": {
           "sys": {
             "id": "22SIYlNyBUO3I2yPIQP7Vr",
@@ -6048,151 +6069,7 @@
             "linkType": "Space"
           }
         },
-        "version": 4,
-        "createdAt": "2024-01-03T09:10:44.525Z",
-        "createdBy": {
-          "sys": {
-            "id": "22SIYlNyBUO3I2yPIQP7Vr",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-01-03T09:11:37.538Z",
-        "updatedBy": {
-          "sys": {
-            "id": "22SIYlNyBUO3I2yPIQP7Vr",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "experienceContent",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "sidebar": [
-        {
-          "settings": {
-          },
-          "widgetId": "6RKxbgPghdY4llDpwCFvgR",
-          "widgetNamespace": "app"
-        },
-        {
-          "settings": {
-          },
-          "widgetId": "publication-widget",
-          "widgetNamespace": "sidebar-builtin"
-        },
-        {
-          "settings": {
-          },
-          "widgetId": "content-preview-widget",
-          "widgetNamespace": "sidebar-builtin"
-        },
-        {
-          "settings": {
-          },
-          "widgetId": "incoming-links-widget",
-          "widgetNamespace": "sidebar-builtin"
-        },
-        {
-          "settings": {
-          },
-          "widgetId": "translation-widget",
-          "widgetNamespace": "sidebar-builtin"
-        },
-        {
-          "settings": {
-          },
-          "widgetId": "versions-widget",
-          "widgetNamespace": "sidebar-builtin"
-        },
-        {
-          "disabled": true,
-          "settings": {
-          },
-          "widgetId": "releases-widget",
-          "widgetNamespace": "sidebar-builtin"
-        }
-      ],
-      "controls": [
-        {
-          "fieldId": "name",
-          "settings": {
-            "helpText": "This is the internal reference you will use within Contentful. Make sure to use naming conventions for consistency."
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "hero",
-          "widgetId": "entryLinkEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "content",
-          "widgetId": "entryLinksEditor",
-          "widgetNamespace": "builtin"
-        }
-      ],
-      "editorLayout": [
-        {
-          "name": "Content",
-          "items": [
-            {
-              "fieldId": "content"
-            }
-          ],
-          "groupId": "content"
-        },
-        {
-          "name": "Page Settings",
-          "items": [
-            {
-              "fieldId": "name"
-            },
-            {
-              "fieldId": "hero"
-            }
-          ],
-          "groupId": "pageSettings"
-        }
-      ],
-      "groupControls": [
-        {
-          "groupId": "content",
-          "widgetId": "topLevelTab",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "groupId": "pageSettings",
-          "widgetId": "topLevelTab",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "o3fhy4qi3ji7",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 16,
+        "version": 18,
         "createdAt": "2024-01-03T10:07:15.072Z",
         "createdBy": {
           "sys": {
@@ -6201,7 +6078,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-05T09:16:36.923Z",
+        "updatedAt": "2024-01-05T12:03:32.503Z",
         "updatedBy": {
           "sys": {
             "id": "22SIYlNyBUO3I2yPIQP7Vr",
@@ -6227,6 +6104,11 @@
       "controls": [
         {
           "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "collectionTitle",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
@@ -6309,7 +6191,7 @@
             "linkType": "Space"
           }
         },
-        "version": 12,
+        "version": 16,
         "createdAt": "2024-01-05T09:08:25.339Z",
         "createdBy": {
           "sys": {
@@ -6318,7 +6200,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-05T10:38:36.855Z",
+        "updatedAt": "2024-01-05T13:15:46.320Z",
         "updatedBy": {
           "sys": {
             "id": "22SIYlNyBUO3I2yPIQP7Vr",
@@ -6344,6 +6226,11 @@
       "controls": [
         {
           "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "collectionTitle",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
@@ -6416,6 +6303,141 @@
         {
           "fieldId": "artMasterdata",
           "widgetId": "resourceLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "o3fhy4qi3ji7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2024-01-05T12:46:39.976Z",
+        "createdBy": {
+          "sys": {
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-05T12:59:23.547Z",
+        "updatedBy": {
+          "sys": {
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "contentCanvas",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "sidebar": [
+        {
+          "settings": {
+          },
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "disabled": true,
+          "widgetId": "releases-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "disabled": true,
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "name",
+          "settings": {
+            "helpText": "This is the internal reference you will use within Contentful. Make sure to use naming conventions for consistency."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "hero",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ],
+      "editorLayout": [
+        {
+          "name": "Content",
+          "items": [
+            {
+              "fieldId": "content"
+            }
+          ],
+          "groupId": "content"
+        },
+        {
+          "name": "Page Settings",
+          "items": [
+            {
+              "fieldId": "name"
+            },
+            {
+              "fieldId": "hero"
+            }
+          ],
+          "groupId": "pageSettings"
+        }
+      ],
+      "groupControls": [
+        {
+          "groupId": "content",
+          "widgetId": "topLevelTab",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "groupId": "pageSettings",
+          "widgetId": "topLevelTab",
           "widgetNamespace": "builtin"
         }
       ]
@@ -6597,7 +6619,7 @@
         "id": "7Leg6RLkqlmwYpHi5zKzCK",
         "type": "Entry",
         "createdAt": "2024-01-05T09:08:47.204Z",
-        "updatedAt": "2024-01-05T10:47:05.365Z",
+        "updatedAt": "2024-01-05T12:36:49.397Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -6605,8 +6627,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 12,
-        "publishedAt": "2024-01-05T10:47:05.365Z",
+        "publishedVersion": 17,
+        "publishedAt": "2024-01-05T12:36:49.397Z",
         "firstPublishedAt": "2024-01-05T09:10:02.527Z",
         "createdBy": {
           "sys": {
@@ -6622,8 +6644,8 @@
             "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 4,
-        "version": 13,
+        "publishedCounter": 6,
+        "version": 18,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -6643,7 +6665,10 @@
       },
       "fields": {
         "name": {
-          "en-US": "Collection - Mixed content"
+          "en-US": "Curated collection - Mixed content"
+        },
+        "collectionTitle": {
+          "en-US": "Experience NYC and Times Square"
         },
         "items": {
           "en-US": [
@@ -6691,7 +6716,7 @@
         "id": "1YabawM2IDMFnnmoWhbNwF",
         "type": "Entry",
         "createdAt": "2024-01-05T09:10:33.950Z",
-        "updatedAt": "2024-01-05T09:14:57.816Z",
+        "updatedAt": "2024-01-05T12:50:32.315Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -6699,8 +6724,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2024-01-05T09:14:57.816Z",
+        "publishedVersion": 8,
+        "publishedAt": "2024-01-05T12:50:32.315Z",
         "firstPublishedAt": "2024-01-05T09:14:57.816Z",
         "createdBy": {
           "sys": {
@@ -6713,16 +6738,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 1,
-        "version": 7,
+        "publishedCounter": 2,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
         "automationTags": [
@@ -6750,89 +6775,12 @@
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "1Xo3ws73K6wH8ZMxpmh7sI"
+              "id": "6ebrZdt017V4kj3t1qo2tN"
             }
           }
         },
         "hideInSearch": {
           "en-US": false
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "o3fhy4qi3ji7"
-          }
-        },
-        "id": "1Xo3ws73K6wH8ZMxpmh7sI",
-        "type": "Entry",
-        "createdAt": "2024-01-05T09:11:28.306Z",
-        "updatedAt": "2024-01-05T09:14:54.407Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 5,
-        "publishedAt": "2024-01-05T09:14:54.407Z",
-        "firstPublishedAt": "2024-01-05T09:14:54.407Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 6,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
-          }
-        },
-        "automationTags": [
-        ],
-        "contentType": {
-          "sys": {
-            "type": "Link",
-            "linkType": "ContentType",
-            "id": "experienceContent"
-          }
-        }
-      },
-      "fields": {
-        "name": {
-          "en-US": "Experience Content - Feature Overview"
-        },
-        "content": {
-          "en-US": [
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "1g4iDyBXHHFVWLWODY1dSq"
-              }
-            }
-          ]
         }
       }
     },
@@ -6932,7 +6880,7 @@
         "id": "74X1T598xoQn7CC7Qvlanv",
         "type": "Entry",
         "createdAt": "2024-01-05T09:13:44.363Z",
-        "updatedAt": "2024-01-05T09:17:36.265Z",
+        "updatedAt": "2024-01-05T12:37:00.383Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -6940,8 +6888,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2024-01-05T09:17:36.265Z",
+        "publishedVersion": 11,
+        "publishedAt": "2024-01-05T12:37:00.383Z",
         "firstPublishedAt": "2024-01-05T09:14:20.192Z",
         "createdBy": {
           "sys": {
@@ -6954,16 +6902,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 2,
-        "version": 8,
+        "publishedCounter": 4,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
         "automationTags": [
@@ -6978,7 +6926,10 @@
       },
       "fields": {
         "name": {
-          "en-US": "Curated Collection - Hotel List"
+          "en-US": "Curated collection - Hotel List"
+        },
+        "collectionTitle": {
+          "en-US": "Our hotels"
         },
         "items": {
           "en-US": [
@@ -7251,6 +7202,83 @@
         },
         "caption": {
           "en-US": "Our CloudM CitizenM rooftop bar at Times square NYC"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "6ebrZdt017V4kj3t1qo2tN",
+        "type": "Entry",
+        "createdAt": "2024-01-05T12:48:11.950Z",
+        "updatedAt": "2024-01-05T12:48:35.212Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-05T12:48:35.212Z",
+        "firstPublishedAt": "2024-01-05T12:48:35.212Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "contentCanvas"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Content canvas - Feature overview"
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1g4iDyBXHHFVWLWODY1dSq"
+              }
+            }
+          ]
         }
       }
     }

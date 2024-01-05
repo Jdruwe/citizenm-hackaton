@@ -9,7 +9,7 @@ const { slug } = defineProps<Props>()
 
 const { data, error } = await useAsyncData('hotel', () => {
   const hotelService = new HotelService()
-  return hotelService.getHotel(slug)
+  return hotelService.getHotelBySlug(slug)
 })
 
 if (error.value) {

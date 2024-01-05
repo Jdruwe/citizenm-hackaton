@@ -1,9 +1,15 @@
+export { isTypeArt } from "./TypeArt";
+export type { TypeArt, TypeArtFields, TypeArtSkeleton } from "./TypeArt";
+export { isTypeArtist } from "./TypeArtist";
+export type { TypeArtist, TypeArtistFields, TypeArtistSkeleton } from "./TypeArtist";
 export { isTypeCity } from "./TypeCity";
 export type { TypeCity, TypeCityFields, TypeCitySkeleton } from "./TypeCity";
 export { isTypeContinent } from "./TypeContinent";
 export type { TypeContinent, TypeContinentFields, TypeContinentSkeleton } from "./TypeContinent";
 export { isTypeCountry } from "./TypeCountry";
 export type { TypeCountry, TypeCountryFields, TypeCountrySkeleton } from "./TypeCountry";
+export { isTypeFaq } from "./TypeFaq";
+export type { TypeFaq, TypeFaqFields, TypeFaqSkeleton } from "./TypeFaq";
 export { isTypeHotel } from "./TypeHotel";
 export type { TypeHotel, TypeHotelFields, TypeHotelSkeleton } from "./TypeHotel";
 export { isTypeLocation } from "./TypeLocation";

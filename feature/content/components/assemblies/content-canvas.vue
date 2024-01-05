@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { TypeExperienceContent } from '~/types/contentful/marketing'
+import type { TypeContentCanvas } from '~/types/contentful/marketing'
 import ContentComponentMapper from '~/feature/content/components/mapper/content-component-mapper.vue'
 
 interface Props {
-  data: TypeExperienceContent<undefined, string>
+  data: TypeContentCanvas<undefined, string>
 }
 
 const { data } = defineProps<Props>()
 
-function getMappedContent(data: TypeExperienceContent<undefined, string>) {
+function getMappedContent(data: TypeContentCanvas<undefined, string>) {
   if (Array.isArray(data.fields.content)) {
     return data.fields.content
   }

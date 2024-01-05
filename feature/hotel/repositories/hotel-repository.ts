@@ -9,11 +9,25 @@ import { getContentfulConnector } from '~/feature/content/connectors/contenful/c
 import type { Hotel } from '~/feature/hotel/types/hotel.types'
 
 class HotelRepository {
+  public async getHotelByCrn(crn: string): Promise<Hotel | null> {
+    const regex = /\/entries\/([^\/]+)/
+    const match = crn.match(regex)
+
+    if (match) {
+      const resource = await getContentfulConnector('masterdata')
+        .getEntry<MasterTypeHotelSkeleton>(match[1], { include: 4 })
+      if (resource) {
+        return this.mapToHotel(resource)
+      }
+    }
+    return null
+  }
+
   /**
    * @return Promise of hotel or null if nothing was found
    * @param slug
    */
-  public async getHotel(slug: string) {
+  public async getHotelBySlug(slug: string): Promise<Hotel | null> {
     const query = {
       'content_type': 'page',
       'fields.pageType.sys.contentType.sys.id': 'hotel',
@@ -28,42 +42,31 @@ class HotelRepository {
 
     if (data && data.items.length > 0) {
       const pageType = data.items[0].fields.pageType as Entry<MarketingTypeHotelSkeleton>
-      const hotelResource = await this.getHotelResourceName(pageType)
-      if (hotelResource) {
-        return this.mapToHotel(hotelResource)
-      }
+      return await this.getHotelResource(pageType)
     }
     return null
   }
 
-  private async getHotelResourceName(pageType: Entry<MarketingTypeHotelSkeleton>) {
+  private async getHotelResource(pageType: Entry<MarketingTypeHotelSkeleton>) {
     if (isTypeHotel(pageType)) {
       const resourceLink = pageType.fields.hotelMasterdata?.sys as ResourceLink
       if (resourceLink) {
-        return await this.getHotelFromMasterSpace(resourceLink.urn)
+        return await this.getHotelByCrn(resourceLink.urn)
       }
-    }
-    return null
-  }
-
-  private async getHotelFromMasterSpace(resourceName: string) {
-    const regex = /\/entries\/([^\/]+)/
-    const match = resourceName.match(regex)
-
-    if (match) {
-      return await getContentfulConnector('masterdata')
-        .getEntry<MasterTypeHotelSkeleton>(match[1], { include: 4 })
     }
     return null
   }
 
   private mapToHotel(entry: Entry<MasterTypeHotelSkeleton>): Hotel {
-    console.log(JSON.stringify(entry.fields.location))
+    // @ts-expect-error we cannot use 'WITHOUT_UNRESOLVABLE_LINKS' as otherwise links to other spaces are not shown
+    const heroImageUrl = entry.fields.heroImage?.fields.asset?.fields.file?.url
+    // @ts-expect-error we cannot use 'WITHOUT_UNRESOLVABLE_LINKS' as otherwise links to other spaces are not shown
+    const mainImageUrl = entry.fields.mainImage?.fields.asset?.fields.file?.url
     return {
       name: entry.fields.name as string,
       shortDescription: entry.fields.shortDescription as string,
-      // @ts-expect-error
-      ...(entry.fields.mainImage && { mainImage: entry.fields.mainImage.fields.asset.fields.file.url }),
+      heroImage: heroImageUrl,
+      ...(mainImageUrl && { mainImage: mainImageUrl }),
     }
   }
 }

@@ -2,6 +2,7 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 
 export interface TypeAutomatedCollectionFields {
     name: EntryFieldTypes.Symbol;
+    collectionTitle: EntryFieldTypes.Symbol;
     types: EntryFieldTypes.Array<EntryFieldTypes.Symbol<"content card" | "experience content" | "hotel" | "news article" | "person">>;
     displayAs: EntryFieldTypes.Symbol<"grid" | "list" | "slider">;
 }

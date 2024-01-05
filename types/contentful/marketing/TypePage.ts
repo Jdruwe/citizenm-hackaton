@@ -1,5 +1,5 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
-import type { TypeExperienceContentSkeleton } from "./TypeExperienceContent";
+import type { TypeContentCanvasSkeleton } from "./TypeContentCanvas";
 import type { TypeFooterSkeleton } from "./TypeFooter";
 import type { TypeHotelSkeleton } from "./TypeHotel";
 import type { TypeMetadataSkeleton } from "./TypeMetadata";
@@ -13,7 +13,7 @@ export interface TypePageFields {
     slug: EntryFieldTypes.Symbol;
     pageMetadata?: EntryFieldTypes.EntryLink<TypeMetadataSkeleton>;
     pageThumbnail?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypePageThumbnailSkeleton>>;
-    pageType: EntryFieldTypes.EntryLink<TypeExperienceContentSkeleton | TypeHotelSkeleton | TypeNewsArticleSkeleton>;
+    pageType: EntryFieldTypes.EntryLink<TypeContentCanvasSkeleton | TypeHotelSkeleton | TypeNewsArticleSkeleton>;
     hideInSearch: EntryFieldTypes.Boolean;
     alternativeNavigation?: EntryFieldTypes.EntryLink<TypeNavigationSkeleton>;
     alternativeFooter?: EntryFieldTypes.EntryLink<TypeFooterSkeleton>;

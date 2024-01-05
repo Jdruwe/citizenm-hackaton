@@ -13,7 +13,7 @@ class ContentfulPageConnector {
       'content_type': 'page',
       'select': 'fields.pageType',
       'fields.slug': slug,
-      'include': 8,
+      'include': 5,
       'limit': 1,
     }
 
