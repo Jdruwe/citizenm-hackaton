@@ -7,10 +7,17 @@ interface Props {
 
 const { slug } = defineProps<Props>()
 
-const { data } = await useAsyncData('hotel', () => {
+const { data, error } = await useAsyncData('hotel', () => {
   const hotelService = new HotelService()
   return hotelService.getHotel(slug)
 })
+
+if (error.value) {
+  throw createError({
+    statusCode: 500,
+    statusMessage: 'Er is iets misgelopen, probeer later opnieuw.',
+  })
+}
 
 if (!data.value) {
   throw createError({

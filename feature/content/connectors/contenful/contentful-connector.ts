@@ -21,8 +21,8 @@ class ContentfulConnector {
     return this.contentfulClient.getEntries<T>(query)
   }
 
-  public async getEntry<T extends EntrySkeletonType>(id: string, options: object): Promise<Entry<T, undefined, string>> {
-    return this.contentfulClient.getEntry<T>(id, options)
+  public async getEntry<T extends EntrySkeletonType>(id: string, query: object): Promise<Entry<T, undefined, string>> {
+    return this.contentfulClient.getEntry<T>(id, query)
   }
 }
 
