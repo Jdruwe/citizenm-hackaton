@@ -1,19 +1,37 @@
 <script setup lang="ts">
 import { ContentfulPageConnector } from '~/feature/content/connectors/contenful/contentful-page-connector'
+import ContentComponentMapper from '~/feature/content/components/mapper/content-component-mapper.vue'
 
 interface Props {
-  slug: string[]
+  slug: string
 }
 
 const { slug } = defineProps<Props>()
 
-const { data: value } = await useAsyncData('pageContent', () => {
+const { data, error } = await useAsyncData('pageContent', () => {
   const contentfulPageConnector = new ContentfulPageConnector()
   return contentfulPageConnector.getPageContent(slug)
 })
+
+if (error.value) {
+  throw createError({
+    statusCode: 500,
+    statusMessage: 'Er is iets misgelopen, probeer later opnieuw.',
+  })
+}
+
+if (!data.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Deze pagina bestaat niet (meer).',
+  })
+}
+
+const contentPage = data.value.fields.pageType
 </script>
 
 <template>
-  <p>PageContent: slug = {{ slug }}</p>
-  <p>Value: {{ value }}</p>
+  <ContentComponentMapper
+    :data="contentPage"
+  />
 </template>

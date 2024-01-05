@@ -250,7 +250,7 @@
         "id": "section",
         "type": "ContentType",
         "createdAt": "2024-01-02T12:01:37.177Z",
-        "updatedAt": "2024-01-04T09:32:08.997Z",
+        "updatedAt": "2024-01-05T09:12:37.737Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -258,8 +258,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2024-01-04T09:32:08.997Z",
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-05T09:12:37.737Z",
         "firstPublishedAt": "2024-01-02T12:01:37.357Z",
         "createdBy": {
           "sys": {
@@ -272,16 +272,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 2,
-        "version": 4,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         }
       },
@@ -324,7 +324,8 @@
                   "richText",
                   "video",
                   "banner",
-                  "automatedCollection"
+                  "automatedCollection",
+                  "curatedCollection"
                 ]
               }
             ],
@@ -2517,7 +2518,7 @@
         "id": "image",
         "type": "ContentType",
         "createdAt": "2024-01-02T12:01:38.614Z",
-        "updatedAt": "2024-01-02T12:01:38.814Z",
+        "updatedAt": "2024-01-05T10:49:30.100Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2525,8 +2526,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2024-01-02T12:01:38.814Z",
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-05T10:49:30.100Z",
         "firstPublishedAt": "2024-01-02T12:01:38.814Z",
         "createdBy": {
           "sys": {
@@ -2542,8 +2543,8 @@
             "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 4,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3696,7 +3697,7 @@
         "id": "automatedCollection",
         "type": "ContentType",
         "createdAt": "2024-01-03T10:07:14.560Z",
-        "updatedAt": "2024-01-04T08:53:45.255Z",
+        "updatedAt": "2024-01-05T09:16:36.252Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3704,8 +3705,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2024-01-04T08:53:45.255Z",
+        "publishedVersion": 15,
+        "publishedAt": "2024-01-05T09:16:36.252Z",
         "firstPublishedAt": "2024-01-03T10:07:14.920Z",
         "createdBy": {
           "sys": {
@@ -3721,8 +3722,8 @@
             "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 7,
-        "version": 14,
+        "publishedCounter": 8,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3781,9 +3782,6 @@
           "localized": false,
           "required": true,
           "validations": [
-            {
-              "unique": true
-            },
             {
               "in": [
                 "grid",
@@ -3878,6 +3876,203 @@
               "source": "crn:contentful:::content:spaces/fzp55rkrsa7v",
               "contentTypes": [
                 "hotel"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "curatedCollection",
+        "type": "ContentType",
+        "createdAt": "2024-01-05T09:08:24.881Z",
+        "updatedAt": "2024-01-05T10:38:36.130Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2024-01-05T10:38:36.130Z",
+        "firstPublishedAt": "2024-01-05T09:08:25.186Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "📐 Curated collection",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "items",
+          "name": "Items",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "hotel",
+                  "experienceContent",
+                  "contentCard",
+                  "art"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "displayAs",
+          "name": "Display as",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "grid",
+                "slider",
+                "list"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "art",
+        "type": "ContentType",
+        "createdAt": "2024-01-05T10:34:46.580Z",
+        "updatedAt": "2024-01-05T10:35:16.867Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-05T10:35:16.867Z",
+        "firstPublishedAt": "2024-01-05T10:34:46.925Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "💡 Art",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "artMasterdata",
+          "name": "Art masterdata",
+          "type": "ResourceLink",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "allowedResources": [
+            {
+              "type": "Contentful:Entry",
+              "source": "crn:contentful:::content:spaces/fzp55rkrsa7v",
+              "contentTypes": [
+                "art"
               ]
             }
           ]
@@ -4009,7 +4204,7 @@
             "linkType": "Space"
           }
         },
-        "version": 4,
+        "version": 6,
         "createdAt": "2024-01-02T12:01:37.571Z",
         "createdBy": {
           "sys": {
@@ -4018,10 +4213,10 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-04T09:32:09.602Z",
+        "updatedAt": "2024-01-05T09:12:38.465Z",
         "updatedBy": {
           "sys": {
-            "id": "6QLLK1TTKYBTd5byaaUORL",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
             "type": "Link",
             "linkType": "User"
           }
@@ -5199,7 +5394,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 9,
         "createdAt": "2024-01-02T12:01:38.952Z",
         "createdBy": {
           "sys": {
@@ -5208,7 +5403,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-02T12:01:40.645Z",
+        "updatedAt": "2024-01-05T10:49:30.791Z",
         "updatedBy": {
           "sys": {
             "id": "22SIYlNyBUO3I2yPIQP7Vr",
@@ -5997,7 +6192,7 @@
             "linkType": "Space"
           }
         },
-        "version": 14,
+        "version": 16,
         "createdAt": "2024-01-03T10:07:15.072Z",
         "createdBy": {
           "sys": {
@@ -6006,7 +6201,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-04T08:53:45.970Z",
+        "updatedAt": "2024-01-05T09:16:36.923Z",
         "updatedBy": {
           "sys": {
             "id": "22SIYlNyBUO3I2yPIQP7Vr",
@@ -6098,6 +6293,128 @@
         },
         {
           "fieldId": "hotelMasterdata",
+          "widgetId": "resourceLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "o3fhy4qi3ji7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 12,
+        "createdAt": "2024-01-05T09:08:25.339Z",
+        "createdBy": {
+          "sys": {
+            "id": "6QLLK1TTKYBTd5byaaUORL",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-05T10:38:36.855Z",
+        "updatedBy": {
+          "sys": {
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "curatedCollection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "items",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": false
+          },
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "displayAs",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "o3fhy4qi3ji7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2024-01-05T10:34:47.075Z",
+        "createdBy": {
+          "sys": {
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-05T10:35:17.592Z",
+        "updatedBy": {
+          "sys": {
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "art",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "artMasterdata",
           "widgetId": "resourceLinkEditor",
           "widgetNamespace": "builtin"
         }
@@ -6196,7 +6513,7 @@
         "id": "4A2oNGPBHkRAcrDzutSQeC",
         "type": "Entry",
         "createdAt": "2024-01-04T11:23:06.461Z",
-        "updatedAt": "2024-01-04T15:36:05.047Z",
+        "updatedAt": "2024-01-05T09:04:37.905Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -6218,11 +6535,11 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
         "publishedCounter": 6,
-        "version": 20,
+        "version": 24,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -6263,9 +6580,756 @@
           "en-US": false
         }
       }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "7Leg6RLkqlmwYpHi5zKzCK",
+        "type": "Entry",
+        "createdAt": "2024-01-05T09:08:47.204Z",
+        "updatedAt": "2024-01-05T10:47:05.365Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 12,
+        "publishedAt": "2024-01-05T10:47:05.365Z",
+        "firstPublishedAt": "2024-01-05T09:10:02.527Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "curatedCollection"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Collection - Mixed content"
+        },
+        "items": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "d0QS4JcoArrDb6FiuPKxb"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "31vyzg1b5zAbNnfwcNZ7N3"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6caaofCPfh9TGZGeeSQfDZ"
+              }
+            }
+          ]
+        },
+        "displayAs": {
+          "en-US": "list"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "1YabawM2IDMFnnmoWhbNwF",
+        "type": "Entry",
+        "createdAt": "2024-01-05T09:10:33.950Z",
+        "updatedAt": "2024-01-05T09:14:57.816Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-01-05T09:14:57.816Z",
+        "firstPublishedAt": "2024-01-05T09:14:57.816Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Page - Features Overview"
+        },
+        "pageTitle": {
+          "en-US": "Features Overview"
+        },
+        "slug": {
+          "en-US": "features-overview"
+        },
+        "pageType": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1Xo3ws73K6wH8ZMxpmh7sI"
+            }
+          }
+        },
+        "hideInSearch": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "1Xo3ws73K6wH8ZMxpmh7sI",
+        "type": "Entry",
+        "createdAt": "2024-01-05T09:11:28.306Z",
+        "updatedAt": "2024-01-05T09:14:54.407Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-05T09:14:54.407Z",
+        "firstPublishedAt": "2024-01-05T09:14:54.407Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "experienceContent"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Experience Content - Feature Overview"
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1g4iDyBXHHFVWLWODY1dSq"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "1g4iDyBXHHFVWLWODY1dSq",
+        "type": "Entry",
+        "createdAt": "2024-01-05T09:11:57.259Z",
+        "updatedAt": "2024-01-05T09:14:49.781Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-05T09:14:49.781Z",
+        "firstPublishedAt": "2024-01-05T09:14:49.781Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "section"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Section - Feature Overview First Section"
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "74X1T598xoQn7CC7Qvlanv"
+              }
+            }
+          ]
+        },
+        "backgroundColour": {
+          "en-US": "White (default)"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "74X1T598xoQn7CC7Qvlanv",
+        "type": "Entry",
+        "createdAt": "2024-01-05T09:13:44.363Z",
+        "updatedAt": "2024-01-05T09:17:36.265Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-05T09:17:36.265Z",
+        "firstPublishedAt": "2024-01-05T09:14:20.192Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "curatedCollection"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Curated Collection - Hotel List"
+        },
+        "items": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "31vyzg1b5zAbNnfwcNZ7N3"
+              }
+            }
+          ]
+        },
+        "displayAs": {
+          "en-US": "list"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "6caaofCPfh9TGZGeeSQfDZ",
+        "type": "Entry",
+        "createdAt": "2024-01-05T10:34:56.578Z",
+        "updatedAt": "2024-01-05T10:36:20.729Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-05T10:36:20.729Z",
+        "firstPublishedAt": "2024-01-05T10:36:12.325Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "art"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Art - NYT - Queen Beatrix of the Netherlands"
+        },
+        "artMasterdata": {
+          "en-US": {
+            "sys": {
+              "type": "ResourceLink",
+              "linkType": "Contentful:Entry",
+              "urn": "crn:contentful:::content:spaces/fzp55rkrsa7v/environments/master/entries/2HnGO4MLLe2iBU6RJbLaBp"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "d0QS4JcoArrDb6FiuPKxb",
+        "type": "Entry",
+        "createdAt": "2024-01-05T10:39:19.694Z",
+        "updatedAt": "2024-01-05T10:46:43.997Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2024-01-05T10:46:43.997Z",
+        "firstPublishedAt": "2024-01-05T10:46:43.997Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "contentCard"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Content card - NYT - CloudM Rooftop bar"
+        },
+        "media": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3ttEIIXEH7pMOhDtYJDVRo"
+            }
+          }
+        },
+        "title": {
+          "en-US": "Experience the clouds at CloudM Rooftop bar"
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "cloudM is a rooftop bar located in the citizenM hotel in Times Square 1. The bar offers a stunning view of the city skyline and is known for its craft cocktails and wine classes. The bar is located on the 21st floor of the hotel and is decorated with chic and art-infused interiors. The menu features a wide range of drinks, including craft cocktails, wines, and beers, and the food menu includes small plates and tapas.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "3ttEIIXEH7pMOhDtYJDVRo",
+        "type": "Entry",
+        "createdAt": "2024-01-05T10:41:19.030Z",
+        "updatedAt": "2024-01-05T10:43:23.276Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2024-01-05T10:43:23.276Z",
+        "firstPublishedAt": "2024-01-05T10:43:23.276Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "image"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Image - NYT - CloudM Rooftop bar"
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5OW1lQOhBnkH3XljJqYLLA"
+            }
+          }
+        },
+        "altText": {
+          "en-US": "Our CloudM CitizenM rooftop bar at Times square NYC"
+        },
+        "caption": {
+          "en-US": "Our CloudM CitizenM rooftop bar at Times square NYC"
+        }
+      }
     }
   ],
   "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "5OW1lQOhBnkH3XljJqYLLA",
+        "type": "Asset",
+        "createdAt": "2024-01-05T10:42:22.438Z",
+        "updatedAt": "2024-01-05T10:42:42.037Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-05T10:42:42.037Z",
+        "firstPublishedAt": "2024-01-05T10:42:42.037Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "NYT - CloudM Rooftop bar"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/o3fhy4qi3ji7/5OW1lQOhBnkH3XljJqYLLA/7f33a5ac80facab6cfb347e43a12abf4/New-York-Times-Square-hotel-cloudM-colourful-designer-chairs-2.jpg",
+            "details": {
+              "size": 549691,
+              "image": {
+                "width": 1883,
+                "height": 1440
+              }
+            },
+            "fileName": "New-York-Times-Square-hotel-cloudM-colourful-designer-chairs-2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
   ],
   "locales": [
     {

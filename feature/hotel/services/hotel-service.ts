@@ -11,6 +11,8 @@ class HotelService {
   public async getHotel(slug: string): Promise<Hotel | null> {
     return await this.contentfulHotelConnector.getHotel(slug)
   }
+
+  // TODO: getHotels
 }
 
 export { HotelService }

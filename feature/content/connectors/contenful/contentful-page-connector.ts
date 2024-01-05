@@ -1,13 +1,31 @@
+import type { Entry } from 'contentful'
+import { getContentfulConnector } from '~/feature/content/connectors/contenful/contentful-connector'
+import type { TypePageSkeleton } from '~/types/contentful/marketing'
+
 class ContentfulPageConnector {
-  public async getPageContent(slug: string[]) {
+  /**
+   * @return Promise of page entry or null if nothing was found
+   * @param slug
+   */
+  public async getPageContent(slug: string): Promise<Entry<TypePageSkeleton, undefined, string> | null> {
+    // TODO: check if the include is at the correct level
     const query = {
       'content_type': 'page',
-      'fields.slug': slug.toString().replace(',', '/'),
+      'select': 'fields.pageType',
+      'fields.slug': slug,
       'include': 8,
       'limit': 1,
     }
-    // return await this.getEntries(query)
-    return ''
+
+    const data = await getContentfulConnector('marketing')
+      .getEntries<TypePageSkeleton>(query)
+
+    if (data && data.items.length > 0) {
+      return data.items[0]
+    }
+    else {
+      return null
+    }
   }
 }
 

@@ -1,5 +1,7 @@
 export { isTypeAlertMessage } from "./TypeAlertMessage";
 export type { TypeAlertMessage, TypeAlertMessageFields, TypeAlertMessageSkeleton } from "./TypeAlertMessage";
+export { isTypeArt } from "./TypeArt";
+export type { TypeArt, TypeArtFields, TypeArtSkeleton } from "./TypeArt";
 export { isTypeAutomatedCollection } from "./TypeAutomatedCollection";
 export type { TypeAutomatedCollection, TypeAutomatedCollectionFields, TypeAutomatedCollectionSkeleton } from "./TypeAutomatedCollection";
 export { isTypeBanner } from "./TypeBanner";
@@ -10,6 +12,8 @@ export { isTypeContentCard } from "./TypeContentCard";
 export type { TypeContentCard, TypeContentCardFields, TypeContentCardSkeleton } from "./TypeContentCard";
 export { isTypeCta } from "./TypeCta";
 export type { TypeCta, TypeCtaFields, TypeCtaSkeleton } from "./TypeCta";
+export { isTypeCuratedCollection } from "./TypeCuratedCollection";
+export type { TypeCuratedCollection, TypeCuratedCollectionFields, TypeCuratedCollectionSkeleton } from "./TypeCuratedCollection";
 export { isTypeExperienceContent } from "./TypeExperienceContent";
 export type { TypeExperienceContent, TypeExperienceContentFields, TypeExperienceContentSkeleton } from "./TypeExperienceContent";
 export { isTypeExternalUrl } from "./TypeExternalUrl";
