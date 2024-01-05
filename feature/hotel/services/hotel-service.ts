@@ -9,7 +9,6 @@ class HotelService {
   }
 
   public async getHotel(slug: string): Promise<Hotel | null> {
-    // TODO: handle notFound?
     return await this.contentfulHotelConnector.getHotel(slug)
   }
 }

@@ -11,6 +11,13 @@ const { data: hotel } = await useAsyncData('hotel', () => {
   const hotelService = new HotelService()
   return hotelService.getHotel(slug)
 })
+
+if (!hotel.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Page Not Found',
+  })
+}
 </script>
 
 <template>
