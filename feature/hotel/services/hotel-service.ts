@@ -8,13 +8,9 @@ class HotelService {
     this.contentfulHotelConnector = new HotelRepository()
   }
 
-  public async getHotel(slug: string[]): Promise<Hotel | null> {
-    const finalSlug = slug.at(-1)
-
-    if (finalSlug) {
-      return await this.contentfulHotelConnector.getHotel(finalSlug)
-    }
-    return null
+  public async getHotel(slug: string): Promise<Hotel | null> {
+    // TODO: handle notFound?
+    return await this.contentfulHotelConnector.getHotel(slug)
   }
 }
 

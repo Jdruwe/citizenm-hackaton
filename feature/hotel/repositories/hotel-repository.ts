@@ -50,15 +50,17 @@ class HotelRepository {
     const regex = /\/entries\/([^\/]+)/
     const match = resourceName.match(regex)
 
+    // TODO: provide correct include level object!
     if (match) {
       const entryId = match[1] // "7GrJJ8g9v9Mq7xtL9wIs1f"
       return await getContentfulConnector('masterdata')
-        .getEntry<MasterTypeHotelSkeleton>(entryId)
+        .getEntry<MasterTypeHotelSkeleton>(entryId, { include: 5 })
     }
     return null
   }
 
   private mapToHotel(entry: Entry<MasterTypeHotelSkeleton>): Hotel {
+    console.log(JSON.stringify(entry.fields.location))
     return {
       name: entry.fields.name as string,
       shortDescription: entry.fields.shortDescription as string,

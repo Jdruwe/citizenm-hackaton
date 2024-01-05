@@ -2,7 +2,7 @@
 import { HotelService } from '~/feature/hotel/services/hotel-service'
 
 interface Props {
-  slug: string[]
+  slug: string
 }
 
 const { slug } = defineProps<Props>()
