@@ -21,7 +21,7 @@ const mappedContent = getMappedContent(data)
 </script>
 
 <template>
-  <div>
+  <div class="mb-10">
     <template v-for="content in mappedContent">
       <ContentComponentMapper
         :data="content"

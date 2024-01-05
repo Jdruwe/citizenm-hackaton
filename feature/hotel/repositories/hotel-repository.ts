@@ -3,10 +3,10 @@ import {
   type TypeHotelSkeleton as MarketingTypeHotelSkeleton,
   type TypePageSkeleton,
   isTypeHotel,
-} from '~/types/contentful/marketing'
-import type { TypeHotelSkeleton as MasterTypeHotelSkeleton } from '~/types/contentful/masterdata'
-import { getContentfulConnector } from '~/feature/content/connectors/contenful/contentful-connector'
-import type { Hotel } from '~/feature/hotel/types/hotel.types'
+} from '../../../types/contentful/marketing'
+import type { TypeHotelSkeleton as MasterTypeHotelSkeleton } from '../../../types/contentful/masterdata'
+import { getContentfulConnector } from '../../content/connectors/contenful/contentful-connector'
+import type { Hotel } from '../types/hotel.types'
 
 class HotelRepository {
   public async getHotelByCrn(crn: string): Promise<Hotel | null> {
@@ -14,6 +14,7 @@ class HotelRepository {
     const match = crn.match(regex)
 
     if (match) {
+      // TODO: check include level
       const resource = await getContentfulConnector('masterdata')
         .getEntry<MasterTypeHotelSkeleton>(match[1], { include: 4 })
       if (resource) {
