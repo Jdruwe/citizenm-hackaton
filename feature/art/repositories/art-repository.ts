@@ -1,5 +1,4 @@
 import type { Entry } from 'contentful'
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import { getContentfulConnector } from '~/feature/content/connectors/contenful/contentful-connector'
 import type { Art } from '~/feature/art/types/art.types'
 import type { TypeArtSkeleton } from '~/types/contentful/masterdata'
@@ -28,7 +27,7 @@ class ArtRepository {
       title: entry.fields.title as string,
       image: imageUrl,
       artist: entry.fields.artist?.fields.name,
-      artistDescription: documentToHtmlString(entry.fields.artist?.fields.artistDescription),
+      artistDescription: entry.fields.artist?.fields.artistDescription,
     }
   }
 }

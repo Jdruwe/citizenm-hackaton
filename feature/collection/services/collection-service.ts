@@ -1,5 +1,4 @@
 import type { Entry, EntrySkeletonType, ResolvedField, ResourceLink } from 'contentful'
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import {
   type TypeArtSkeleton,
   type TypeContentCardSkeleton,
@@ -47,16 +46,11 @@ class CollectionService {
     // @ts-expect-error we cannot use 'WITHOUT_UNRESOLVABLE_LINKS' as otherwise links to other spaces are not shown
     const imageUrl = item.fields.media?.fields.asset?.fields.file?.url as string
 
-    let text
-    if (item.fields.description) {
-      text = documentToHtmlString(item.fields.description)
-    }
-
     return {
       image: imageUrl,
       title: item.fields.title,
-      ...(text && { text }),
-      ...(text && { htmlText: true }),
+      ...(item.fields.description && { text: item.fields.description }),
+      ...(item.fields.description && { richText: true }),
     }
   }
 
@@ -81,7 +75,7 @@ class CollectionService {
         image: art.image,
         title: art.name,
         text: art.artistDescription,
-        htmlText: true,
+        richText: true,
       }
     }
     else {
