@@ -13,7 +13,7 @@ const link = `https://maps.google.com/?q=${lat},${lon}`
 </script>
 
 <template>
-  <a :href="link" target="_blank" class="inline-block cursor-pointer mb-4 bg-green-100 p-5 rounded-md">
+  <a :href="link" target="_blank" class="inline-block cursor-pointer mb-4 bg-red-200 p-5 rounded-md">
     {{ street }} {{ postalCode }} {{ city }}
   </a>
 </template>
