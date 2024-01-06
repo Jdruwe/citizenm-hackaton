@@ -16,7 +16,9 @@ class HotelService {
     return await this.hotelRepository.getHotelByCrn(crn)
   }
 
-  // TODO: getHotels
+  public async getHotels(): Promise<Hotel[]> {
+    return await this.hotelRepository.getHotels()
+  }
 }
 
 export { HotelService }

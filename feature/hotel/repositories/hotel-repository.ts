@@ -48,6 +48,12 @@ class HotelRepository {
     return null
   }
 
+  public async getHotels(): Promise<Hotel[]> {
+    const hotels: Hotel[] = []
+    // TODO: implement
+    return hotels
+  }
+
   private async getHotelResource(pageType: Entry<MarketingTypeHotelSkeleton>) {
     if (isTypeHotel(pageType)) {
       const resourceLink = pageType.fields.hotelMasterdata?.sys as ResourceLink
