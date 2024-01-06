@@ -9,6 +9,7 @@ import type {
   TypeCitySkeleton,
   TypeContinentSkeleton,
   TypeCountrySkeleton,
+  TypeFaqSkeleton,
   TypeLocationSkeleton,
 } from '../../../types/contentful/masterdata'
 import { getContentfulConnector } from '../../content/connectors/contenful/contentful-connector'
@@ -79,6 +80,7 @@ class HotelRepository {
     const city = location.fields.city as Entry<TypeCitySkeleton>
     const country = city.fields.country as Entry<TypeCountrySkeleton>
     const continent = country.fields.continent as Entry<TypeContinentSkeleton>
+    const faqs = entry.fields.faqs as Entry<TypeFaqSkeleton>[] | undefined
 
     // @ts-expect-error we cannot use 'WITHOUT_UNRESOLVABLE_LINKS' as otherwise links to other spaces are not shown
     const heroImageUrl = entry.fields.heroImage?.fields.asset?.fields.file?.url
@@ -96,6 +98,10 @@ class HotelRepository {
         country: country.fields.name,
         continent: continent.fields.name,
       },
+      ...(faqs && { faqs: faqs.map(faq => ({
+        question: faq.fields.question,
+        answer: faq.fields.answer,
+      })) }),
     }
   }
 }

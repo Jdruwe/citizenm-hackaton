@@ -1,4 +1,5 @@
 import type { Entry, EntrySkeletonType, ResolvedField, ResourceLink } from 'contentful'
+import type { Document } from '@contentful/rich-text-types'
 import {
   type TypeArtSkeleton,
   type TypeContentCardSkeleton,
@@ -45,12 +46,13 @@ class CollectionService {
   private mapContentCardToItem(item: Entry<TypeContentCardSkeleton, undefined, string>): Item {
     // @ts-expect-error we cannot use 'WITHOUT_UNRESOLVABLE_LINKS' as otherwise links to other spaces are not shown
     const imageUrl = item.fields.media?.fields.asset?.fields.file?.url as string
+    const description = item.fields.description as Document | undefined
 
     return {
       image: imageUrl,
       title: item.fields.title,
-      ...(item.fields.description && { text: item.fields.description }),
-      ...(item.fields.description && { richText: true }),
+      ...(description && { text: description }),
+      ...(description && { richText: true }),
     }
   }
 

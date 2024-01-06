@@ -1,3 +1,5 @@
+import type { Document } from '@contentful/rich-text-types'
+
 export interface Hotel {
   name: string
   shortDescription: string
@@ -10,4 +12,10 @@ export interface Hotel {
     country: string
     continent: string
   }
+  faqs?: Faq[]
+}
+
+export interface Faq {
+  question: string
+  answer: Document
 }

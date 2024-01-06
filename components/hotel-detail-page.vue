@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { HotelService } from '~/feature/hotel/services/hotel-service'
+import Faq from '~/components/faq.vue'
 
 interface Props {
   slug: string
@@ -28,7 +29,7 @@ if (!data.value) {
 </script>
 
 <template>
-  <section v-if="data" class="bg-white dark:bg-gray-900">
+  <section v-if="data" class="bg-white dark:bg-gray-900 mb-10">
     <div class="grid mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
       <div class="mr-auto place-self-center lg:col-span-7">
         <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
@@ -42,5 +43,6 @@ if (!data.value) {
         <NuxtImg provider="contentful" :src="data?.mainImage" alt="" width="600" height="600" />
       </div>
     </div>
+    <Faq v-if="data.faqs" :faqs="data.faqs" />
   </section>
 </template>
