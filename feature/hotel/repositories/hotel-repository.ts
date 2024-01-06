@@ -4,7 +4,13 @@ import {
   type TypePageSkeleton,
   isTypeHotel,
 } from '../../../types/contentful/marketing'
-import type { TypeHotelSkeleton as MasterTypeHotelSkeleton } from '../../../types/contentful/masterdata'
+import type {
+  TypeHotelSkeleton as MasterTypeHotelSkeleton,
+  TypeCitySkeleton,
+  TypeContinentSkeleton,
+  TypeCountrySkeleton,
+  TypeLocationSkeleton,
+} from '../../../types/contentful/masterdata'
 import { getContentfulConnector } from '../../content/connectors/contenful/contentful-connector'
 import type { Hotel } from '../types/hotel.types'
 
@@ -14,7 +20,6 @@ class HotelRepository {
     const match = crn.match(regex)
 
     if (match) {
-      // TODO: check include level
       const resource = await getContentfulConnector('masterdata')
         .getEntry<MasterTypeHotelSkeleton>(match[1], { include: 4 })
       if (resource) {
@@ -50,7 +55,12 @@ class HotelRepository {
 
   public async getHotels(): Promise<Hotel[]> {
     const hotels: Hotel[] = []
-    // TODO: implement
+    const hotelEntryCollection = await getContentfulConnector('masterdata')
+      .getEntries<MasterTypeHotelSkeleton>({ content_type: 'hotel', include: 4,
+      })
+    for (const entry of hotelEntryCollection.items) {
+      hotels.push(this.mapToHotel(entry))
+    }
     return hotels
   }
 
@@ -65,6 +75,11 @@ class HotelRepository {
   }
 
   private mapToHotel(entry: Entry<MasterTypeHotelSkeleton>): Hotel {
+    const location = entry.fields.location as Entry<TypeLocationSkeleton>
+    const city = location.fields.city as Entry<TypeCitySkeleton>
+    const country = city.fields.country as Entry<TypeCountrySkeleton>
+    const continent = country.fields.continent as Entry<TypeContinentSkeleton>
+
     // @ts-expect-error we cannot use 'WITHOUT_UNRESOLVABLE_LINKS' as otherwise links to other spaces are not shown
     const heroImageUrl = entry.fields.heroImage?.fields.asset?.fields.file?.url
     // @ts-expect-error we cannot use 'WITHOUT_UNRESOLVABLE_LINKS' as otherwise links to other spaces are not shown
@@ -74,6 +89,13 @@ class HotelRepository {
       shortDescription: entry.fields.shortDescription as string,
       heroImage: heroImageUrl,
       ...(mainImageUrl && { mainImage: mainImageUrl }),
+      location: {
+        lat: location.fields.coordinates.lat,
+        lon: location.fields.coordinates.lon,
+        city: city.fields.name,
+        country: country.fields.name,
+        continent: continent.fields.name,
+      },
     }
   }
 }
