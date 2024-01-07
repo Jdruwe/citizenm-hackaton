@@ -3,6 +3,7 @@ import RichText from 'contentful-rich-text-vue-renderer'
 import { BLOCKS } from '@contentful/rich-text-types'
 import type { Faq } from '~/feature/hotel/types/hotel.types'
 import Location from '~/components/location.vue'
+import { isTypeLocation } from '~/types/contentful/masterdata'
 
 interface Props {
   faqs: Faq[]
@@ -16,17 +17,19 @@ function renderNodes() {
       return h('h4', { class: 'font-extrabold mb-4' }, node.content[0].value)
     },
     [BLOCKS.EMBEDDED_ENTRY]: (node: any) => {
-      const fields = node.data.target.fields
-      return h(Location, {
-        isRichTextEmbedded: true,
-        data: {
-          city: fields.city.fields.name,
-          street: fields.street,
-          postalCode: fields.postalCode,
-          lat: fields.coordinates.lat,
-          lon: fields.coordinates.lon,
-        },
-      })
+      if (isTypeLocation(node.data.target)) {
+        const fields = node.data.target.fields
+        return h(Location, {
+          isRichTextEmbedded: true,
+          data: {
+            city: fields.city.fields.name,
+            street: fields.street,
+            postalCode: fields.postalCode,
+            lat: fields.coordinates.lat,
+            lon: fields.coordinates.lon,
+          },
+        })
+      }
     },
   }
 }
@@ -37,18 +40,18 @@ function renderNodes() {
     <h2 class="mb-6 lg:mb-8 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
       Frequently asked questions
     </h2>
-    <div v-for="(faq, index) in faqs" :key="index">
-      <div
-        id="accordion-flush" data-accordion="collapse"
-        data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
-        data-inactive-classes="text-gray-500 dark:text-gray-400"
-      >
-        <h2 id="accordion-flush-heading-1">
+    <div
+      id="accordion-flush" data-accordion="collapse"
+      data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+      data-inactive-classes="text-gray-500 dark:text-gray-400"
+    >
+      <div v-for="(faq, index) in faqs" :key="index">
+        <h2 :id="`accordion-flush-heading-${index}`">
           <button
             type="button"
             class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
-            data-accordion-target="#accordion-flush-body-1" aria-expanded="false"
-            aria-controls="accordion-flush-body-1"
+            :data-accordion-target="`#accordion-flush-body-${index}`" aria-expanded="false"
+            :aria-controls="`accordion-flush-body-${index}`"
           >
             <span>{{ faq.question }}</span>
             <svg
@@ -63,7 +66,7 @@ function renderNodes() {
             </svg>
           </button>
         </h2>
-        <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+        <div :id="`accordion-flush-body-${index}`" class="hidden" :aria-labelledby="`accordion-flush-heading-${index}`">
           <div class="py-5 border-b border-gray-200 dark:border-gray-700">
             <RichText :document="faq.answer" :node-renderers="renderNodes()" />
           </div>
