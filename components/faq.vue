@@ -18,11 +18,14 @@ function renderNodes() {
     [BLOCKS.EMBEDDED_ENTRY]: (node: any) => {
       const fields = node.data.target.fields
       return h(Location, {
-        city: fields.city.fields.name,
-        street: fields.street,
-        postalCode: fields.postalCode,
-        lat: fields.coordinates.lat,
-        lon: fields.coordinates.lon,
+        isRichTextEmbedded: true,
+        data: {
+          city: fields.city.fields.name,
+          street: fields.street,
+          postalCode: fields.postalCode,
+          lat: fields.coordinates.lat,
+          lon: fields.coordinates.lon,
+        },
       })
     },
   }

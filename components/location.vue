@@ -1,19 +1,23 @@
 <script setup lang="ts">
 interface Props {
-  street: string
-  postalCode: string
-  city: string
-  lon: number
-  lat: number
+  isRichTextEmbedded?: boolean
+  data: {
+    street: string
+    postalCode: string
+    city: string
+    lon: number
+    lat: number
+  }
 }
 
-const { street, postalCode, city, lat, lon } = defineProps<Props>()
+const { data, isRichTextEmbedded } = defineProps<Props>()
+const { street, postalCode, city, lat, lon } = data
 
 const link = `https://maps.google.com/?q=${lat},${lon}`
 </script>
 
 <template>
-  <a :href="link" target="_blank" class="inline-block cursor-pointer mb-4 bg-red-200 p-5 rounded-md">
+  <a v-if="isRichTextEmbedded" :href="link" target="_blank" class="inline-block cursor-pointer mb-4 bg-red-200 p-5 rounded-md">
     {{ street }} {{ postalCode }} {{ city }}
   </a>
 </template>
