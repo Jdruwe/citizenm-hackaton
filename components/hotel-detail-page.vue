@@ -43,7 +43,14 @@ if (!data.value) {
         <NuxtImg provider="contentful" :src="data?.mainImage" alt="" width="600" height="600" />
       </div>
     </div>
-    <Location v-if="data.location" :is-rich-text-embedded="false" :data="data.location" />
-    <Faq v-if="data.faqs" :faqs="data.faqs" />
+    <div class="mb-10">
+      <h2 class="mb-6 lg:mb-8 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+        Where can you find us?
+      </h2>
+      <Location v-if="data.location" :is-rich-text-embedded="false" :data="data.location" />
+    </div>
+    <div class="mb-4">
+      <Faq v-if="data.faqs" :faqs="data.faqs" />
+    </div>
   </section>
 </template>
