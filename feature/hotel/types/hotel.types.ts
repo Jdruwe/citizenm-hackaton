@@ -5,17 +5,21 @@ export interface Hotel {
   shortDescription: string
   heroImage: string
   mainImage?: string
-  location: {
-    lat: number
-    lon: number
-    city: string
-    country: string
-    continent: string
-  }
+  location: Location
   faqs?: Faq[]
 }
 
 export interface Faq {
   question: string
   answer: Document
+}
+
+export interface Location {
+  lat: number
+  lon: number
+  street: string
+  postalCode: string
+  city: string
+  country: string
+  continent: string
 }

@@ -97,6 +97,8 @@ class HotelRepository {
         city: city.fields.name,
         country: country.fields.name,
         continent: continent.fields.name,
+        street: location.fields.street,
+        postalCode: location.fields.postalCode,
       },
       ...(faqs && { faqs: faqs.map(faq => ({
         question: faq.fields.question,

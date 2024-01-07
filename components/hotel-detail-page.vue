@@ -43,6 +43,7 @@ if (!data.value) {
         <NuxtImg provider="contentful" :src="data?.mainImage" alt="" width="600" height="600" />
       </div>
     </div>
+    <Location v-if="data.location" :is-rich-text-embedded="false" :data="data.location" />
     <Faq v-if="data.faqs" :faqs="data.faqs" />
   </section>
 </template>
