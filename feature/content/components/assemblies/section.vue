@@ -4,12 +4,12 @@ import ContentComponentMapper from '~/feature/content/components/mapper/content-
 import Section from '~/components/section.vue'
 
 interface Props {
-  data: TypeSection<undefined, string>
+  data: TypeSection<'WITHOUT_UNRESOLVABLE_LINKS', string>
 }
 
 const { data } = defineProps<Props>()
 
-function getMappedContent(data: TypeSection<undefined, string>) {
+function getMappedContent(data: TypeSection<'WITHOUT_UNRESOLVABLE_LINKS', string>) {
   if (Array.isArray(data.fields.content)) {
     return data.fields.content
   }

@@ -25,18 +25,15 @@ function mapContentCardToItem(item: Entry<TypeContentCardSkeleton, 'WITHOUT_UNRE
   const { media, description } = item.fields
   if (media) {
     if (isTypeImage(media)) {
-      const asset = media.fields.asset
-      if (asset) {
-        const file = asset.fields.file
-        if (file) {
-          return {
-            id: generateId(),
-            type: 'contentCard',
-            image: file.url,
-            title: item.fields.title,
-            ...(description && { text: description }),
-            ...(description && { richText: true }),
-          }
+      const assetUrl = media.fields.asset?.fields.file?.url
+      if (assetUrl) {
+        return {
+          id: generateId(),
+          type: 'contentCard',
+          image: assetUrl,
+          title: item.fields.title,
+          ...(description && { text: description }),
+          ...(description && { richText: true }),
         }
       }
     }

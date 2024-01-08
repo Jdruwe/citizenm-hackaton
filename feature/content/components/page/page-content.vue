@@ -35,7 +35,7 @@ const isContentCanvas = contentCanvas && isTypeContentCanvas(contentCanvas)
 
 <template>
   <ContentComponentMapper
-    v-if="isTypeContentCanvas"
+    v-if="isContentCanvas"
     :data="contentCanvas"
   />
 </template>
