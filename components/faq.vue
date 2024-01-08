@@ -36,7 +36,7 @@ function renderNodes() {
 </script>
 
 <template>
-  <h2 class="mb-2 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900">
+  <h2 class="mb-2 text-3xl lg:text-5xl tracking-tight font-extrabold text-gray-900">
     you have questions, we have answers
   </h2>
   <div
@@ -52,7 +52,7 @@ function renderNodes() {
           :data-accordion-target="`#accordion-flush-body-${index}`" aria-expanded="false"
           :aria-controls="`accordion-flush-body-${index}`"
         >
-          <span class="font-extrabold md:ml-16">{{ faq.question }}</span>
+          <span class="font-extrabold md:ml-16 text-xl">{{ faq.question }}</span>
           <svg
             data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ function renderNodes() {
         </button>
       </h2>
       <div :id="`accordion-flush-body-${index}`" class="hidden" :aria-labelledby="`accordion-flush-heading-${index}`">
-        <div class="py-5 border-b border-gray-200">
+        <div class="py-5 border-b border-gray-400">
           <div class="md:ml-16">
             <RichText :document="faq.answer" :node-renderers="renderNodes()" />
           </div>
