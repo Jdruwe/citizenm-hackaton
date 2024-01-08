@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import HotelDetailPage from '~/components/hotel-detail-page.vue'
+import HotelDetail from '~/feature/hotel/components/hotel-detail.vue'
 </script>
 
 <template>
-  <HotelDetailPage :slug="$route.params.slug" />
+  <HotelDetail :slug="$route.params.slug" />
 </template>
