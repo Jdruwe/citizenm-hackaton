@@ -17,7 +17,7 @@ const { items } = defineProps<Props>()
 function renderNodes() {
   return {
     [BLOCKS.HEADING_4]: (node: any) => {
-      return h('h4', { class: 'font-extrabold mb-4' }, node.content[0].value)
+      return h('h4', { class: 'font-extrabold my-3' }, node.content[0].value)
     },
     [BLOCKS.EMBEDDED_ENTRY]: (node: any) => {
       if (isTypeLocation(node.data.target)) {
