@@ -16,14 +16,6 @@ const { data: items } = await useAsyncData('collectionItems', () => {
 function isSlider() {
   return data.fields.displayAs === 'slider'
 }
-
-function isGrid() {
-  return data.fields.displayAs === 'list'
-}
-
-function isList() {
-  return data.fields.displayAs === 'grid'
-}
 </script>
 
 <template>

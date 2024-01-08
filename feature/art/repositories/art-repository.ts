@@ -9,9 +9,8 @@ class ArtRepository {
     const match = crn.match(regex)
 
     if (match) {
-      // TODO: check include level
       const resource = await getContentfulConnector('masterdata')
-        .getEntry<TypeArtSkeleton>(match[1], { include: 4 })
+        .getEntry<TypeArtSkeleton>(match[1], { include: 1 })
       if (resource) {
         return this.mapToArt(resource)
       }
