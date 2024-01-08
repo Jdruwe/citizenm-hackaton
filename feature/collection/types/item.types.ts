@@ -5,5 +5,4 @@ export interface Item {
   title: string
   text?: string | Document
   richText?: boolean
-  link?: string
 }

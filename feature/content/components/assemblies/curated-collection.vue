@@ -3,7 +3,7 @@ import type { TypeCuratedCollection } from '~/types/contentful/marketing'
 import { CollectionService } from '~/feature/collection/services/collection-service'
 
 interface Props {
-  data: TypeCuratedCollection<undefined, string>
+  data: TypeCuratedCollection<'WITHOUT_UNRESOLVABLE_LINKS', string>
 }
 
 const { data } = defineProps<Props>()

@@ -79,11 +79,15 @@ class HotelRepository {
   private mapToContentfulHotel(
     marketingData: Entry<MarketingTypeHotelSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>,
     masterData: Entry<MasterTypeHotelSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>,
-  ): ContentfulHotel {
-    return {
-      marketing: marketingData,
-      master: mapToHotel(masterData),
+  ): ContentfulHotel | null {
+    const mappedHotel = mapToHotel(masterData)
+    if (mappedHotel) {
+      return {
+        marketing: marketingData,
+        master: mappedHotel,
+      }
     }
+    return null
   }
 }
 

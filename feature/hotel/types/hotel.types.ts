@@ -10,9 +10,9 @@ export interface ContentfulHotel {
 export interface Hotel {
   name: string
   shortDescription: string
-  heroImage?: string
+  heroImage: string
+  location: Location
   mainImage?: string
-  location?: Location
   faqs?: FaqItem[]
 }
 

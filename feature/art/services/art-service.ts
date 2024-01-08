@@ -8,8 +8,8 @@ class ArtService {
     this.artRepository = new ArtRepository()
   }
 
-  public async getArtByCrn(crn: string): Promise<Art | null> {
-    return await this.artRepository.getArtByCrn(crn)
+  public async getArtById(id: string): Promise<Art | null> {
+    return await this.artRepository.getArtById(id)
   }
 }
 
