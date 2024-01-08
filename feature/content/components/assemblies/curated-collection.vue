@@ -20,6 +20,6 @@ function isSlider() {
 
 <template>
   <template v-if="isSlider">
-    <Slider :items="items" />
+    <Slider :items="items" :title="data.fields.collectionTitle" />
   </template>
 </template>

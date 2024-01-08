@@ -11,10 +11,12 @@ export default {
   ],
   theme: {
     fontFamily: {
-      sans: ['Chalet-NewYorkNineteenSixty', 'ui-sans-serif', 'system-ui'],
+      sans: ['Chalet-LondonNineteenSixty', 'ui-sans-serif', 'system-ui'],
+      headings: ['Chalet-NewYorkNineteenSixty'],
     },
   },
   plugins: [
     require('flowbite/plugin'),
+    require('@tailwindcss/typography'),
   ],
 }
