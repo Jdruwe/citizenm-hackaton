@@ -36,19 +36,19 @@ function renderNodes() {
 </script>
 
 <template>
-  <h2 class="mb-2 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white max-w-md">
+  <h2 class="mb-2 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900">
     you have questions, we have answers
   </h2>
   <div
     id="accordion-flush" data-accordion="collapse"
-    data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
-    data-inactive-classes="text-gray-500 dark:text-gray-400"
+    data-active-classes="bg-white text-gray-900"
+    data-inactive-classes="text-gray-900"
   >
     <div v-for="(faq, index) in faqs" :key="index">
       <h2 :id="`accordion-flush-heading-${index}`">
         <button
           type="button"
-          class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+          class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-900 bg-white border-b border-gray-200"
           :data-accordion-target="`#accordion-flush-body-${index}`" aria-expanded="false"
           :aria-controls="`accordion-flush-body-${index}`"
         >
