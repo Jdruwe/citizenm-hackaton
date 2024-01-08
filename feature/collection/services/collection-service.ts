@@ -1,5 +1,4 @@
-import type { Entry, EntrySkeletonType, ResolvedField, ResourceLink } from 'contentful'
-import type { Document } from '@contentful/rich-text-types'
+import type { Entry, EntrySkeletonType, ResolvedField } from 'contentful'
 import {
   type TypeArtSkeleton,
   type TypeContentCardSkeleton,
@@ -12,6 +11,7 @@ import {
 import { HotelService } from '~/feature/hotel/services/hotel-service'
 import type { Item } from '~/feature/collection/types/item.types'
 import { ArtService } from '~/feature/art/services/art-service'
+import { mapArtToItem, mapContentCardToItem, mapHotelToItem } from '~/feature/collection/mapper/item-mapper'
 
 class CollectionService {
   private readonly hotelService
@@ -22,67 +22,33 @@ class CollectionService {
     this.artService = new ArtService()
   }
 
-  public async mapItems(items: ResolvedField<TypeCuratedCollectionSkeleton['fields']['items'], undefined, string>) {
+  public async mapItems(items: ResolvedField<TypeCuratedCollectionSkeleton['fields']['items'], 'WITHOUT_UNRESOLVABLE_LINKS', string>) {
     const mappedItems: Item[] = []
     for (const item of items) {
       if (item) {
-        if (isTypeHotel(item as Entry<EntrySkeletonType, undefined, string>)) {
-          const mappedItem = await this.mapHotelToItem(item as Entry<TypeHotelSkeleton, undefined, string>)
+        if (isTypeHotel(item as Entry<EntrySkeletonType, 'WITHOUT_UNRESOLVABLE_LINKS', string>)) {
+          const id = (item as Entry<TypeHotelSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>).fields.hotelMasterdata?.sys.id
+          if (id) {
+            const hotel = await this.hotelService.getHotelById(id)
+            const mappedItem = hotel && await mapHotelToItem(hotel)
+            mappedItem && mappedItems.push(mappedItem)
+          }
+        }
+        if (isTypeContentCard(item as Entry<EntrySkeletonType, 'WITHOUT_UNRESOLVABLE_LINKS', string>)) {
+          const mappedItem = mapContentCardToItem(item as Entry<TypeContentCardSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>)
           mappedItem && mappedItems.push(mappedItem)
         }
-        if (isTypeContentCard(item as Entry<EntrySkeletonType, undefined, string>)) {
-          const mappedItem = await this.mapContentCardToItem(item as Entry<TypeContentCardSkeleton, undefined, string>)
-          mappedItem && mappedItems.push(mappedItem)
-        }
-        if (isTypeArt(item as Entry<EntrySkeletonType, undefined, string>)) {
-          const mappedItem = await this.mapArtToItem(item as Entry<TypeArtSkeleton, undefined, string>)
-          mappedItem && mappedItems.push(mappedItem)
+        if (isTypeArt(item as Entry<EntrySkeletonType, 'WITHOUT_UNRESOLVABLE_LINKS', string>)) {
+          const id = (item as Entry<TypeArtSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>).fields.artMasterdata?.sys.id
+          if (id) {
+            const art = await this.artService.getArtById(id)
+            const mappedItem = art && await mapArtToItem(art)
+            mappedItem && mappedItems.push(mappedItem)
+          }
         }
       }
     }
     return mappedItems
-  }
-
-  private mapContentCardToItem(item: Entry<TypeContentCardSkeleton, undefined, string>): Item {
-    // @ts-expect-error we cannot use 'WITHOUT_UNRESOLVABLE_LINKS' as otherwise links to other spaces are not shown
-    const imageUrl = item.fields.media?.fields.asset?.fields.file?.url as string
-    const description = item.fields.description as Document | undefined
-
-    return {
-      image: imageUrl,
-      title: item.fields.title,
-      ...(description && { text: description }),
-      ...(description && { richText: true }),
-    }
-  }
-
-  private async mapHotelToItem(item: Entry<TypeHotelSkeleton, undefined, string>): Promise<Item | null> {
-    const hotel = await this.hotelService.getHotelByCrn((item.fields.hotelMasterdata?.sys as ResourceLink).urn)
-    if (hotel) {
-      return {
-        image: hotel.heroImage,
-        title: hotel.name,
-        text: hotel.shortDescription,
-      }
-    }
-    else {
-      return null
-    }
-  }
-
-  private async mapArtToItem(item: Entry<TypeArtSkeleton, undefined, string>): Promise<Item | null> {
-    const art = await this.artService.getArtByCrn((item.fields.artMasterdata?.sys as ResourceLink).urn)
-    if (art) {
-      return {
-        image: art.image,
-        title: art.name,
-        text: art.artistDescription,
-        richText: true,
-      }
-    }
-    else {
-      return null
-    }
   }
 }
 
