@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ContentfulPageConnector } from '~/feature/content/connectors/contenful/contentful-page-connector'
 import ContentComponentMapper from '~/feature/content/components/mapper/content-component-mapper.vue'
+import Section from '~/components/section.vue'
 
 interface Props {
   slug: string
@@ -31,7 +32,9 @@ const contentPage = data.value.fields.pageType
 </script>
 
 <template>
-  <ContentComponentMapper
-    :data="contentPage"
-  />
+  <Section>
+    <ContentComponentMapper
+      :data="contentPage"
+    />
+  </Section>
 </template>
