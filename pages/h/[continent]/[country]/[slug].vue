@@ -3,5 +3,5 @@ import HotelDetail from '~/feature/hotel/components/hotel-detail.vue'
 </script>
 
 <template>
-  <HotelDetail :slug="$route.params.slug" />
+  <HotelDetail :params="$route.params" />
 </template>

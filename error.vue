@@ -11,7 +11,7 @@ const { error } = defineProps<Props>()
 
 <template>
   <NuxtLayout>
-    <section>
+    <Section>
       <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-primary-600 dark:text-primary-500 mt-10">
         error {{ error.statusCode }}
       </h1>
@@ -21,6 +21,6 @@ const { error } = defineProps<Props>()
       <NuxtLink to="/" class="inline-block bg-red-600 text-white rounded-md p-4">
         home
       </NuxtLink>
-    </section>
+    </Section>
   </NuxtLayout>
 </template>
