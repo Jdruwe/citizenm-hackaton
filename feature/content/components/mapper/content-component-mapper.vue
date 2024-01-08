@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Entry, EntrySkeletonType } from 'contentful'
-import { isTypeContentCanvas, isTypeCuratedCollection, isTypeSection } from '../../../../types/contentful/marketing'
+import { isTypeContentCanvas, isTypeCuratedCollection, isTypeSection } from '~/types/contentful/marketing'
 import Section from '~/feature/content/components/assemblies/section.vue'
 import CuratedCollection from '~/feature/content/components/assemblies/curated-collection.vue'
 import ContentCanvas from '~/feature/content/components/assemblies/content-canvas.vue'

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { TypeSection } from '~/types/contentful/marketing'
 import ContentComponentMapper from '~/feature/content/components/mapper/content-component-mapper.vue'
+import Section from '~/components/section.vue'
 
 interface Props {
   data: TypeSection<undefined, string>
@@ -21,11 +22,11 @@ const mappedContent = getMappedContent(data)
 </script>
 
 <template>
-  <div class="mb-10">
-    <template v-for="content in mappedContent">
+  <Section>
+    <template v-for="(content, index) in mappedContent" :key="index">
       <ContentComponentMapper
         :data="content"
       />
     </template>
-  </div>
+  </Section>
 </template>
