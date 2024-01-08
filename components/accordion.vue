@@ -1,15 +1,18 @@
 <script setup lang="ts">
 import RichText from 'contentful-rich-text-vue-renderer'
 import { BLOCKS } from '@contentful/rich-text-types'
-import type { FaqItem } from '~/feature/hotel/types/hotel.types'
 import Location from '~/components/location.vue'
 import { isTypeLocation } from '~/types/contentful/masterdata'
 
 interface Props {
-  faqs: FaqItem[]
+  items: {
+    title: string
+    text: string
+    isRichText: boolean
+  }[]
 }
 
-const { faqs } = defineProps<Props>()
+const { items } = defineProps<Props>()
 
 function renderNodes() {
   return {
@@ -44,7 +47,7 @@ function renderNodes() {
     data-active-classes="bg-white text-gray-900"
     data-inactive-classes="text-gray-900"
   >
-    <div v-for="(faq, index) in faqs" :key="index">
+    <div v-for="(item, index) in items" :key="index">
       <h2 :id="`accordion-flush-heading-${index}`">
         <button
           type="button"
@@ -52,7 +55,7 @@ function renderNodes() {
           :data-accordion-target="`#accordion-flush-body-${index}`" aria-expanded="false"
           :aria-controls="`accordion-flush-body-${index}`"
         >
-          <span class="font-extrabold md:ml-16 text-xl">{{ faq.question }}</span>
+          <span class="font-extrabold md:ml-16 text-xl">{{ item.title }}</span>
           <svg
             data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +71,8 @@ function renderNodes() {
       <div :id="`accordion-flush-body-${index}`" class="hidden" :aria-labelledby="`accordion-flush-heading-${index}`">
         <div class="py-5 border-b border-gray-400">
           <div class="md:ml-16">
-            <RichText :document="faq.answer" :node-renderers="renderNodes()" />
+            <RichText v-if="item.isRichText" :document="item.text" :node-renderers="renderNodes()" />
+            <span v-else>{{ item.text }}</span>
           </div>
         </div>
       </div>

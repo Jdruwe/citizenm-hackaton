@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { HotelService } from '~/feature/hotel/services/hotel-service'
-import Faq from '~/components/faq.vue'
+import Accordion from '~/components/accordion.vue'
 
 interface Props {
   params: {
@@ -39,6 +39,14 @@ function isHotelMatchingUrl(): boolean {
     && hotel.value?.master?.location?.city.toLowerCase().replace(/\s+/g, '-') === params.city
   )
 }
+
+const accordionItems = hotel.value.master?.faqs?.map((faq) => {
+  return {
+    title: faq.question,
+    text: faq.answer,
+    isRichText: true,
+  }
+})
 </script>
 
 <template>
@@ -63,7 +71,7 @@ function isHotelMatchingUrl(): boolean {
       <Location v-if="hotel.master.location" :is-rich-text-embedded="false" :data="hotel.master.location" />
     </div>
     <div class="mx-auto w-full md:max-w-screen-md">
-      <Faq v-if="hotel.master.faqs" :faqs="hotel.master.faqs" />
+      <Accordion v-if="hotel.master.faqs" :items="accordionItems" />
     </div>
   </Section>
 </template>
