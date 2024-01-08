@@ -3679,7 +3679,7 @@
         "id": "hotel",
         "type": "ContentType",
         "createdAt": "2024-01-04T09:48:36.735Z",
-        "updatedAt": "2024-01-04T09:55:07.682Z",
+        "updatedAt": "2024-01-08T09:37:48.021Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3687,8 +3687,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2024-01-04T09:55:07.682Z",
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-08T09:37:48.021Z",
         "firstPublishedAt": "2024-01-04T09:48:37.048Z",
         "createdBy": {
           "sys": {
@@ -3701,16 +3701,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 2,
-        "version": 4,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         }
       },
@@ -3751,6 +3751,23 @@
               ]
             }
           ]
+        },
+        {
+          "id": "highlightReel",
+          "name": "Highlight reel",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "curatedCollection"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
         }
       ]
     },
@@ -3766,7 +3783,7 @@
         "id": "curatedCollection",
         "type": "ContentType",
         "createdAt": "2024-01-05T09:08:24.881Z",
-        "updatedAt": "2024-01-05T13:15:45.450Z",
+        "updatedAt": "2024-01-08T09:44:47.381Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3774,8 +3791,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 15,
-        "publishedAt": "2024-01-05T13:15:45.450Z",
+        "publishedVersion": 19,
+        "publishedAt": "2024-01-08T09:44:47.381Z",
         "firstPublishedAt": "2024-01-05T09:08:25.186Z",
         "createdBy": {
           "sys": {
@@ -3788,16 +3805,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 8,
-        "version": 16,
+        "publishedCounter": 10,
+        "version": 20,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         }
       },
@@ -3847,7 +3864,9 @@
                 "linkContentType": [
                   "hotel",
                   "contentCard",
-                  "art"
+                  "art",
+                  "contentCanvas",
+                  "experience"
                 ]
               }
             ],
@@ -4099,6 +4118,90 @@
           }
         }
       }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "experience",
+        "type": "ContentType",
+        "createdAt": "2024-01-08T09:44:27.885Z",
+        "updatedAt": "2024-01-08T11:29:47.904Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-08T11:29:47.904Z",
+        "firstPublishedAt": "2024-01-08T09:44:28.201Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "💡 Experience",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "experienceMasterdata",
+          "name": "Experience masterdata",
+          "type": "ResourceLink",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "allowedResources": [
+            {
+              "type": "Contentful:Entry",
+              "source": "crn:contentful:::content:spaces/fzp55rkrsa7v",
+              "contentTypes": [
+                "experience"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "tags": [
@@ -6135,7 +6238,7 @@
             "linkType": "Space"
           }
         },
-        "version": 4,
+        "version": 6,
         "createdAt": "2024-01-04T09:48:37.239Z",
         "createdBy": {
           "sys": {
@@ -6144,10 +6247,10 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-04T09:55:08.492Z",
+        "updatedAt": "2024-01-08T09:37:48.745Z",
         "updatedBy": {
           "sys": {
-            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "id": "6QLLK1TTKYBTd5byaaUORL",
             "type": "Link",
             "linkType": "User"
           }
@@ -6177,6 +6280,11 @@
           "fieldId": "hotelMasterdata",
           "widgetId": "resourceLinkEditor",
           "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "highlightReel",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
         }
       ]
     },
@@ -6191,7 +6299,7 @@
             "linkType": "Space"
           }
         },
-        "version": 16,
+        "version": 20,
         "createdAt": "2024-01-05T09:08:25.339Z",
         "createdBy": {
           "sys": {
@@ -6200,10 +6308,10 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-05T13:15:46.320Z",
+        "updatedAt": "2024-01-08T09:44:48.087Z",
         "updatedBy": {
           "sys": {
-            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "id": "6QLLK1TTKYBTd5byaaUORL",
             "type": "Link",
             "linkType": "User"
           }
@@ -6441,6 +6549,62 @@
           "widgetNamespace": "builtin"
         }
       ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "o3fhy4qi3ji7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-01-08T09:44:28.365Z",
+        "createdBy": {
+          "sys": {
+            "id": "6QLLK1TTKYBTd5byaaUORL",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-08T11:29:48.680Z",
+        "updatedBy": {
+          "sys": {
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "experience",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "experienceMasterdata",
+          "widgetId": "resourceLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
     }
   ],
   "entries": [
@@ -6460,7 +6624,7 @@
         "id": "31vyzg1b5zAbNnfwcNZ7N3",
         "type": "Entry",
         "createdAt": "2024-01-04T09:49:22.993Z",
-        "updatedAt": "2024-01-04T15:36:16.955Z",
+        "updatedAt": "2024-01-08T09:42:04.186Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -6468,8 +6632,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-01-04T15:36:16.955Z",
+        "publishedVersion": 9,
+        "publishedAt": "2024-01-08T09:42:04.186Z",
         "firstPublishedAt": "2024-01-04T09:49:37.301Z",
         "createdBy": {
           "sys": {
@@ -6485,8 +6649,8 @@
             "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 2,
-        "version": 6,
+        "publishedCounter": 4,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -6514,6 +6678,15 @@
               "type": "ResourceLink",
               "linkType": "Contentful:Entry",
               "urn": "crn:contentful:::content:spaces/fzp55rkrsa7v/environments/master/entries/7GrJJ8g9v9Mq7xtL9wIs1f"
+            }
+          }
+        },
+        "highlightReel": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1rQjmZDFkRaRBHiWs1iECQ"
             }
           }
         }
@@ -6800,7 +6973,7 @@
         "id": "1g4iDyBXHHFVWLWODY1dSq",
         "type": "Entry",
         "createdAt": "2024-01-05T09:11:57.259Z",
-        "updatedAt": "2024-01-05T09:14:49.781Z",
+        "updatedAt": "2024-01-06T07:24:42.223Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -6808,8 +6981,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-01-05T09:14:49.781Z",
+        "publishedVersion": 13,
+        "publishedAt": "2024-01-06T07:24:42.223Z",
         "firstPublishedAt": "2024-01-05T09:14:49.781Z",
         "createdBy": {
           "sys": {
@@ -6825,8 +6998,8 @@
             "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 4,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -6854,7 +7027,7 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "74X1T598xoQn7CC7Qvlanv"
+                "id": "4xJxrNQd2xcNROhdwyL21m"
               }
             }
           ]
@@ -7038,7 +7211,7 @@
         "id": "d0QS4JcoArrDb6FiuPKxb",
         "type": "Entry",
         "createdAt": "2024-01-05T10:39:19.694Z",
-        "updatedAt": "2024-01-05T10:46:43.997Z",
+        "updatedAt": "2024-01-06T07:08:44.367Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7046,8 +7219,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 15,
-        "publishedAt": "2024-01-05T10:46:43.997Z",
+        "publishedVersion": 16,
+        "publishedAt": "2024-01-06T07:08:44.367Z",
         "firstPublishedAt": "2024-01-05T10:46:43.997Z",
         "createdBy": {
           "sys": {
@@ -7060,16 +7233,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 1,
-        "version": 16,
+        "publishedCounter": 2,
+        "version": 17,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
         "automationTags": [
@@ -7221,7 +7394,7 @@
         "id": "6ebrZdt017V4kj3t1qo2tN",
         "type": "Entry",
         "createdAt": "2024-01-05T12:48:11.950Z",
-        "updatedAt": "2024-01-05T12:48:35.212Z",
+        "updatedAt": "2024-01-08T11:58:37.374Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7229,8 +7402,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2024-01-05T12:48:35.212Z",
+        "publishedVersion": 10,
+        "publishedAt": "2024-01-08T11:58:37.374Z",
         "firstPublishedAt": "2024-01-05T12:48:35.212Z",
         "createdBy": {
           "sys": {
@@ -7246,8 +7419,8 @@
             "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 4,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7269,6 +7442,15 @@
         "name": {
           "en-US": "Content canvas - Feature overview"
         },
+        "hero": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5WvQH8mpw1bamMckS3zCuw"
+            }
+          }
+        },
         "content": {
           "en-US": [
             {
@@ -7279,6 +7461,503 @@
               }
             }
           ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "6wBKaT3BQcGWI8dlMragzD",
+        "type": "Entry",
+        "createdAt": "2024-01-05T19:54:12.620Z",
+        "updatedAt": "2024-01-05T19:54:40.861Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-05T19:54:40.861Z",
+        "firstPublishedAt": "2024-01-05T19:54:40.861Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "section"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Section - Feature Overview Second Section"
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7Leg6RLkqlmwYpHi5zKzCK"
+              }
+            }
+          ]
+        },
+        "backgroundColour": {
+          "en-US": "White (default)"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "4xJxrNQd2xcNROhdwyL21m",
+        "type": "Entry",
+        "createdAt": "2024-01-06T06:33:08.163Z",
+        "updatedAt": "2024-01-06T08:30:17.054Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-01-06T08:30:17.054Z",
+        "firstPublishedAt": "2024-01-06T06:33:15.162Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "curatedCollection"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Curated collection - Mixed content Jeroen"
+        },
+        "collectionTitle": {
+          "en-US": "Experience NYC and Times Square"
+        },
+        "items": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "d0QS4JcoArrDb6FiuPKxb"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6caaofCPfh9TGZGeeSQfDZ"
+              }
+            }
+          ]
+        },
+        "displayAs": {
+          "en-US": "list"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "1rQjmZDFkRaRBHiWs1iECQ",
+        "type": "Entry",
+        "createdAt": "2024-01-08T09:39:47.915Z",
+        "updatedAt": "2024-01-08T11:54:41.262Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2024-01-08T11:54:41.262Z",
+        "firstPublishedAt": "2024-01-08T09:41:17.169Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "curatedCollection"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Curated collection - NYT Highlight Reel"
+        },
+        "collectionTitle": {
+          "en-US": "Must see in NYC"
+        },
+        "items": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6caaofCPfh9TGZGeeSQfDZ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3xcC1vYHST0JpqMx1nTGhN"
+              }
+            }
+          ]
+        },
+        "displayAs": {
+          "en-US": "slider"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "3xcC1vYHST0JpqMx1nTGhN",
+        "type": "Entry",
+        "createdAt": "2024-01-08T09:45:22.076Z",
+        "updatedAt": "2024-01-08T11:55:01.964Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2024-01-08T11:55:01.964Z",
+        "firstPublishedAt": "2024-01-08T09:45:31.818Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "experience"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Experience - NYC - Butcher's Daughter"
+        },
+        "experienceMasterdata": {
+          "en-US": {
+            "sys": {
+              "type": "ResourceLink",
+              "linkType": "Contentful:Entry",
+              "urn": "crn:contentful:::content:spaces/fzp55rkrsa7v/environments/master/entries/7vybvi5xfPppGKNHO04gqW"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "5WvQH8mpw1bamMckS3zCuw",
+        "type": "Entry",
+        "createdAt": "2024-01-08T11:54:09.265Z",
+        "updatedAt": "2024-01-08T11:58:07.835Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2024-01-08T11:58:07.835Z",
+        "firstPublishedAt": "2024-01-08T11:55:51.449Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hero"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Hero - NYT - Coworking"
+        },
+        "media": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2hbW13UXydaJ1ecO02GToK"
+            }
+          }
+        },
+        "title": {
+          "en-US": "co-work at citizenM New York"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "2hbW13UXydaJ1ecO02GToK",
+        "type": "Entry",
+        "createdAt": "2024-01-08T11:56:57.336Z",
+        "updatedAt": "2024-01-08T11:57:56.393Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2024-01-08T11:57:56.393Z",
+        "firstPublishedAt": "2024-01-08T11:57:42.484Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "image"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Image - NYT - Coworking"
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "61vQm5AD4mqlDamPVqwBLe"
+            }
+          }
+        },
+        "altText": {
+          "en-US": "Coworking at NY Times Square"
+        },
+        "caption": {
+          "en-US": "Cowork at NYT"
+        },
+        "focalPoint": {
+          "en-US": "center"
         }
       }
     }
@@ -7353,6 +8032,80 @@
               }
             },
             "fileName": "New-York-Times-Square-hotel-cloudM-colourful-designer-chairs-2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "61vQm5AD4mqlDamPVqwBLe",
+        "type": "Asset",
+        "createdAt": "2024-01-08T11:52:47.478Z",
+        "updatedAt": "2024-01-08T11:53:44.105Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2024-01-08T11:53:44.105Z",
+        "firstPublishedAt": "2024-01-08T11:53:44.105Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "NYT - Cowork - Hero image"
+        },
+        "description": {
+          "en-US": "Coworking hero image at NYT."
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/o3fhy4qi3ji7/61vQm5AD4mqlDamPVqwBLe/d78030a9cee8d4c034f44c3cc7a3e5df/Citizen_M_-_coworking.jpeg",
+            "details": {
+              "size": 2223267,
+              "image": {
+                "width": 2859,
+                "height": 3161
+              }
+            },
+            "fileName": "Citizen M - coworking.jpeg",
             "contentType": "image/jpeg"
           }
         }
