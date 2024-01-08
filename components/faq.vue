@@ -36,8 +36,8 @@ function renderNodes() {
 </script>
 
 <template>
-  <h2 class="mb-2 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-    Frequently asked questions
+  <h2 class="mb-2 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white max-w-md">
+    you have questions, we have answers
   </h2>
   <div
     id="accordion-flush" data-accordion="collapse"
