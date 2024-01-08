@@ -5,6 +5,7 @@ interface Props {
 }
 
 const { title } = defineProps<Props>()
+const uid = getCurrentInstance()?.uid
 </script>
 
 <template>
@@ -12,17 +13,18 @@ const { title } = defineProps<Props>()
     {{ title }}
   </h2>
   <div
-    id="accordion-flush" data-accordion="collapse"
+    :id="`accordion-flush-${uid}`"
+    data-accordion="collapse"
     data-active-classes="bg-white text-gray-900"
     data-inactive-classes="text-gray-900"
   >
     <div v-for="(item, index) in items" :key="index">
-      <h2 :id="`accordion-flush-heading-${index}`">
+      <h2 :id="`accordion-flush-heading-${uid}-${index}`">
         <button
           type="button"
           class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-900 bg-white border-b border-gray-200"
-          :data-accordion-target="`#accordion-flush-body-${index}`" aria-expanded="false"
-          :aria-controls="`accordion-flush-body-${index}`"
+          :data-accordion-target="`#accordion-flush-body-${uid}-${index}`" aria-expanded="false"
+          :aria-controls="`accordion-flush-body-${uid}-${index}`"
         >
           <span class="font-extrabold md:ml-16 text-xl">
             <slot name="title" v-bind="item" />
@@ -39,7 +41,7 @@ const { title } = defineProps<Props>()
           </svg>
         </button>
       </h2>
-      <div :id="`accordion-flush-body-${index}`" class="hidden" :aria-labelledby="`accordion-flush-heading-${index}`">
+      <div :id="`accordion-flush-body-${uid}-${index}`" class="hidden" :aria-labelledby="`accordion-flush-heading-${uid}-${index}`">
         <div class="py-5 border-b border-gray-200">
           <div class="md:ml-16">
             <slot name="content" v-bind="item" />
