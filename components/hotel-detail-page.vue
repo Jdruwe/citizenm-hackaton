@@ -49,7 +49,7 @@ if (!data.value) {
       </h2>
       <Location v-if="data.location" :is-rich-text-embedded="false" :data="data.location" />
     </div>
-    <div class="mb-4">
+    <div class="mx-auto w-full md:max-w-screen-md">
       <Faq v-if="data.faqs" :faqs="data.faqs" />
     </div>
   </Section>
