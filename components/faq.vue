@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import RichText from 'contentful-rich-text-vue-renderer'
 import { BLOCKS } from '@contentful/rich-text-types'
-import type { Faq } from '~/feature/hotel/types/hotel.types'
+import type { FaqItem } from '~/feature/hotel/types/hotel.types'
 import Location from '~/components/location.vue'
 import { isTypeLocation } from '~/types/contentful/masterdata'
 
 interface Props {
-  faqs: Faq[]
+  faqs: FaqItem[]
 }
 
 const { faqs } = defineProps<Props>()

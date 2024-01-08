@@ -16,6 +16,8 @@ export { isTypeCta } from "./TypeCta";
 export type { TypeCta, TypeCtaFields, TypeCtaSkeleton } from "./TypeCta";
 export { isTypeCuratedCollection } from "./TypeCuratedCollection";
 export type { TypeCuratedCollection, TypeCuratedCollectionFields, TypeCuratedCollectionSkeleton } from "./TypeCuratedCollection";
+export { isTypeExperience } from "./TypeExperience";
+export type { TypeExperience, TypeExperienceFields, TypeExperienceSkeleton } from "./TypeExperience";
 export { isTypeExternalUrl } from "./TypeExternalUrl";
 export type { TypeExternalUrl, TypeExternalUrlFields, TypeExternalUrlSkeleton } from "./TypeExternalUrl";
 export { isTypeFooter } from "./TypeFooter";

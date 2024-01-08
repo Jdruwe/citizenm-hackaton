@@ -1,3 +1,5 @@
+export { isTypeAmenity } from "./TypeAmenity";
+export type { TypeAmenity, TypeAmenityFields, TypeAmenitySkeleton } from "./TypeAmenity";
 export { isTypeArt } from "./TypeArt";
 export type { TypeArt, TypeArtFields, TypeArtSkeleton } from "./TypeArt";
 export { isTypeArtist } from "./TypeArtist";
@@ -8,6 +10,10 @@ export { isTypeContinent } from "./TypeContinent";
 export type { TypeContinent, TypeContinentFields, TypeContinentSkeleton } from "./TypeContinent";
 export { isTypeCountry } from "./TypeCountry";
 export type { TypeCountry, TypeCountryFields, TypeCountrySkeleton } from "./TypeCountry";
+export { isTypeCoworkingSpace } from "./TypeCoworkingSpace";
+export type { TypeCoworkingSpace, TypeCoworkingSpaceFields, TypeCoworkingSpaceSkeleton } from "./TypeCoworkingSpace";
+export { isTypeExperience } from "./TypeExperience";
+export type { TypeExperience, TypeExperienceFields, TypeExperienceSkeleton } from "./TypeExperience";
 export { isTypeFaq } from "./TypeFaq";
 export type { TypeFaq, TypeFaqFields, TypeFaqSkeleton } from "./TypeFaq";
 export { isTypeHotel } from "./TypeHotel";

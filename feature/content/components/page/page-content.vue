@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ContentfulPageConnector } from '~/feature/content/connectors/contenful/contentful-page-connector'
 import ContentComponentMapper from '~/feature/content/components/mapper/content-component-mapper.vue'
+import { isTypeContentCanvas } from '~/types/contentful/marketing'
 
 interface Props {
   slug: string
@@ -27,11 +28,14 @@ if (!data.value) {
   })
 }
 
-const contentPage = data.value.fields.pageType
+const contentCanvas = data.value.fields.pageType
+
+const isContentCanvas = contentCanvas && isTypeContentCanvas(contentCanvas)
 </script>
 
 <template>
   <ContentComponentMapper
-    :data="contentPage"
+    v-if="isTypeContentCanvas"
+    :data="contentCanvas"
   />
 </template>
