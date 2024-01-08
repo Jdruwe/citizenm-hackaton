@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import RichText from 'contentful-rich-text-vue-renderer'
+import { BLOCKS } from '@contentful/rich-text-types'
+import type { FaqItem } from '../types/hotel.types'
 import { HotelService } from '~/feature/hotel/services/hotel-service'
 import Accordion from '~/components/accordion.vue'
+import { isTypeLocation } from '~/types/contentful/masterdata'
+import Location from '~/components/location.vue'
 
 interface Props {
   params: {
@@ -40,13 +45,30 @@ function isHotelMatchingUrl(): boolean {
   )
 }
 
-const accordionItems = hotel.value.master?.faqs?.map((faq) => {
+const faqs = hotel.value.master?.faqs
+
+function renderNodes() {
   return {
-    title: faq.question,
-    text: faq.answer,
-    isRichText: true,
+    [BLOCKS.HEADING_4]: (node: any) => {
+      return h('h4', { class: 'font-extrabold my-4' }, node.content[0].value)
+    },
+    [BLOCKS.EMBEDDED_ENTRY]: (node: any) => {
+      if (isTypeLocation(node.data.target)) {
+        const fields = node.data.target.fields
+        return h(Location, {
+          isRichTextEmbedded: true,
+          data: {
+            city: fields.city.fields.name,
+            street: fields.street,
+            postalCode: fields.postalCode,
+            lat: fields.coordinates.lat,
+            lon: fields.coordinates.lon,
+          },
+        })
+      }
+    },
   }
-})
+}
 </script>
 
 <template>
@@ -71,7 +93,14 @@ const accordionItems = hotel.value.master?.faqs?.map((faq) => {
       <Location v-if="hotel.master.location" :is-rich-text-embedded="false" :data="hotel.master.location" />
     </div>
     <div class="mx-auto w-full md:max-w-screen-md">
-      <Accordion v-if="hotel.master.faqs" :items="accordionItems" />
+      <Accordion v-if="faqs" :items="faqs" title="you have questions, we have answers">
+        <template #title="item">
+          {{ (item as FaqItem).question }}
+        </template>
+        <template #content="item">
+          <RichText :document="(item as FaqItem).answer" :node-renderers="renderNodes()" />
+        </template>
+      </Accordion>
     </div>
   </Section>
 </template>

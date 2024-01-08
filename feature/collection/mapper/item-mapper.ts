@@ -8,6 +8,8 @@ async function mapHotelToItem(hotel: Hotel): Promise<Item | null> {
   const { name, heroImage, shortDescription } = hotel
   if (name && heroImage && shortDescription) {
     return {
+      id: generateId(),
+      type: 'hotel',
       image: heroImage,
       title: name,
       text: shortDescription,
@@ -27,6 +29,8 @@ function mapContentCardToItem(item: Entry<TypeContentCardSkeleton, 'WITHOUT_UNRE
         const file = asset.fields.file
         if (file) {
           return {
+            id: generateId(),
+            type: 'contentCard',
             image: file.url,
             title: item.fields.title,
             ...(description && { text: description }),
@@ -42,6 +46,8 @@ function mapContentCardToItem(item: Entry<TypeContentCardSkeleton, 'WITHOUT_UNRE
 async function mapArtToItem(art: Art): Promise<Item | null> {
   if (art) {
     return {
+      id: generateId(),
+      type: 'art',
       image: art.image,
       title: art.name,
       text: art.artist.description,
@@ -51,6 +57,10 @@ async function mapArtToItem(art: Art): Promise<Item | null> {
   else {
     return null
   }
+}
+
+function generateId(): string {
+  return crypto.randomUUID()
 }
 
 export { mapHotelToItem, mapContentCardToItem, mapArtToItem }

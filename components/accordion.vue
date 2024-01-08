@@ -1,46 +1,15 @@
 <script setup lang="ts">
-import RichText from 'contentful-rich-text-vue-renderer'
-import { BLOCKS } from '@contentful/rich-text-types'
-import Location from '~/components/location.vue'
-import { isTypeLocation } from '~/types/contentful/masterdata'
-
 interface Props {
-  items: {
-    title: string
-    text: string
-    isRichText: boolean
-  }[]
+  title: string
+  items: any[]
 }
 
-const { items } = defineProps<Props>()
-
-function renderNodes() {
-  return {
-    [BLOCKS.HEADING_4]: (node: any) => {
-      return h('h4', { class: 'font-extrabold my-4 first:mt-0' }, node.content[0].value)
-    },
-    [BLOCKS.EMBEDDED_ENTRY]: (node: any) => {
-      if (isTypeLocation(node.data.target)) {
-        const fields = node.data.target.fields
-        return h(Location, {
-          isRichTextEmbedded: true,
-          data: {
-            city: fields.city.fields.name,
-            street: fields.street,
-            postalCode: fields.postalCode,
-            lat: fields.coordinates.lat,
-            lon: fields.coordinates.lon,
-          },
-        })
-      }
-    },
-  }
-}
+const { title } = defineProps<Props>()
 </script>
 
 <template>
   <h2 class="mb-2 text-3xl lg:text-5xl tracking-tight font-extrabold text-gray-900">
-    you have questions, we have answers
+    {{ title }}
   </h2>
   <div
     id="accordion-flush" data-accordion="collapse"
@@ -55,7 +24,9 @@ function renderNodes() {
           :data-accordion-target="`#accordion-flush-body-${index}`" aria-expanded="false"
           :aria-controls="`accordion-flush-body-${index}`"
         >
-          <span class="font-extrabold md:ml-16 text-xl">{{ item.title }}</span>
+          <span class="font-extrabold md:ml-16 text-xl">
+            <slot name="title" v-bind="item" />
+          </span>
           <svg
             data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -69,10 +40,9 @@ function renderNodes() {
         </button>
       </h2>
       <div :id="`accordion-flush-body-${index}`" class="hidden" :aria-labelledby="`accordion-flush-heading-${index}`">
-        <div class="py-5 border-b border-gray-400">
+        <div class="py-5 border-b border-gray-200">
           <div class="md:ml-16">
-            <RichText v-if="item.isRichText" :document="item.text" :node-renderers="renderNodes()" />
-            <span v-else>{{ item.text }}</span>
+            <slot name="content" v-bind="item" />
           </div>
         </div>
       </div>
