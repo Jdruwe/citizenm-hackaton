@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import RichText from 'contentful-rich-text-vue-renderer'
+import { BLOCKS } from '@contentful/rich-text-types'
 import type { TypeCuratedCollection } from '~/types/contentful/marketing'
 import { CollectionService } from '~/feature/collection/services/collection-service'
 import type { Item } from '~/feature/collection/types/item.types'
@@ -17,6 +18,14 @@ const { data: items } = await useAsyncData('collectionItems', () => {
 
 const isSlider = data.fields.displayAs === 'slider'
 const isList = data.fields.displayAs === 'list'
+
+function renderNodes() {
+  return {
+    [BLOCKS.HEADING_4]: (node: any) => {
+      return h('h4', { class: 'font-extrabold my-4' }, node.content[0].value)
+    },
+  }
+}
 </script>
 
 <template>
@@ -31,14 +40,14 @@ const isList = data.fields.displayAs === 'list'
         </template>
         <template #content="item">
           <NuxtImg
-            v-if="(item as Item).type === 'hotel'"
+            v-if="(item as Item).image && (item as Item).type === 'hotel'"
             loading="lazy"
             provider="contentful"
             :src="(item as Item).image"
             width="400"
             class="mb-4 rounded rounded-xl"
           />
-          <RichText v-if="(item as Item).richText" :document="(item as Item).text" />
+          <RichText v-if="(item as Item).richText" :document="(item as Item).text" :node-renderers="renderNodes()" />
           <span v-else>{{ (item as Item).text }}</span>
         </template>
       </Accordion>

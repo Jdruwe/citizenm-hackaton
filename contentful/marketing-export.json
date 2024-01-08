@@ -250,7 +250,7 @@
         "id": "section",
         "type": "ContentType",
         "createdAt": "2024-01-02T12:01:37.177Z",
-        "updatedAt": "2024-01-05T09:12:37.737Z",
+        "updatedAt": "2024-01-08T14:57:08.067Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -258,8 +258,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-01-05T09:12:37.737Z",
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-08T14:57:08.067Z",
         "firstPublishedAt": "2024-01-02T12:01:37.357Z",
         "createdBy": {
           "sys": {
@@ -275,8 +275,8 @@
             "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 4,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -325,7 +325,8 @@
                   "video",
                   "banner",
                   "automatedCollection",
-                  "curatedCollection"
+                  "curatedCollection",
+                  "form"
                 ]
               }
             ],
@@ -2518,7 +2519,7 @@
         "id": "image",
         "type": "ContentType",
         "createdAt": "2024-01-02T12:01:38.614Z",
-        "updatedAt": "2024-01-05T10:49:30.100Z",
+        "updatedAt": "2024-01-08T15:24:16.289Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2526,8 +2527,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2024-01-05T10:49:30.100Z",
+        "publishedVersion": 11,
+        "publishedAt": "2024-01-08T15:24:16.289Z",
         "firstPublishedAt": "2024-01-02T12:01:38.814Z",
         "createdBy": {
           "sys": {
@@ -2543,8 +2544,8 @@
             "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 4,
-        "version": 8,
+        "publishedCounter": 6,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3783,7 +3784,7 @@
         "id": "curatedCollection",
         "type": "ContentType",
         "createdAt": "2024-01-05T09:08:24.881Z",
-        "updatedAt": "2024-01-08T09:44:47.381Z",
+        "updatedAt": "2024-01-08T21:18:32.367Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3791,8 +3792,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 19,
-        "publishedAt": "2024-01-08T09:44:47.381Z",
+        "publishedVersion": 21,
+        "publishedAt": "2024-01-08T21:18:32.367Z",
         "firstPublishedAt": "2024-01-05T09:08:25.186Z",
         "createdBy": {
           "sys": {
@@ -3808,8 +3809,8 @@
             "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 10,
-        "version": 20,
+        "publishedCounter": 11,
+        "version": 22,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3866,7 +3867,8 @@
                   "contentCard",
                   "art",
                   "contentCanvas",
-                  "experience"
+                  "experience",
+                  "faq"
                 ]
               }
             ],
@@ -4202,6 +4204,171 @@
           ]
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "form",
+        "type": "ContentType",
+        "createdAt": "2024-01-08T14:43:05.962Z",
+        "updatedAt": "2024-01-08T14:56:40.285Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2024-01-08T14:56:40.285Z",
+        "firstPublishedAt": "2024-01-08T14:43:06.393Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "🧱 Form (Typeform)",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "typeformReference",
+          "name": "Typeform reference",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "faq",
+        "type": "ContentType",
+        "createdAt": "2024-01-08T21:10:58.624Z",
+        "updatedAt": "2024-01-08T21:33:24.318Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-08T21:33:24.318Z",
+        "firstPublishedAt": "2024-01-08T21:10:59.006Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Faq",
+      "description": "",
+      "fields": [
+        {
+          "id": "faqMasterdata",
+          "name": "Faq masterdata",
+          "type": "ResourceLink",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "allowedResources": [
+            {
+              "type": "Contentful:Entry",
+              "source": "crn:contentful:::content:spaces/fzp55rkrsa7v",
+              "contentTypes": [
+                "faq"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "name",
+          "name": "name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "tags": [
@@ -4328,7 +4495,7 @@
             "linkType": "Space"
           }
         },
-        "version": 6,
+        "version": 8,
         "createdAt": "2024-01-02T12:01:37.571Z",
         "createdBy": {
           "sys": {
@@ -4337,7 +4504,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-05T09:12:38.465Z",
+        "updatedAt": "2024-01-08T14:57:09.041Z",
         "updatedBy": {
           "sys": {
             "id": "22SIYlNyBUO3I2yPIQP7Vr",
@@ -5518,7 +5685,7 @@
             "linkType": "Space"
           }
         },
-        "version": 9,
+        "version": 13,
         "createdAt": "2024-01-02T12:01:38.952Z",
         "createdBy": {
           "sys": {
@@ -5527,7 +5694,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-05T10:49:30.791Z",
+        "updatedAt": "2024-01-08T15:24:16.944Z",
         "updatedBy": {
           "sys": {
             "id": "22SIYlNyBUO3I2yPIQP7Vr",
@@ -6299,7 +6466,7 @@
             "linkType": "Space"
           }
         },
-        "version": 20,
+        "version": 22,
         "createdAt": "2024-01-05T09:08:25.339Z",
         "createdBy": {
           "sys": {
@@ -6308,7 +6475,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-08T09:44:48.087Z",
+        "updatedAt": "2024-01-08T21:18:33.039Z",
         "updatedBy": {
           "sys": {
             "id": "6QLLK1TTKYBTd5byaaUORL",
@@ -6602,6 +6769,118 @@
         {
           "fieldId": "experienceMasterdata",
           "widgetId": "resourceLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "o3fhy4qi3ji7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 15,
+        "createdAt": "2024-01-08T14:43:06.531Z",
+        "createdBy": {
+          "sys": {
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-08T14:56:40.924Z",
+        "updatedBy": {
+          "sys": {
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "form",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "typeformReference",
+          "widgetId": "1SZgLiOT63ijEzPJZQ4QWT",
+          "widgetNamespace": "app"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "o3fhy4qi3ji7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-01-08T21:10:59.125Z",
+        "createdBy": {
+          "sys": {
+            "id": "6QLLK1TTKYBTd5byaaUORL",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-08T21:33:24.902Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6QLLK1TTKYBTd5byaaUORL",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "faq",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "faqMasterdata",
+          "widgetId": "resourceLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
       ]
@@ -7211,7 +7490,7 @@
         "id": "d0QS4JcoArrDb6FiuPKxb",
         "type": "Entry",
         "createdAt": "2024-01-05T10:39:19.694Z",
-        "updatedAt": "2024-01-06T07:08:44.367Z",
+        "updatedAt": "2024-01-08T14:11:09.304Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7219,8 +7498,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 16,
-        "publishedAt": "2024-01-06T07:08:44.367Z",
+        "publishedVersion": 19,
+        "publishedAt": "2024-01-08T14:11:09.304Z",
         "firstPublishedAt": "2024-01-05T10:46:43.997Z",
         "createdBy": {
           "sys": {
@@ -7236,8 +7515,8 @@
             "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 2,
-        "version": 17,
+        "publishedCounter": 3,
+        "version": 20,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7560,7 +7839,7 @@
         "id": "4xJxrNQd2xcNROhdwyL21m",
         "type": "Entry",
         "createdAt": "2024-01-06T06:33:08.163Z",
-        "updatedAt": "2024-01-06T08:30:17.054Z",
+        "updatedAt": "2024-01-08T21:34:23.078Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7568,8 +7847,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2024-01-06T08:30:17.054Z",
+        "publishedVersion": 10,
+        "publishedAt": "2024-01-08T21:34:23.078Z",
         "firstPublishedAt": "2024-01-06T06:33:15.162Z",
         "createdBy": {
           "sys": {
@@ -7585,8 +7864,8 @@
             "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 3,
-        "version": 7,
+        "publishedCounter": 5,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7625,6 +7904,20 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "6caaofCPfh9TGZGeeSQfDZ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "31vyzg1b5zAbNnfwcNZ7N3"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "BW6gEPtwhPV6qhmKlQhZH"
               }
             }
           ]
@@ -7815,7 +8108,7 @@
         "id": "5WvQH8mpw1bamMckS3zCuw",
         "type": "Entry",
         "createdAt": "2024-01-08T11:54:09.265Z",
-        "updatedAt": "2024-01-08T11:58:07.835Z",
+        "updatedAt": "2024-01-08T15:24:39.238Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7823,8 +8116,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2024-01-08T11:58:07.835Z",
+        "publishedVersion": 13,
+        "publishedAt": "2024-01-08T15:24:39.238Z",
         "firstPublishedAt": "2024-01-08T11:55:51.449Z",
         "createdBy": {
           "sys": {
@@ -7840,8 +8133,8 @@
             "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 3,
-        "version": 12,
+        "publishedCounter": 4,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7874,6 +8167,30 @@
         },
         "title": {
           "en-US": "co-work at citizenM New York"
+        },
+        "description": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Make our living room your office! Choose form two easy-to-reach New York locations – Times Square and Bowery – both perfect for creatives and entrepreneurs, just like you.\n\nThese inspiring co-working spaces come with cafe-style and long table seating options, superfast Wi-Fi, free filtered water, power outlets and plenty of food and drink options.\n\nRemember, this is your community – make yourself at home!",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     },
@@ -7958,6 +8275,150 @@
         },
         "focalPoint": {
           "en-US": "center"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "4We09qLSeOSedU8nsuEY0l",
+        "type": "Entry",
+        "createdAt": "2024-01-08T14:44:40.866Z",
+        "updatedAt": "2024-01-08T14:44:58.997Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-08T14:44:58.997Z",
+        "firstPublishedAt": "2024-01-08T14:44:58.997Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "form"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Form - Coworking space reserveration"
+        },
+        "typeformReference": {
+          "en-US": "https://s3kyaggdjrs.typeform.com/to/rX2U9c8T"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "BW6gEPtwhPV6qhmKlQhZH",
+        "type": "Entry",
+        "createdAt": "2024-01-08T21:33:52.727Z",
+        "updatedAt": "2024-01-08T21:34:10.595Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-08T21:34:10.595Z",
+        "firstPublishedAt": "2024-01-08T21:34:10.595Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "faqMasterdata": {
+          "en-US": {
+            "sys": {
+              "type": "ResourceLink",
+              "linkType": "Contentful:Entry",
+              "urn": "crn:contentful:::content:spaces/fzp55rkrsa7v/environments/master/entries/vWAcAkzgAGGAJvRY6boTm"
+            }
+          }
+        },
+        "name": {
+          "en-US": "Faq - Booking"
         }
       }
     }

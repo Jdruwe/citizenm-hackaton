@@ -3,6 +3,7 @@ import type { TypeAutomatedCollectionSkeleton } from "./TypeAutomatedCollection"
 import type { TypeBannerSkeleton } from "./TypeBanner";
 import type { TypeCtaSkeleton } from "./TypeCta";
 import type { TypeCuratedCollectionSkeleton } from "./TypeCuratedCollection";
+import type { TypeFormSkeleton } from "./TypeForm";
 import type { TypeImageSkeleton } from "./TypeImage";
 import type { TypeQuoteSkeleton } from "./TypeQuote";
 import type { TypeRichTextSkeleton } from "./TypeRichText";
@@ -10,7 +11,7 @@ import type { TypeVideoSkeleton } from "./TypeVideo";
 
 export interface TypeSectionFields {
     name: EntryFieldTypes.Symbol;
-    content: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeAutomatedCollectionSkeleton | TypeBannerSkeleton | TypeCtaSkeleton | TypeCuratedCollectionSkeleton | TypeImageSkeleton | TypeQuoteSkeleton | TypeRichTextSkeleton | TypeVideoSkeleton>>;
+    content: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeAutomatedCollectionSkeleton | TypeBannerSkeleton | TypeCtaSkeleton | TypeCuratedCollectionSkeleton | TypeFormSkeleton | TypeImageSkeleton | TypeQuoteSkeleton | TypeRichTextSkeleton | TypeVideoSkeleton>>;
     backgroundColour: EntryFieldTypes.Symbol<"Black" | "Bright" | "Dark" | "Light" | "White (default)">;
 }
 

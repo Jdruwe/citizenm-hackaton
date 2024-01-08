@@ -3,23 +3,28 @@ import {
   type TypeArtSkeleton,
   type TypeContentCardSkeleton,
   type TypeCuratedCollectionSkeleton,
+  type TypeFaqSkeleton,
   type TypeHotelSkeleton,
   isTypeArt,
   isTypeContentCard,
+  isTypeFaq,
   isTypeHotel,
 } from '~/types/contentful/marketing'
 import { HotelService } from '~/feature/hotel/services/hotel-service'
 import type { Item } from '~/feature/collection/types/item.types'
 import { ArtService } from '~/feature/art/services/art-service'
-import { mapArtToItem, mapContentCardToItem, mapHotelToItem } from '~/feature/collection/mapper/item-mapper'
+import { mapArtToItem, mapContentCardToItem, mapFaqToItem, mapHotelToItem } from '~/feature/collection/mapper/item-mapper'
+import { FaqService } from '~/feature/faq/services/faq-service'
 
 class CollectionService {
   private readonly hotelService
   private readonly artService
+  private readonly faqService
 
   constructor() {
     this.hotelService = new HotelService()
     this.artService = new ArtService()
+    this.faqService = new FaqService()
   }
 
   public async mapItems(items: ResolvedField<TypeCuratedCollectionSkeleton['fields']['items'], 'WITHOUT_UNRESOLVABLE_LINKS', string>) {
@@ -43,6 +48,14 @@ class CollectionService {
           if (id) {
             const art = await this.artService.getArtById(id)
             const mappedItem = art && await mapArtToItem(art)
+            mappedItem && mappedItems.push(mappedItem)
+          }
+        }
+        if (isTypeFaq(item as Entry<EntrySkeletonType, 'WITHOUT_UNRESOLVABLE_LINKS', string>)) {
+          const id = (item as Entry<TypeFaqSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>).fields.faqMasterdata?.sys.id
+          if (id) {
+            const faq = await this.faqService.getFaqById(id)
+            const mappedItem = faq && await mapFaqToItem(faq)
             mappedItem && mappedItems.push(mappedItem)
           }
         }

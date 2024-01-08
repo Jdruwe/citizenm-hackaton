@@ -8,6 +8,8 @@ interface Props {
 }
 
 const { title, items } = defineProps<Props>()
+
+const filteredItems = items.filter(item => item.type !== 'faq')
 </script>
 
 <template>
@@ -15,10 +17,13 @@ const { title, items } = defineProps<Props>()
     {{ title }}
   </h2>
   <div class="relative w-full flex gap-6 snap-x snap-proximity overflow-x-auto pb-14">
-    <div v-for="(item, index) in items" :key="index" class="snap-center bg-white shrink-0 max-w-xs">
+    <div v-for="(item, index) in filteredItems" :key="index" class="snap-center bg-white shrink-0 max-w-xs">
       <NuxtImg
-        provider="contentful" class="aspect-[3/4] w-full object-cover" :src="item.image" alt="" width="600"
-        height="600"
+        v-if="item.image"
+        provider="contentful"
+        class="aspect-[3/4] w-full object-cover"
+        :src="item.image"
+        width="600"
       />
       <div class="py-5">
         <h5 class="mb-2 ml-2 font-medium tracking-tight text-gray-900 dark:text-white">

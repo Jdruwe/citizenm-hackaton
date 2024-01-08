@@ -1,6 +1,6 @@
-import type { Document } from '@contentful/rich-text-types'
 import type { Entry } from 'contentful'
 import type { TypeHotelSkeleton as MarketingTypeHotelSkeleton } from '~/types/contentful/marketing'
+import type { FaqItem } from '~/feature/faq/types/faq.types'
 
 export interface ContentfulHotel {
   marketing: Entry<MarketingTypeHotelSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>
@@ -14,11 +14,6 @@ export interface Hotel {
   location: Location
   mainImage?: string
   faqs?: FaqItem[]
-}
-
-export interface FaqItem {
-  question: string
-  answer: Document
 }
 
 export interface Location {

@@ -3,6 +3,7 @@ import type { Item } from '~/feature/collection/types/item.types'
 import type { Hotel } from '~/feature/hotel/types/hotel.types'
 import { type TypeContentCardSkeleton, isTypeImage } from '~/types/contentful/marketing'
 import type { Art } from '~/feature/art/types/art.types'
+import type { FaqItem } from '~/feature/faq/types/faq.types'
 
 async function mapHotelToItem(hotel: Hotel): Promise<Item | null> {
   const { name, heroImage, shortDescription } = hotel
@@ -59,8 +60,23 @@ async function mapArtToItem(art: Art): Promise<Item | null> {
   }
 }
 
+async function mapFaqToItem(faq: FaqItem): Promise<Item | null> {
+  if (faq) {
+    return {
+      id: generateId(),
+      type: 'faq',
+      title: faq.question,
+      text: faq.answer,
+      richText: true,
+    }
+  }
+  else {
+    return null
+  }
+}
+
 function generateId(): string {
   return crypto.randomUUID()
 }
 
-export { mapHotelToItem, mapContentCardToItem, mapArtToItem }
+export { mapHotelToItem, mapContentCardToItem, mapArtToItem, mapFaqToItem }
