@@ -1,8 +1,10 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
+import type { TypeCuratedCollectionSkeleton } from "./TypeCuratedCollection";
 
 export interface TypeHotelFields {
     name: EntryFieldTypes.Symbol;
     hotelMasterdata: EntryFieldTypes.EntryResourceLink<EntrySkeletonType>;
+    highlightReel?: EntryFieldTypes.EntryLink<TypeCuratedCollectionSkeleton>;
 }
 
 export type TypeHotelSkeleton = EntrySkeletonType<TypeHotelFields, "hotel">;

@@ -3,8 +3,9 @@ import type { TypeCountrySkeleton } from "./TypeCountry";
 
 export interface TypeCityFields {
     name: EntryFieldTypes.Symbol;
-    country: EntryFieldTypes.EntryLink<TypeCountrySkeleton>;
+    code: EntryFieldTypes.Symbol;
     localizedName?: EntryFieldTypes.Symbol;
+    country: EntryFieldTypes.EntryLink<TypeCountrySkeleton>;
 }
 
 export type TypeCitySkeleton = EntrySkeletonType<TypeCityFields, "city">;

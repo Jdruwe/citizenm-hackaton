@@ -1,12 +1,14 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
 import type { TypeArtSkeleton } from "./TypeArt";
+import type { TypeContentCanvasSkeleton } from "./TypeContentCanvas";
 import type { TypeContentCardSkeleton } from "./TypeContentCard";
+import type { TypeExperienceSkeleton } from "./TypeExperience";
 import type { TypeHotelSkeleton } from "./TypeHotel";
 
 export interface TypeCuratedCollectionFields {
     name: EntryFieldTypes.Symbol;
     collectionTitle: EntryFieldTypes.Symbol;
-    items: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeArtSkeleton | TypeContentCardSkeleton | TypeHotelSkeleton>>;
+    items: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeArtSkeleton | TypeContentCanvasSkeleton | TypeContentCardSkeleton | TypeExperienceSkeleton | TypeHotelSkeleton>>;
     displayAs: EntryFieldTypes.Symbol<"grid" | "list" | "slider">;
 }
 
