@@ -7,13 +7,13 @@ class ContentfulPageConnector {
    * @return Promise of page entry or null if nothing was found
    * @param slug
    */
-  public async getPageContent(slug: string): Promise<Entry<TypePageSkeleton, undefined, string> | null> {
-    // TODO: check if the include is at the correct level
+  public async getPageContent(slug: string): Promise<Entry<TypePageSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string> | null> {
     const query = {
       'content_type': 'page',
+      'fields.pageType.sys.contentType.sys.id': 'contentCanvas',
       'select': 'fields.pageType',
       'fields.slug': slug,
-      'include': 5,
+      'include': 10,
       'limit': 1,
     }
 
