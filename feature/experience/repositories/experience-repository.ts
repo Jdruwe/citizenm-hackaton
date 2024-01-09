@@ -10,12 +10,9 @@ class ExperienceRepository {
     return mapToExperience(experienceFromMasterData)
   }
 
-  /**
-   * It might be possible that we need to increase the include value during the hackathon.
-   */
   private async getExperienceFromMasterDataById(id: string): Promise<Entry<TypeExperienceSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>> {
     return await getContentfulConnector('masterdata')
-      .getEntry<TypeExperienceSkeleton>(id, { include: 1 })
+      .getEntry<TypeExperienceSkeleton>(id, { include: 4 })
   }
 }
 

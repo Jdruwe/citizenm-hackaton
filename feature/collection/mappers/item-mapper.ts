@@ -65,6 +65,7 @@ async function mapExperienceToItem(experience: Experience): Promise<Item> {
     type: 'experience',
     title: experience.title,
     text: experience.content,
+    image: experience.image,
     richText: true,
   }
 }

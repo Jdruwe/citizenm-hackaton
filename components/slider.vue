@@ -9,6 +9,7 @@ interface Props {
 
 const { title, items } = defineProps<Props>()
 
+// TODO [HACKATHON]: provide a valid rendering mode for FAQ items inside a slider
 const filteredItems = items.filter(item => item.type !== 'faq')
 </script>
 

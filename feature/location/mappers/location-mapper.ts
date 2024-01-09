@@ -1,5 +1,5 @@
 import type { Entry } from 'contentful'
-import type { Location } from '~/feature/hotel/types/hotel.types'
+import type { Location } from '~/feature/location/types/location.types'
 import type { TypeLocationSkeleton } from '~/types/contentful/masterdata'
 
 function mapToLocation(location: Entry<TypeLocationSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>): Location | null {

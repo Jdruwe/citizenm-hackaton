@@ -41,7 +41,6 @@ class CollectionService {
   public async mapItems(items: ResolvedField<TypeCuratedCollectionSkeleton['fields']['items'], 'WITHOUT_UNRESOLVABLE_LINKS', string>) {
     const mappedItems: Item[] = []
     for (const item of items) {
-      console.log('item', item.sys.contentType.sys.id)
       if (item) {
         if (isTypeHotel(item as Entry<EntrySkeletonType, 'WITHOUT_UNRESOLVABLE_LINKS', string>)) {
           const id = (item as Entry<TypeHotelSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>).fields.hotelMasterdata?.sys.id
