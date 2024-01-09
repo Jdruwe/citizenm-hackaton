@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.1.0",
+    "@typeform/embed": "^4.4.1",
     "cf-content-types-generator": "^2.13.0",
     "contentful": "^10.6.15",
     "contentful-management": "^11.7.3",

@@ -20,7 +20,7 @@ function renderNodes() {
 </script>
 
 <template>
-  <div class="relative mt-20 lg:mt-32">
+  <div class="relative mt-28 lg:mt-44">
     <h1 class="text-4xl sm:text-6xl lg:text-8xl max-w-60 sm:max-w-sm md:max-w-md lg:max-w-md absolute -mt-14 lg:-mt-28 z-10">
       {{ title }}
     </h1>
