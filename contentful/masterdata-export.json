@@ -272,7 +272,7 @@
         "id": "hotel",
         "type": "ContentType",
         "createdAt": "2024-01-04T08:21:19.952Z",
-        "updatedAt": "2024-01-08T11:43:29.882Z",
+        "updatedAt": "2024-01-09T11:09:04.294Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -280,8 +280,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2024-01-08T11:43:29.882Z",
+        "publishedVersion": 13,
+        "publishedAt": "2024-01-09T11:09:04.294Z",
         "firstPublishedAt": "2024-01-04T08:21:20.290Z",
         "createdBy": {
           "sys": {
@@ -294,16 +294,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 6,
-        "version": 12,
+        "publishedCounter": 7,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         }
       },
@@ -321,6 +321,17 @@
             {
               "unique": true
             }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
           ],
           "disabled": false,
           "omitted": false
@@ -1738,7 +1749,7 @@
             "linkType": "Space"
           }
         },
-        "version": 12,
+        "version": 14,
         "createdAt": "2024-01-04T08:21:20.404Z",
         "createdBy": {
           "sys": {
@@ -1747,10 +1758,10 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-08T11:43:30.714Z",
+        "updatedAt": "2024-01-09T11:09:05.126Z",
         "updatedBy": {
           "sys": {
-            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "id": "6QLLK1TTKYBTd5byaaUORL",
             "type": "Link",
             "linkType": "User"
           }
@@ -1773,6 +1784,11 @@
       "controls": [
         {
           "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
@@ -2731,7 +2747,7 @@
         "id": "7GrJJ8g9v9Mq7xtL9wIs1f",
         "type": "Entry",
         "createdAt": "2024-01-04T09:41:50.576Z",
-        "updatedAt": "2024-01-07T13:34:03.010Z",
+        "updatedAt": "2024-01-09T11:10:24.782Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2739,8 +2755,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 26,
-        "publishedAt": "2024-01-07T13:34:03.010Z",
+        "publishedVersion": 30,
+        "publishedAt": "2024-01-09T11:10:24.782Z",
         "firstPublishedAt": "2024-01-04T09:46:35.545Z",
         "createdBy": {
           "sys": {
@@ -2756,8 +2772,8 @@
             "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 9,
-        "version": 27,
+        "publishedCounter": 11,
+        "version": 31,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2778,6 +2794,9 @@
       "fields": {
         "name": {
           "en-US": "NYT - New York Times Square"
+        },
+        "title": {
+          "en-US": "New York Times Square hotel"
         },
         "code": {
           "en-US": "NYT"
@@ -2835,6 +2854,17 @@
               "id": "5Xa92Ipgul6QhsQJZ3lbgX"
             }
           }
+        },
+        "amenities": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2YQwV42p3KKfF3XM49XOLZ"
+              }
+            }
+          ]
         },
         "artCollection": {
           "en-US": [

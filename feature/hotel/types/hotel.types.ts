@@ -8,7 +8,7 @@ export interface ContentfulHotel {
 }
 
 export interface Hotel {
-  name: string
+  title: string
   shortDescription: string
   heroImage: string
   location: Location

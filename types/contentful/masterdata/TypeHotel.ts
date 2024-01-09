@@ -7,6 +7,7 @@ import type { TypeNameSkeleton } from "./TypeName";
 
 export interface TypeHotelFields {
     name: EntryFieldTypes.Symbol;
+    title: EntryFieldTypes.Symbol;
     code: EntryFieldTypes.Symbol;
     shortDescription: EntryFieldTypes.Symbol;
     description: EntryFieldTypes.RichText;

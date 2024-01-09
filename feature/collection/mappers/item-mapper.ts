@@ -5,19 +5,14 @@ import { type TypeContentCardSkeleton, isTypeImage } from '~/types/contentful/ma
 import type { Art } from '~/feature/art/types/art.types'
 import type { FaqItem } from '~/feature/faq/types/faq.types'
 
-async function mapHotelToItem(hotel: Hotel): Promise<Item | null> {
-  const { name, heroImage, shortDescription } = hotel
-  if (name && heroImage && shortDescription) {
-    return {
-      id: generateId(),
-      type: 'hotel',
-      image: heroImage,
-      title: name,
-      text: shortDescription,
-    }
-  }
-  else {
-    return null
+async function mapHotelToItem(hotel: Hotel): Promise<Item> {
+  const { title, heroImage: image, shortDescription: text } = hotel
+  return {
+    id: generateId(),
+    title,
+    image,
+    text,
+    type: 'hotel',
   }
 }
 
@@ -41,34 +36,25 @@ function mapContentCardToItem(item: Entry<TypeContentCardSkeleton, 'WITHOUT_UNRE
   return null
 }
 
-async function mapArtToItem(art: Art): Promise<Item | null> {
-  if (art) {
-    return {
-      id: generateId(),
-      type: 'art',
-      image: art.image,
-      title: art.name,
-      text: art.artist.description,
-      richText: true,
-    }
-  }
-  else {
-    return null
+async function mapArtToItem(art: Art): Promise<Item> {
+  const { image, title, artist } = art
+  return {
+    id: generateId(),
+    type: 'art',
+    image,
+    title,
+    text: artist.description,
+    richText: true,
   }
 }
 
-async function mapFaqToItem(faq: FaqItem): Promise<Item | null> {
-  if (faq) {
-    return {
-      id: generateId(),
-      type: 'faq',
-      title: faq.question,
-      text: faq.answer,
-      richText: true,
-    }
-  }
-  else {
-    return null
+async function mapFaqToItem(faq: FaqItem): Promise<Item> {
+  return {
+    id: generateId(),
+    type: 'faq',
+    title: faq.question,
+    text: faq.answer,
+    richText: true,
   }
 }
 

@@ -4,15 +4,22 @@ import type { Hotel } from '~/feature/hotel/types/hotel.types'
 import { mapToLocation } from '~/feature/location/mappers/location-mapper'
 
 function mapToHotel(entry: Entry<MasterTypeHotelSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>): Hotel | null {
-  const { location, heroImage, mainImage, faqs } = entry.fields
+  const {
+    title,
+    shortDescription,
+    location,
+    heroImage,
+    mainImage,
+    faqs,
+  } = entry.fields
   const heroImageUrl = heroImage?.fields.asset?.fields.file?.url
   const mappedLocation = location && mapToLocation(location)
 
   // TODO: resolve typing issue, not sure why FAQs is complaining
   if (heroImageUrl && mappedLocation) {
     return {
-      name: entry.fields.name,
-      shortDescription: entry.fields.shortDescription,
+      title,
+      shortDescription,
       heroImage: heroImageUrl,
       mainImage: mainImage?.fields.asset?.fields.file?.url,
       location: mappedLocation,
