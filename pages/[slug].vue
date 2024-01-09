@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import PageContent from '~/feature/content/components/page/page-content.vue'
+import ContentCanvas from '~/feature/content/components/page/content-canvas.vue'
 </script>
 
 <template>
-  <PageContent :slug="$route.params.slug" />
+  <ContentCanvas :slug="$route.params.slug" />
 </template>

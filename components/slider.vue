@@ -17,7 +17,7 @@ const filteredItems = items.filter(item => item.type !== 'faq')
     {{ title }}
   </h2>
   <div class="relative w-full flex gap-6 snap-x snap-proximity overflow-x-auto">
-    <div v-for="(item, index) in filteredItems" :key="index" class="snap-center bg-white shrink-0 max-w-xs">
+    <div v-for="item in filteredItems" :key="item.id" class="snap-center bg-white shrink-0 max-w-xs">
       <NuxtImg
         v-if="item.image"
         provider="contentful"

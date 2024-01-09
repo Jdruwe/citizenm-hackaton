@@ -8,25 +8,12 @@ interface Props {
 }
 
 const { data } = defineProps<Props>()
-
-function getMappedContent(data: TypeSection<'WITHOUT_UNRESOLVABLE_LINKS', string>) {
-  if (Array.isArray(data.fields.content)) {
-    return data.fields.content
-  }
-  else {
-    return [data.fields.content]
-  }
-}
-
-const mappedContent = getMappedContent(data)
 </script>
 
 <template>
   <Section>
-    <template v-for="(content, index) in mappedContent" :key="index">
-      <ContentComponentMapper
-        :data="content"
-      />
-    </template>
+    <ContentComponentMapper
+      :data="data"
+    />
   </Section>
 </template>

@@ -12,6 +12,7 @@ import type { ContentfulHotel, Hotel } from '../types/hotel.types'
 import { mapToHotel } from '~/feature/hotel/mappers/hotel-mapper'
 
 class HotelRepository {
+  // TODO: what happens if I try to fetch an entry that doesn't exist?
   public async getHotelById(id: string): Promise<Hotel | null> {
     const hotelFromMasterData = await this.getHotelFromMasterDataById(id)
     return mapToHotel(hotelFromMasterData)

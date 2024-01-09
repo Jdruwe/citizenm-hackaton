@@ -41,7 +41,10 @@ const uid = getCurrentInstance()?.uid
           </svg>
         </button>
       </h2>
-      <div :id="`accordion-flush-body-${uid}-${index}`" class="hidden" :aria-labelledby="`accordion-flush-heading-${uid}-${index}`">
+      <div
+        :id="`accordion-flush-body-${uid}-${index}`" class="hidden"
+        :aria-labelledby="`accordion-flush-heading-${uid}-${index}`"
+      >
         <div class="py-5 border-b border-gray-200">
           <div class="md:ml-16">
             <slot name="content" v-bind="item" />

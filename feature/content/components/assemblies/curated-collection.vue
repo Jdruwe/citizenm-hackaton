@@ -4,6 +4,7 @@ import { BLOCKS } from '@contentful/rich-text-types'
 import type { TypeCuratedCollection } from '~/types/contentful/marketing'
 import { CollectionService } from '~/feature/collection/services/collection-service'
 import type { Item } from '~/feature/collection/types/item.types'
+import Accordion from '~/components/accordion.vue'
 
 interface Props {
   data: TypeCuratedCollection<'WITHOUT_UNRESOLVABLE_LINKS', string>
@@ -11,7 +12,7 @@ interface Props {
 
 const { data } = defineProps<Props>()
 
-const { data: items } = await useAsyncData('collectionItems', () => {
+const { data: items } = await useAsyncData(`collectionItems-${data.sys.id}`, () => {
   const collectionService = new CollectionService()
   return collectionService.mapItems(data.fields.items)
 })
@@ -45,7 +46,7 @@ function renderNodes() {
             provider="contentful"
             :src="(item as Item).image"
             width="400"
-            class="mb-4 rounded rounded-xl"
+            class="mb-4 rounded-xl"
           />
           <RichText v-if="(item as Item).richText" :document="(item as Item).text" :node-renderers="renderNodes()" />
           <span v-else>{{ (item as Item).text }}</span>

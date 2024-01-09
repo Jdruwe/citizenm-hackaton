@@ -1,6 +1,7 @@
 import type { Entry } from 'contentful'
 import type { TypeHotelSkeleton as MarketingTypeHotelSkeleton } from '~/types/contentful/marketing'
 import type { FaqItem } from '~/feature/faq/types/faq.types'
+import type { Location } from '~/feature/location/types/location.types'
 
 export interface ContentfulHotel {
   marketing: Entry<MarketingTypeHotelSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>
@@ -14,14 +15,4 @@ export interface Hotel {
   location: Location
   mainImage?: string
   faqs?: FaqItem[]
-}
-
-export interface Location {
-  lat: number
-  lon: number
-  street: string
-  postalCode: string
-  city: string
-  country: string
-  continent: string
 }

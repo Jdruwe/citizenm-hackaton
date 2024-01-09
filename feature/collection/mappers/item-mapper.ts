@@ -4,6 +4,7 @@ import type { Hotel } from '~/feature/hotel/types/hotel.types'
 import { type TypeContentCardSkeleton, isTypeImage } from '~/types/contentful/marketing'
 import type { Art } from '~/feature/art/types/art.types'
 import type { FaqItem } from '~/feature/faq/types/faq.types'
+import type { Experience } from '~/feature/experience/types/experience.types'
 
 async function mapHotelToItem(hotel: Hotel): Promise<Item> {
   const { title, heroImage: image, shortDescription: text } = hotel
@@ -58,8 +59,18 @@ async function mapFaqToItem(faq: FaqItem): Promise<Item> {
   }
 }
 
+async function mapExperienceToItem(experience: Experience): Promise<Item> {
+  return {
+    id: generateId(),
+    type: 'experience',
+    title: experience.title,
+    text: experience.content,
+    richText: true,
+  }
+}
+
 function generateId(): string {
   return crypto.randomUUID()
 }
 
-export { mapHotelToItem, mapContentCardToItem, mapArtToItem, mapFaqToItem }
+export { mapHotelToItem, mapContentCardToItem, mapArtToItem, mapFaqToItem, mapExperienceToItem }

@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { ContentfulPageConnector } from '~/feature/content/connectors/contenful/contentful-page-connector'
+import {
+  type TypeContentCanvas,
+  isTypeContentCanvas,
+} from '~/types/contentful/marketing'
+import Hero from '~/feature/content/components/content/hero.vue'
 import ContentComponentMapper from '~/feature/content/components/mapper/content-component-mapper.vue'
-import { isTypeContentCanvas } from '~/types/contentful/marketing'
 
 interface Props {
   slug: string
@@ -9,7 +13,7 @@ interface Props {
 
 const { slug } = defineProps<Props>()
 
-const { data, error } = await useAsyncData('pageContent', () => {
+const { data, error } = await useAsyncData(`pageContent-${slug}`, () => {
   const contentfulPageConnector = new ContentfulPageConnector()
   return contentfulPageConnector.getPageContent(slug)
 })
@@ -29,13 +33,17 @@ if (!data.value) {
 }
 
 const contentCanvas = data.value.fields.pageType
-
 const isContentCanvas = contentCanvas && isTypeContentCanvas(contentCanvas)
+const hero = contentCanvas && (contentCanvas as TypeContentCanvas<'WITHOUT_UNRESOLVABLE_LINKS', string>).fields.hero
 </script>
 
 <template>
-  <ContentComponentMapper
-    v-if="isContentCanvas"
-    :data="contentCanvas"
-  />
+  <template v-if="isContentCanvas">
+    <Section v-if="hero">
+      <Hero :data="hero" />
+    </Section>
+    <ContentComponentMapper
+      :data="contentCanvas"
+    />
+  </template>
 </template>
