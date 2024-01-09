@@ -7,9 +7,9 @@ import {
 import type {
   TypeHotelSkeleton as MasterTypeHotelSkeleton,
 } from '../../../types/contentful/masterdata'
-import { getContentfulConnector } from '../../content/connectors/contenful/contentful-connector'
 import type { ContentfulHotel, Hotel } from '../types/hotel.types'
 import { mapToHotel } from '~/feature/hotel/mappers/hotel-mapper'
+import { getEntries, getEntry } from '~/feature/content/connectors/contenful/contentful-connector'
 
 class HotelRepository {
   // TODO: what happens if I try to fetch an entry that doesn't exist?
@@ -27,8 +27,7 @@ class HotelRepository {
       'limit': 1,
     }
 
-    const data = await getContentfulConnector('marketing')
-      .getEntries<TypePageSkeleton>(query)
+    const data = await getEntries<TypePageSkeleton>('marketing', query)
 
     if (data && data.items.length > 0) {
       const pageType = data.items[0].fields.pageType as Entry<MarketingTypeHotelSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string> | undefined
@@ -52,8 +51,7 @@ class HotelRepository {
       'include': 1,
     }
 
-    const data = await getContentfulConnector('marketing')
-      .getEntries<TypePageSkeleton>(query)
+    const data = await getEntries<TypePageSkeleton>('marketing', query)
 
     if (data && data.items.length > 0) {
       for (const pageEntry of data.items) {
@@ -81,8 +79,7 @@ class HotelRepository {
   }
 
   private async getHotelFromMasterDataById(id: string): Promise<Entry<MasterTypeHotelSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>> {
-    return await getContentfulConnector('masterdata')
-      .getEntry<MasterTypeHotelSkeleton>(id, { include: 4 })
+    return await getEntry<MasterTypeHotelSkeleton>('masterdata', id, { include: 4 })
   }
 
   private mapToContentfulHotel(

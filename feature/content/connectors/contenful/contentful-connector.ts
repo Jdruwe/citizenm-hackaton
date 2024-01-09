@@ -1,60 +1,46 @@
-import {
-  type ContentfulClientApi,
-  type CreateClientParams,
-  type Entry,
-  type EntryCollection,
-  createClient,
-} from 'contentful'
-import type { EntrySkeletonType } from 'contentful/dist/types/types/query'
+import type { ChainModifiers, Entry, EntryCollection, EntrySkeletonType } from 'contentful'
 
-class ContentfulConnector {
-  private readonly contentfulClient: ContentfulClientApi<undefined>
-
-  constructor(createClientParams: CreateClientParams) {
-    this.contentfulClient = createClient(createClientParams)
-  }
-
-  public async getEntries<T extends EntrySkeletonType>(query: object): Promise<EntryCollection<T, 'WITHOUT_UNRESOLVABLE_LINKS', string>> {
-    return this.contentfulClient.withoutUnresolvableLinks.getEntries<T>(query)
-  }
-
-  public async getEntry<T extends EntrySkeletonType>(id: string, query: object): Promise<Entry<T, 'WITHOUT_UNRESOLVABLE_LINKS', string>> {
-    return this.contentfulClient.withoutUnresolvableLinks.getEntry<T>(id, query)
-  }
-}
-
-/**
- * We have some typing related issues here because this code could potentially be executed in the browser.
- * Is there a way to make this work only on the server? Need more Nuxt insights here. For now I am just ignoring it as
- * useAsyncData is only executed on the server.
- */
-function getContentfulConnector(space: 'marketing' | 'masterdata'): ContentfulConnector {
-  if (space === 'marketing') {
-    return new ContentfulConnector({
-      space: process.env.CTF_MARKETING_SPACE_ID!,
-      accessToken: process.env.CTF_MARKETING_CDA_ACCESS_TOKEN!,
-      environment: process.env.CTF_ENVIRONMENT,
+async function getEntry<
+    TEntrySkeletonType extends EntrySkeletonType,
+    TChainModifiers extends ChainModifiers = 'WITHOUT_UNRESOLVABLE_LINKS',
+>(space: 'marketing' | 'masterdata', id: string, query: object): Promise<Entry<TEntrySkeletonType, TChainModifiers>> {
+  const response = await fetch(
+    'http://localhost:3000/api/contentful/entry',
+    {
+      method: 'POST',
       headers: {
-        'x-contentful-resource-resolution': getMasterDataResolutionHeader(),
+        'Content-Type': 'application/json',
       },
-    })
-  }
-  else {
-    return new ContentfulConnector({
-      space: process.env.CTF_MASTER_DATA_SPACE_ID!,
-      accessToken: process.env.CTF_MASTER_DATA_CDA_ACCESS_TOKEN!,
-      environment: process.env.CTF_ENVIRONMENT,
-    })
-  }
-}
-
-function getMasterDataResolutionHeader() {
-  return Buffer.from(JSON.stringify({
-    spaces: {
-      [process.env.CTF_MARKETING_SPACE_ID]: process.env.CTF_MARKETING_CDA_ACCESS_TOKEN,
-      [process.env.CTF_MASTER_DATA_SPACE_ID]: process.env.CTF_MASTER_DATA_CDA_ACCESS_TOKEN,
+      body: JSON.stringify({
+        query,
+        space,
+        id,
+      }),
     },
-  })).toString('base64')
+  )
+
+  return await response.json()
 }
 
-export { getContentfulConnector }
+async function getEntries<
+    TEntrySkeletonType extends EntrySkeletonType,
+    TChainModifiers extends ChainModifiers = 'WITHOUT_UNRESOLVABLE_LINKS',
+>(space: 'marketing' | 'masterdata', query: object): Promise<EntryCollection<TEntrySkeletonType, TChainModifiers>> {
+  const response = await fetch(
+    'http://localhost:3000/api/contentful/entries',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        query,
+        space,
+      }),
+    },
+  )
+
+  return await response.json()
+}
+
+export { getEntry, getEntries }

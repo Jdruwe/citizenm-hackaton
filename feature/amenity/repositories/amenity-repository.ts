@@ -1,8 +1,8 @@
 import type { Entry } from 'contentful'
 import type { TypeAmenitySkeleton } from '~/types/contentful/masterdata'
-import { getContentfulConnector } from '~/feature/content/connectors/contenful/contentful-connector'
 import { mapToAmenity } from '~/feature/amenity/mappers/amenity-mapper'
 import type { Amenity } from '~/feature/amenity/types/amenity.types'
+import { getEntry } from '~/feature/content/connectors/contenful/contentful-connector'
 
 class AmenityRepository {
   public async getAmenityById(id: string): Promise<Amenity | null> {
@@ -14,8 +14,7 @@ class AmenityRepository {
    * It might be possible that we need to increase the include value during the hackathon.
    */
   private async getAmenityFromMasterDataById(id: string): Promise<Entry<TypeAmenitySkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>> {
-    return await getContentfulConnector('masterdata')
-      .getEntry<TypeAmenitySkeleton>(id, { include: 1 })
+    return await getEntry<TypeAmenitySkeleton>('masterdata', id, { include: 1 })
   }
 }
 

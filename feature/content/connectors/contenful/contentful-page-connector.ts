@@ -1,6 +1,6 @@
 import type { Entry } from 'contentful'
-import { getContentfulConnector } from '~/feature/content/connectors/contenful/contentful-connector'
 import type { TypePageSkeleton } from '~/types/contentful/marketing'
+import { getEntries } from '~/feature/content/connectors/contenful/contentful-connector'
 
 class ContentfulPageConnector {
   /**
@@ -17,8 +17,7 @@ class ContentfulPageConnector {
       'limit': 1,
     }
 
-    const data = await getContentfulConnector('marketing')
-      .getEntries<TypePageSkeleton>(query)
+    const data = await getEntries<TypePageSkeleton>('marketing', query)
 
     if (data && data.items.length > 0) {
       return data.items[0]
