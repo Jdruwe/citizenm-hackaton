@@ -18,15 +18,10 @@ class HotelRepository {
     return mapToHotel(hotelFromMasterData)
   }
 
-  /**
-   * @return Promise of hotel or null if nothing was found
-   * @param slug
-   */
   public async getHotelBySlug(slug: string): Promise<ContentfulHotel | null> {
     const query = {
       'content_type': 'page',
       'fields.pageType.sys.contentType.sys.id': 'hotel',
-      'select': 'fields.pageType',
       'fields.slug': slug,
       'include': 1,
       'limit': 1,
@@ -40,25 +35,38 @@ class HotelRepository {
       if (pageType) {
         const masterDataHotel = await this.getHotelFromMasterData(pageType)
         if (masterDataHotel) {
-          return this.mapToContentfulHotel(pageType, masterDataHotel)
+          return this.mapToContentfulHotel(data.items[0], masterDataHotel)
         }
       }
+      return null
     }
     return null
   }
 
-  public async getHotels(): Promise<Hotel[]> {
-    const hotels: Hotel[] = []
-    // TODO: fix below!
-    // const hotelEntryCollection = await getContentfulConnector('masterdata')
-    //   .getEntries<MasterTypeHotelSkeleton>({
-    //     content_type: 'hotel',
-    //     include: 4,
-    //   })
+  public async getHotels(): Promise<ContentfulHotel[]> {
+    const hotels: ContentfulHotel[] = []
 
-    // for (const entry of hotelEntryCollection.items) {
-    //   hotels.push(this.mapToHotel(entry))
-    // }
+    const query = {
+      'content_type': 'page',
+      'fields.pageType.sys.contentType.sys.id': 'hotel',
+      'include': 1,
+    }
+
+    const data = await getContentfulConnector('marketing')
+      .getEntries<TypePageSkeleton>(query)
+
+    if (data && data.items.length > 0) {
+      for (const pageEntry of data.items) {
+        const pageType = pageEntry.fields.pageType as Entry<MarketingTypeHotelSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string> | undefined
+        if (pageType) {
+          const masterDataHotel = await this.getHotelFromMasterData(pageType)
+          if (masterDataHotel) {
+            const contentfulHotel = this.mapToContentfulHotel(pageEntry, masterDataHotel)
+            contentfulHotel && hotels.push(contentfulHotel)
+          }
+        }
+      }
+    }
     return hotels
   }
 
@@ -78,14 +86,14 @@ class HotelRepository {
   }
 
   private mapToContentfulHotel(
-    marketingData: Entry<MarketingTypeHotelSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>,
+    pageEntry: Entry<TypePageSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>,
     masterData: Entry<MasterTypeHotelSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>,
   ): ContentfulHotel | null {
     const mappedHotel = mapToHotel(masterData)
     if (mappedHotel) {
       return {
-        marketing: marketingData,
-        master: mappedHotel,
+        page: pageEntry,
+        data: mappedHotel,
       }
     }
     return null

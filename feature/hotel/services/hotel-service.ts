@@ -16,7 +16,8 @@ class HotelService {
     return await this.hotelRepository.getHotelById(id)
   }
 
-  public async getHotels(): Promise<Hotel[]> {
+  // TODO [HACKATHON]: use this method to render a list of hotels in the menu
+  public async getHotels(): Promise<ContentfulHotel[]> {
     return await this.hotelRepository.getHotels()
   }
 }
