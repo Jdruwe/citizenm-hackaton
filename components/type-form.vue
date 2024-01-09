@@ -16,5 +16,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <form ref="form" class="aspect-[4/3] max-w-md mx-auto" />
+  <form ref="form" class="aspect-[4/3] max-w-lg mx-auto" />
 </template>
