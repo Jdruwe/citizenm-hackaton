@@ -20,20 +20,6 @@ Start the development server on `http://localhost:3000` + open browser automatic
 npm run dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
 ## Docs
 
 - [Nuxt 3](https://nuxt.com/docs/getting-started/introduction)
