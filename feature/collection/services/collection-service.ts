@@ -13,7 +13,7 @@ import {
 import { HotelService } from '~/feature/hotel/services/hotel-service'
 import type { Item } from '~/feature/collection/types/item.types'
 import { ArtService } from '~/feature/art/services/art-service'
-import { mapArtToItem, mapContentCardToItem, mapFaqToItem, mapHotelToItem } from '~/feature/collection/mapper/item-mapper'
+import { mapArtToItem, mapContentCardToItem, mapFaqToItem, mapHotelToItem } from '~/feature/collection/mappers/item-mapper'
 import { FaqService } from '~/feature/faq/services/faq-service'
 
 class CollectionService {

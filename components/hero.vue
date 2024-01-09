@@ -31,7 +31,7 @@ function renderNodes() {
         :src="image"
         width="600"
       />
-      <div class="mt-10 lg:-ml-4 italic text-lg">
+      <div class="mt-10 lg:-ml-4 text-xl">
         <RichText v-if="description" :document="description" :node-renderers="renderNodes()" />
       </div>
     </div>

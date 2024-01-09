@@ -9,7 +9,7 @@ import type {
 } from '../../../types/contentful/masterdata'
 import { getContentfulConnector } from '../../content/connectors/contenful/contentful-connector'
 import type { ContentfulHotel, Hotel } from '../types/hotel.types'
-import { mapToHotel } from '~/feature/hotel/mapper/hotel-mapper'
+import { mapToHotel } from '~/feature/hotel/mappers/hotel-mapper'
 
 class HotelRepository {
   public async getHotelById(id: string): Promise<Hotel | null> {

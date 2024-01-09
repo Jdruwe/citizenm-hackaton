@@ -2,7 +2,7 @@ import type { Entry } from 'contentful'
 import type { Location } from '~/feature/hotel/types/hotel.types'
 import type { TypeLocationSkeleton } from '~/types/contentful/masterdata'
 
-function mapToMasterDataLocation(location: Entry<TypeLocationSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>): Location | null {
+function mapToLocation(location: Entry<TypeLocationSkeleton, 'WITHOUT_UNRESOLVABLE_LINKS', string>): Location | null {
   const city = location.fields.city
   if (city) {
     const country = city.fields.country
@@ -24,4 +24,4 @@ function mapToMasterDataLocation(location: Entry<TypeLocationSkeleton, 'WITHOUT_
   return null
 }
 
-export { mapToMasterDataLocation }
+export { mapToLocation }

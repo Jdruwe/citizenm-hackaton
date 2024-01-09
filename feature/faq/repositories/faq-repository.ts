@@ -2,7 +2,7 @@ import type { Entry } from 'contentful'
 import type { FaqItem } from '~/feature/faq/types/faq.types'
 import { getContentfulConnector } from '~/feature/content/connectors/contenful/contentful-connector'
 import type { TypeFaqSkeleton } from '~/types/contentful/masterdata'
-import { mapToFaqItem } from '~/feature/faq/mapper/faq-mapper'
+import { mapToFaqItem } from '~/feature/faq/mappers/faq-mapper'
 
 class FaqRepository {
   public async getFaqById(id: string): Promise<FaqItem | null> {
