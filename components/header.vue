@@ -1,3 +1,61 @@
+<script setup lang="ts">
+import type { ContentfulHotel } from '~/feature/hotel/types/hotel.types'
+import { HotelService } from '~/feature/hotel/services/hotel-service'
+
+const { data: contentfulHotels, error } = await useAsyncData(`hotels`, () => {
+  const hotelService = new HotelService()
+  return hotelService.getHotels()
+})
+
+interface HotelNavigationItems {
+  [key: string]: {
+    [key: string]: ContentfulHotel[]
+  }
+}
+
+let hotelNavigationItems: HotelNavigationItems = {}
+if (!error.value && contentfulHotels.value) {
+  const sortedByCity = contentfulHotels.value!.sort((a, b) => {
+    const cityA = a.data.location.city.toLowerCase()
+    const cityB = b.data.location.city.toLowerCase()
+
+    if (cityA < cityB) {
+      return -1
+    }
+
+    if (cityA > cityB) {
+      return 1
+    }
+
+    return 0
+  })
+
+  hotelNavigationItems = sortedByCity!.reduce((acc, contentfulHotel) => {
+    const { continent, city } = contentfulHotel.data.location
+
+    if (!acc[continent]) {
+      acc[continent] = {}
+    }
+
+    if (!acc[continent][city]) {
+      acc[continent][city] = []
+    }
+
+    acc[continent][city].push(contentfulHotel)
+    return acc
+  }, {} as HotelNavigationItems)
+}
+
+function buildUrl(contentfulHotel: ContentfulHotel) {
+  const { continent, country, city } = contentfulHotel.data.location
+  return `/h/${sanitize(continent)}/${sanitize(country)}/${sanitize(city)}/${contentfulHotel.page.fields.slug}`
+}
+
+function sanitize(value: string) {
+  return value.toLowerCase().replace(/\s+/g, '-')
+}
+</script>
+
 <template>
   <nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900 drop-shadow font-headings">
     <div
@@ -67,68 +125,26 @@
       class="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600 hidden"
     >
       <ul class="max-w-screen-xl px-6 py-5 mx-auto text-gray-900 dark:text-white">
-        <li class="flex flex-col mt-3">
+        <li
+          v-for="([continentKey, continent]) of Object.entries(hotelNavigationItems)" :key="continentKey"
+          class="flex flex-col mt-3"
+        >
           <p class="text-sm text-gray-500 border-b border-gray-400 pb-1 self-start">
-            Europa
+            {{ continentKey }}
           </p>
           <ul class="grid grid-cols-2 md:grid-cols-4 mt-2 gap-3">
-            <li>
+            <li v-for="([cityKey, city]) of Object.entries(continent)" :key="cityKey">
               <ul>
                 <li class="text-sm font-semibold">
-                  Amsterdam
+                  {{ cityKey }}
                 </li>
-                <li>
-                  <a href="#" class="block rounded-lg">
-                    <p class="text-sm text-gray-500 dark:text-gray-400 hover:bg-gray-100">Amstel Amsterdam</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block rounded-lg">
-                    <p class="text-sm text-gray-500 dark:text-gray-400 hover:bg-gray-100">Amsterdam Zuid</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li class="text-sm font-semibold">
-                  Kopenhagen
-                </li>
-                <li>
-                  <a href="#" class="block rounded-lg">
-                    <p class="text-sm text-gray-500 dark:text-gray-400 hover:bg-gray-100">Kopenhagen</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="flex flex-col mt-10">
-          <p class="text-sm text-gray-500 border-b border-gray-400 pb-1 self-start">
-            Amerika
-          </p>
-          <ul class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-3">
-            <li>
-              <ul>
-                <li class="text-sm font-semibold">
-                  Austin
-                </li>
-                <li>
-                  <a href="#" class="block rounded-lg">
-                    <p class="text-sm text-gray-500 dark:text-gray-400 hover:bg-gray-100">Austin Downtown</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li class="text-sm font-semibold">
-                  Boston
-                </li>
-                <li>
-                  <a href="#" class="block rounded-lg">
-                    <p class="text-sm text-gray-500 dark:text-gray-400 hover:bg-gray-100">Boston North Station</p>
-                  </a>
+                <li v-for="contentfulHotel in city" :key="contentfulHotel.page.sys.id">
+                  <NuxtLink
+                    :to="buildUrl(contentfulHotel)"
+                    class="block rounded-lg text-sm text-gray-500 dark:text-gray-400 hover:bg-gray-100"
+                  >
+                    {{ contentfulHotel.data.title }}
+                  </NuxtLink>
                 </li>
               </ul>
             </li>
