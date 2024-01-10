@@ -85,27 +85,4 @@ function showNextSlide() {
       </svg>
     </button>
   </div>
-
-  <!--  <div class="relative w-full flex gap-6 snap-x snap-proximity overflow-x-auto"> -->
-  <!--    <div v-for="item in filteredItems" :key="item.id" class="snap-center bg-white shrink-0 max-w-xs"> -->
-  <!--      <NuxtImg -->
-  <!--        v-if="item.image" -->
-  <!--        provider="contentful" -->
-  <!--        class="aspect-[3/4] w-full object-cover" -->
-  <!--        :src="item.image" -->
-  <!--        width="600" -->
-  <!--      /> -->
-  <!--      <div class="py-5"> -->
-  <!--        <h5 class="mb-2 ml-2 font-medium tracking-tight text-gray-900 dark:text-white"> -->
-  <!--          {{ item.title }} -->
-  <!--        </h5> -->
-  <!--        <p v-if="item.text && !item.richText" class="mb-3 font-normal text-gray-700 dark:text-gray-400"> -->
-  <!--          {{ item.text }} -->
-  <!--        </p> -->
-  <!--        <p v-if="item.text && item.richText" class="mb-3 font-normal text-gray-700 dark:text-gray-400"> -->
-  <!--          <RichText :document="item.text" /> -->
-  <!--        </p> -->
-  <!--      </div> -->
-  <!--    </div> -->
-  <!--  </div> -->
 </template>
