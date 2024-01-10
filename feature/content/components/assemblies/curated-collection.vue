@@ -20,6 +20,8 @@ const { data: items } = await useAsyncData(`collectionItems-${data.sys.id}`, () 
 const isSlider = data.fields.displayAs === 'slider'
 const isList = data.fields.displayAs === 'list'
 
+// TODO [HACKATHON]: provide support for grid rendering, you could use: https://tailwindcss.com/docs/grid-template-columns
+
 function renderNodes() {
   return {
     [BLOCKS.HEADING_4]: (node: any) => {

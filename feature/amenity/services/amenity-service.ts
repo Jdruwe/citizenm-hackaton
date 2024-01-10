@@ -11,6 +11,8 @@ class AmenityService {
   public async getAmenityById(id: string): Promise<Amenity | null> {
     return await this.amenityRepository.getAmenityById(id)
   }
+
+  // TODO [HACKATHON]: visualize the data
 }
 
 export { AmenityService }
