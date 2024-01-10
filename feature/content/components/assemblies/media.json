@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "tags": []
+  },
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "o3fhy4qi3ji7"
+      }
+    },
+    "id": "2nkVzanEHsJxGl7nej1for",
+    "type": "Entry",
+    "createdAt": "2024-01-09T09:30:17.259Z",
+    "updatedAt": "2024-01-09T09:30:17.259Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "revision": 1,
+    "contentType": {
+      "sys": {
+        "type": "Link",
+        "linkType": "ContentType",
+        "id": "mediaText"
+      }
+    },
+    "locale": "en-US"
+  },
+  "fields": {
+    "name": "MediaText - NYT - Bowery",
+    "media": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "7fXsxeqNOXWSWCUrIRbCMj",
+        "type": "Entry",
+        "createdAt": "2024-01-09T09:27:09.599Z",
+        "updatedAt": "2024-01-09T09:27:09.599Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "image"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "name": "Image - NYT - Bowery interior",
+        "asset": {
+          "metadata": {
+            "tags": []
+          },
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "o3fhy4qi3ji7"
+              }
+            },
+            "id": "ijsMaNgoz8u5uRkjPMpu4",
+            "type": "Asset",
+            "createdAt": "2024-01-09T09:16:06.391Z",
+            "updatedAt": "2024-01-09T09:16:06.391Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "revision": 1,
+            "locale": "en-US"
+          },
+          "fields": {
+            "title": "NYT - Bowery interior",
+            "description": "NYT - Bowery interior",
+            "file": {
+              "url": "//images.ctfassets.net/o3fhy4qi3ji7/ijsMaNgoz8u5uRkjPMpu4/c4a7e4418e42ec73b9ddc3833e127552/New_York_Bowery-CitizenM_NYB_2-079_high-1920x1080.webp",
+              "details": {
+                "size": 70966,
+                "image": {
+                  "width": 780,
+                  "height": 780
+                }
+              },
+              "fileName": "New_York_Bowery-CitizenM_NYB_2-079_high-1920x1080.webp",
+              "contentType": "image/webp"
+            }
+          }
+        },
+        "altText": "Bowery Interior",
+        "caption": "The bowery"
+      }
+    },
+    "content": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "3Jy1tCEI92L8rJLHXyCfRO",
+        "type": "Entry",
+        "createdAt": "2024-01-09T09:30:07.717Z",
+        "updatedAt": "2024-01-09T09:30:07.717Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "richText"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "name": "RichText - NYT - Bowery",
+        "content": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "heading-2",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "New York Bowery",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Hello, Lower East Side! Just an 18-min train from Grand Central Station, our Bowery hotel is perfectly placed – away from big crowds, but still close to big fun. Outside: Chinatown and Little Italy on the left, SoHo in front, Greenwich Village to the right. Need to unwind? Take the lift to our cloudM rooftop bar for stunning views of the Manhattan skyline.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "layout": "Media left (default)"
+  }
+}

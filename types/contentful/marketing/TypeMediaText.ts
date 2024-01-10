@@ -5,6 +5,7 @@ import type { TypeVideoSkeleton } from "./TypeVideo";
 
 export interface TypeMediaTextFields {
     name: EntryFieldTypes.Symbol;
+    title: EntryFieldTypes.Symbol;
     media: EntryFieldTypes.EntryLink<TypeImageSkeleton | TypeVideoSkeleton>;
     content: EntryFieldTypes.EntryLink<TypeRichTextSkeleton>;
     layout: EntryFieldTypes.Symbol<"Media left (default)" | "Media right">;

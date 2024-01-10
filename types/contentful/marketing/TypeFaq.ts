@@ -1,8 +1,8 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
 
 export interface TypeFaqFields {
-    faqMasterdata: EntryFieldTypes.EntryResourceLink<EntrySkeletonType>;
     name: EntryFieldTypes.Symbol;
+    faqMasterdata: EntryFieldTypes.EntryResourceLink<EntrySkeletonType>;
 }
 
 export type TypeFaqSkeleton = EntrySkeletonType<TypeFaqFields, "faq">;

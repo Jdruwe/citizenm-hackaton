@@ -2,9 +2,11 @@
 import Section from '~/feature/content/components/assemblies/section.vue'
 import CuratedCollection from '~/feature/content/components/assemblies/curated-collection.vue'
 import TypeForm from '~/feature/content/components/content/type-form.vue'
+import MediaText from '~/feature/content/components/assemblies/media-text.vue'
 import {
   isTypeCuratedCollection,
   isTypeForm,
+  isTypeMediaText,
   isTypeSection,
 } from '~/types/contentful/marketing'
 import type { ContentComponentProps, ContentComponentTypes } from '~/feature/content/types/content-component.types'
@@ -35,6 +37,9 @@ const mappedContent = getMappedContent(data)
       </template>
       <template v-if="isTypeForm(contentItem)">
         <TypeForm :data="contentItem" />
+      </template>
+      <template v-if="isTypeMediaText(contentItem)">
+        <MediaText :data="contentItem" />
       </template>
     </template>
   </template>

@@ -250,7 +250,7 @@
         "id": "section",
         "type": "ContentType",
         "createdAt": "2024-01-02T12:01:37.177Z",
-        "updatedAt": "2024-01-08T14:57:08.067Z",
+        "updatedAt": "2024-01-09T09:32:46.501Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -258,8 +258,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2024-01-08T14:57:08.067Z",
+        "publishedVersion": 9,
+        "publishedAt": "2024-01-09T09:32:46.501Z",
         "firstPublishedAt": "2024-01-02T12:01:37.357Z",
         "createdBy": {
           "sys": {
@@ -275,8 +275,8 @@
             "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 4,
-        "version": 8,
+        "publishedCounter": 5,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -326,7 +326,8 @@
                   "banner",
                   "automatedCollection",
                   "curatedCollection",
-                  "form"
+                  "form",
+                  "mediaText"
                 ]
               }
             ],
@@ -2946,7 +2947,7 @@
         "id": "mediaText",
         "type": "ContentType",
         "createdAt": "2024-01-02T12:01:39.610Z",
-        "updatedAt": "2024-01-02T12:01:39.978Z",
+        "updatedAt": "2024-01-10T15:13:12.001Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2954,8 +2955,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2024-01-02T12:01:39.978Z",
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-10T15:13:12.001Z",
         "firstPublishedAt": "2024-01-02T12:01:39.978Z",
         "createdBy": {
           "sys": {
@@ -2968,16 +2969,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         }
       },
@@ -2995,6 +2996,17 @@
             {
               "unique": true
             }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
           ],
           "disabled": false,
           "omitted": false
@@ -4295,7 +4307,94 @@
         "id": "faq",
         "type": "ContentType",
         "createdAt": "2024-01-08T21:10:58.624Z",
-        "updatedAt": "2024-01-08T21:33:24.318Z",
+        "updatedAt": "2024-01-09T11:09:41.243Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2024-01-09T11:09:41.243Z",
+        "firstPublishedAt": "2024-01-08T21:10:59.006Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "💡 Faq",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "faqMasterdata",
+          "name": "Faq masterdata",
+          "type": "ResourceLink",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "allowedResources": [
+            {
+              "type": "Contentful:Entry",
+              "source": "crn:contentful:::content:spaces/fzp55rkrsa7v",
+              "contentTypes": [
+                "faq"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "digitalSignage",
+        "type": "ContentType",
+        "createdAt": "2024-01-10T09:53:39.754Z",
+        "updatedAt": "2024-01-10T09:54:24.511Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4304,8 +4403,8 @@
           }
         },
         "publishedVersion": 5,
-        "publishedAt": "2024-01-08T21:33:24.318Z",
-        "firstPublishedAt": "2024-01-08T21:10:59.006Z",
+        "publishedAt": "2024-01-10T09:54:24.511Z",
+        "firstPublishedAt": "2024-01-10T09:53:40.064Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -4331,32 +4430,12 @@
         }
       },
       "displayField": "name",
-      "name": "Faq",
+      "name": "💡 Digital signage",
       "description": "",
       "fields": [
         {
-          "id": "faqMasterdata",
-          "name": "Faq masterdata",
-          "type": "ResourceLink",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "allowedResources": [
-            {
-              "type": "Contentful:Entry",
-              "source": "crn:contentful:::content:spaces/fzp55rkrsa7v",
-              "contentTypes": [
-                "faq"
-              ]
-            }
-          ]
-        },
-        {
           "id": "name",
-          "name": "name",
+          "name": "Name",
           "type": "Symbol",
           "localized": false,
           "required": true,
@@ -4367,11 +4446,62 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
         }
       ]
     }
   ],
   "tags": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "citynewYork",
+        "type": "Tag",
+        "createdAt": "2024-01-10T14:56:49.933Z",
+        "updatedAt": "2024-01-10T14:56:49.933Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5vSt2iU4jri7yDYXJDKtRZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5vSt2iU4jri7yDYXJDKtRZ"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "city:new-york"
+    }
   ],
   "editorInterfaces": [
     {
@@ -4495,7 +4625,7 @@
             "linkType": "Space"
           }
         },
-        "version": 8,
+        "version": 10,
         "createdAt": "2024-01-02T12:01:37.571Z",
         "createdBy": {
           "sys": {
@@ -4504,7 +4634,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-08T14:57:09.041Z",
+        "updatedAt": "2024-01-09T09:32:47.212Z",
         "updatedBy": {
           "sys": {
             "id": "22SIYlNyBUO3I2yPIQP7Vr",
@@ -5988,7 +6118,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 4,
         "createdAt": "2024-01-02T12:01:40.134Z",
         "createdBy": {
           "sys": {
@@ -5997,10 +6127,10 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-02T12:01:40.782Z",
+        "updatedAt": "2024-01-10T15:13:12.655Z",
         "updatedBy": {
           "sys": {
-            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "id": "6QLLK1TTKYBTd5byaaUORL",
             "type": "Link",
             "linkType": "User"
           }
@@ -6026,6 +6156,11 @@
           "settings": {
             "helpText": "This is the internal reference you will use within Contentful. Make sure to use naming conventions for consistency."
           },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
@@ -6840,7 +6975,7 @@
             "linkType": "Space"
           }
         },
-        "version": 6,
+        "version": 12,
         "createdAt": "2024-01-08T21:10:59.125Z",
         "createdBy": {
           "sys": {
@@ -6849,7 +6984,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-08T21:33:24.902Z",
+        "updatedAt": "2024-01-09T11:09:41.953Z",
         "updatedBy": {
           "sys": {
             "id": "6QLLK1TTKYBTd5byaaUORL",
@@ -6874,13 +7009,69 @@
       },
       "controls": [
         {
-          "fieldId": "faqMasterdata",
-          "widgetId": "resourceLinkEditor",
+          "fieldId": "name",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
         {
+          "fieldId": "faqMasterdata",
+          "widgetId": "resourceLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "o3fhy4qi3ji7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-01-10T09:53:40.180Z",
+        "createdBy": {
+          "sys": {
+            "id": "6QLLK1TTKYBTd5byaaUORL",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-10T09:54:25.075Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6QLLK1TTKYBTd5byaaUORL",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "digitalSignage",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
           "fieldId": "name",
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "widgetId": "entryLinkEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -7071,7 +7262,7 @@
         "id": "7Leg6RLkqlmwYpHi5zKzCK",
         "type": "Entry",
         "createdAt": "2024-01-05T09:08:47.204Z",
-        "updatedAt": "2024-01-05T12:36:49.397Z",
+        "updatedAt": "2024-01-09T13:12:18.989Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7079,8 +7270,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 17,
-        "publishedAt": "2024-01-05T12:36:49.397Z",
+        "publishedVersion": 19,
+        "publishedAt": "2024-01-09T13:12:18.989Z",
         "firstPublishedAt": "2024-01-05T09:10:02.527Z",
         "createdBy": {
           "sys": {
@@ -7093,16 +7284,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 6,
-        "version": 18,
+        "publishedCounter": 7,
+        "version": 20,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
         "automationTags": [
@@ -7136,13 +7327,6 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "31vyzg1b5zAbNnfwcNZ7N3"
-              }
-            },
-            {
-              "sys": {
-                "type": "Link",
-                "linkType": "Entry",
-                "id": "6caaofCPfh9TGZGeeSQfDZ"
               }
             }
           ]
@@ -7252,7 +7436,7 @@
         "id": "1g4iDyBXHHFVWLWODY1dSq",
         "type": "Entry",
         "createdAt": "2024-01-05T09:11:57.259Z",
-        "updatedAt": "2024-01-06T07:24:42.223Z",
+        "updatedAt": "2024-01-10T15:04:24.115Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7260,8 +7444,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2024-01-06T07:24:42.223Z",
+        "publishedVersion": 22,
+        "publishedAt": "2024-01-10T15:04:24.115Z",
         "firstPublishedAt": "2024-01-05T09:14:49.781Z",
         "createdBy": {
           "sys": {
@@ -7277,8 +7461,8 @@
             "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 4,
-        "version": 14,
+        "publishedCounter": 7,
+        "version": 23,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7302,6 +7486,20 @@
         },
         "content": {
           "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2nkVzanEHsJxGl7nej1for"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4We09qLSeOSedU8nsuEY0l"
+              }
+            },
             {
               "sys": {
                 "type": "Link",
@@ -7673,7 +7871,7 @@
         "id": "6ebrZdt017V4kj3t1qo2tN",
         "type": "Entry",
         "createdAt": "2024-01-05T12:48:11.950Z",
-        "updatedAt": "2024-01-08T11:58:37.374Z",
+        "updatedAt": "2024-01-09T14:06:26.375Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7681,8 +7879,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 10,
-        "publishedAt": "2024-01-08T11:58:37.374Z",
+        "publishedVersion": 31,
+        "publishedAt": "2024-01-09T14:06:26.375Z",
         "firstPublishedAt": "2024-01-05T12:48:35.212Z",
         "createdBy": {
           "sys": {
@@ -7695,16 +7893,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 4,
-        "version": 11,
+        "publishedCounter": 14,
+        "version": 32,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
         "automationTags": [
@@ -7737,6 +7935,13 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "1g4iDyBXHHFVWLWODY1dSq"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6wBKaT3BQcGWI8dlMragzD"
               }
             }
           ]
@@ -7839,7 +8044,7 @@
         "id": "4xJxrNQd2xcNROhdwyL21m",
         "type": "Entry",
         "createdAt": "2024-01-06T06:33:08.163Z",
-        "updatedAt": "2024-01-08T21:34:23.078Z",
+        "updatedAt": "2024-01-10T08:57:45.567Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7847,8 +8052,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 10,
-        "publishedAt": "2024-01-08T21:34:23.078Z",
+        "publishedVersion": 43,
+        "publishedAt": "2024-01-10T08:57:45.567Z",
         "firstPublishedAt": "2024-01-06T06:33:15.162Z",
         "createdBy": {
           "sys": {
@@ -7864,8 +8069,8 @@
             "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 5,
-        "version": 11,
+        "publishedCounter": 21,
+        "version": 44,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7917,13 +8122,20 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
+                "id": "3xcC1vYHST0JpqMx1nTGhN"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
                 "id": "BW6gEPtwhPV6qhmKlQhZH"
               }
             }
           ]
         },
         "displayAs": {
-          "en-US": "list"
+          "en-US": "slider"
         }
       }
     },
@@ -8108,7 +8320,7 @@
         "id": "5WvQH8mpw1bamMckS3zCuw",
         "type": "Entry",
         "createdAt": "2024-01-08T11:54:09.265Z",
-        "updatedAt": "2024-01-08T15:24:39.238Z",
+        "updatedAt": "2024-01-08T23:09:30.169Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8116,8 +8328,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2024-01-08T15:24:39.238Z",
+        "publishedVersion": 19,
+        "publishedAt": "2024-01-08T23:09:30.169Z",
         "firstPublishedAt": "2024-01-08T11:55:51.449Z",
         "createdBy": {
           "sys": {
@@ -8130,16 +8342,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 4,
-        "version": 14,
+        "publishedCounter": 7,
+        "version": 20,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
         "automationTags": [
@@ -8181,7 +8393,37 @@
                 "content": [
                   {
                     "nodeType": "text",
-                    "value": "Make our living room your office! Choose form two easy-to-reach New York locations – Times Square and Bowery – both perfect for creatives and entrepreneurs, just like you.\n\nThese inspiring co-working spaces come with cafe-style and long table seating options, superfast Wi-Fi, free filtered water, power outlets and plenty of food and drink options.\n\nRemember, this is your community – make yourself at home!",
+                    "value": "Make our living room your office! Choose form two easy-to-reach New York locations – Times Square and Bowery – both perfect for creatives and entrepreneurs, just like you.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "These inspiring co-working spaces come with cafe-style and long table seating options, superfast Wi-Fi, free filtered water, power outlets and plenty of food and drink options.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Remember, this is your community – make yourself at home!",
                     "marks": [
                     ],
                     "data": {
@@ -8294,7 +8536,7 @@
         "id": "4We09qLSeOSedU8nsuEY0l",
         "type": "Entry",
         "createdAt": "2024-01-08T14:44:40.866Z",
-        "updatedAt": "2024-01-08T14:44:58.997Z",
+        "updatedAt": "2024-01-09T09:16:31.100Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8316,11 +8558,11 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
         "publishedCounter": 1,
-        "version": 5,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8341,9 +8583,6 @@
       "fields": {
         "name": {
           "en-US": "Form - Coworking space reserveration"
-        },
-        "typeformReference": {
-          "en-US": "https://s3kyaggdjrs.typeform.com/to/rX2U9c8T"
         }
       }
     },
@@ -8419,6 +8658,1418 @@
         },
         "name": {
           "en-US": "Faq - Booking"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "7fXsxeqNOXWSWCUrIRbCMj",
+        "type": "Entry",
+        "createdAt": "2024-01-09T09:16:35.657Z",
+        "updatedAt": "2024-01-09T09:27:09.599Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-09T09:27:09.599Z",
+        "firstPublishedAt": "2024-01-09T09:27:09.599Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "image"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Image - NYT - Bowery interior"
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "ijsMaNgoz8u5uRkjPMpu4"
+            }
+          }
+        },
+        "altText": {
+          "en-US": "Bowery Interior"
+        },
+        "caption": {
+          "en-US": "The bowery"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "2SB2A5Xare20MwlLPbW5Do",
+        "type": "Entry",
+        "createdAt": "2024-01-09T09:27:17.145Z",
+        "updatedAt": "2024-01-09T09:27:41.436Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-09T09:27:41.436Z",
+        "firstPublishedAt": "2024-01-09T09:27:41.436Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "image"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Image - NYT - Times square interior"
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "dXSnDb0681sUMgGN6zpFN"
+            }
+          }
+        },
+        "altText": {
+          "en-US": "Times square interior"
+        },
+        "caption": {
+          "en-US": "Times square"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "ZzmrkX1jnDnXCeblIAxqu",
+        "type": "Entry",
+        "createdAt": "2024-01-09T09:27:52.217Z",
+        "updatedAt": "2024-01-09T09:29:16.899Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-09T09:29:16.899Z",
+        "firstPublishedAt": "2024-01-09T09:29:16.899Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "mediaText"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "MediaText - NYT - Times square"
+        },
+        "media": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2SB2A5Xare20MwlLPbW5Do"
+            }
+          }
+        },
+        "content": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5BL9ZwAR7Y7SDtFwS92X9Y"
+            }
+          }
+        },
+        "layout": {
+          "en-US": "Media left (default)"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "5BL9ZwAR7Y7SDtFwS92X9Y",
+        "type": "Entry",
+        "createdAt": "2024-01-09T09:28:37.121Z",
+        "updatedAt": "2024-01-09T09:29:10.887Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-09T09:29:10.887Z",
+        "firstPublishedAt": "2024-01-09T09:29:04.477Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "richText"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "RichText - NYT - Times Square"
+        },
+        "content": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Times Square",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-2"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "The Crossroads of the World... Midtown Manhattan... the core of the Big Apple. Whatever you call Times Square, you'll be right in the center of it in our art-filled living room. Strike the perfect work/fun balance with our rooftop bar – perfect for impromptu business meetings (or an after-work date). And when you need a time out, Central Park is only 15 minutes away!",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "2nkVzanEHsJxGl7nej1for",
+        "type": "Entry",
+        "createdAt": "2024-01-09T09:29:33.693Z",
+        "updatedAt": "2024-01-10T15:14:20.703Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-01-10T15:14:20.703Z",
+        "firstPublishedAt": "2024-01-09T09:30:17.259Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "mediaText"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "MediaText - NYT - Bowery"
+        },
+        "title": {
+          "en-US": "New York Bowery"
+        },
+        "media": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7fXsxeqNOXWSWCUrIRbCMj"
+            }
+          }
+        },
+        "content": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3Jy1tCEI92L8rJLHXyCfRO"
+            }
+          }
+        },
+        "layout": {
+          "en-US": "Media left (default)"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "3Jy1tCEI92L8rJLHXyCfRO",
+        "type": "Entry",
+        "createdAt": "2024-01-09T09:29:47.996Z",
+        "updatedAt": "2024-01-09T09:30:07.717Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-09T09:30:07.717Z",
+        "firstPublishedAt": "2024-01-09T09:30:07.717Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "richText"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "RichText - NYT - Bowery"
+        },
+        "content": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "heading-2",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "New York Bowery",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Hello, Lower East Side! Just an 18-min train from Grand Central Station, our Bowery hotel is perfectly placed – away from big crowds, but still close to big fun. Outside: Chinatown and Little Italy on the left, SoHo in front, Greenwich Village to the right. Need to unwind? Take the lift to our cloudM rooftop bar for stunning views of the Manhattan skyline.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "1XURYRUGFHAtQ12PN9ZNIb",
+        "type": "Entry",
+        "createdAt": "2024-01-09T09:30:38.014Z",
+        "updatedAt": "2024-01-09T09:33:08.614Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-09T09:33:08.614Z",
+        "firstPublishedAt": "2024-01-09T09:33:08.614Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "section"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Section - NYT - Coworking options"
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "ZzmrkX1jnDnXCeblIAxqu"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2nkVzanEHsJxGl7nej1for"
+              }
+            }
+          ]
+        },
+        "backgroundColour": {
+          "en-US": "White (default)"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "2aWOP9W45c4XzMz6w8FfzX",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:11:54.069Z",
+        "updatedAt": "2024-01-10T11:22:34.298Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-10T11:22:34.298Z",
+        "firstPublishedAt": "2024-01-10T11:22:34.298Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Hotel - NYB"
+        },
+        "pageTitle": {
+          "en-US": "New York Bowery hotel"
+        },
+        "slug": {
+          "en-US": "new-york-bowery-hotel"
+        },
+        "pageMetadata": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5jASPI6Of9QqjJCVH9pSaW"
+            }
+          }
+        },
+        "pageType": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1oeXaZuJqOf2lsx99EMjVH"
+            }
+          }
+        },
+        "hideInSearch": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "1oeXaZuJqOf2lsx99EMjVH",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:13:48.390Z",
+        "updatedAt": "2024-01-10T11:22:31.567Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-10T11:22:31.567Z",
+        "firstPublishedAt": "2024-01-10T11:22:31.567Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hotel"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Hotel - NYB"
+        },
+        "hotelMasterdata": {
+          "en-US": {
+            "sys": {
+              "type": "ResourceLink",
+              "linkType": "Contentful:Entry",
+              "urn": "crn:contentful:::content:spaces/fzp55rkrsa7v/environments/master/entries/6pnXGtA556RbHacPZhHPWC"
+            }
+          }
+        },
+        "highlightReel": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3dbK9FQDi9ZfSERZLg8FaK"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "7dQaOScgE5fSjCzHUFSvS",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:13:56.485Z",
+        "updatedAt": "2024-01-10T10:33:03.703Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2024-01-10T10:33:03.703Z",
+        "firstPublishedAt": "2024-01-10T10:33:03.703Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "RTM - Rotterdam hotel - Europe"
+        },
+        "pageTitle": {
+          "en-US": "Rotterdam hotel"
+        },
+        "slug": {
+          "en-US": "rotterdam-hotel"
+        },
+        "pageMetadata": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2ToVmkA2fN7Wse6Vs3IjT"
+            }
+          }
+        },
+        "pageType": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6s2V73TeaTfb5YGkoaPh1l"
+            }
+          }
+        },
+        "hideInSearch": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "2ToVmkA2fN7Wse6Vs3IjT",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:15:21.525Z",
+        "updatedAt": "2024-01-10T10:19:28.709Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-10T10:19:28.709Z",
+        "firstPublishedAt": "2024-01-10T10:19:28.709Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "metadata"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Rotterdam [hotel property] - metadata"
+        },
+        "seoTitle": {
+          "en-US": "citizenM Rotterdam Hotel | City Vibrance | Book now"
+        },
+        "seoDescription": {
+          "en-US": "Fantastic location near the Old Harbor and Markthal with bars, shops and restaurants. XL beds ✔ designer living room ✔ Book your hotel in Rotterdam now."
+        },
+        "noIndexNoFollow": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "6s2V73TeaTfb5YGkoaPh1l",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:30:45.117Z",
+        "updatedAt": "2024-01-10T10:32:31.858Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-10T10:32:31.858Z",
+        "firstPublishedAt": "2024-01-10T10:32:31.858Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hotel"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "RTM - Rotterdam hotel"
+        },
+        "hotelMasterdata": {
+          "en-US": {
+            "sys": {
+              "type": "ResourceLink",
+              "linkType": "Contentful:Entry",
+              "urn": "crn:contentful:::content:spaces/fzp55rkrsa7v/environments/master/entries/17cdgywlWHserpx8Mhh7M1"
+            }
+          }
+        },
+        "highlightReel": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7Cqbvbg8F0AS1pMLxfXrQm"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "7Cqbvbg8F0AS1pMLxfXrQm",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:31:04.991Z",
+        "updatedAt": "2024-01-10T10:32:06.017Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-01-10T10:32:06.017Z",
+        "firstPublishedAt": "2024-01-10T10:32:06.017Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "curatedCollection"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Rotterdam hotel collection - RTM"
+        },
+        "collectionTitle": {
+          "en-US": "Rotterdam hotel collection"
+        },
+        "items": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "BW6gEPtwhPV6qhmKlQhZH"
+              }
+            }
+          ]
+        },
+        "displayAs": {
+          "en-US": "slider"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "5jASPI6Of9QqjJCVH9pSaW",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:33:35.092Z",
+        "updatedAt": "2024-01-10T10:34:36.529Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-10T10:34:36.529Z",
+        "firstPublishedAt": "2024-01-10T10:34:36.529Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "metadata"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "NYB - meta data"
+        },
+        "seoTitle": {
+          "en-US": "citizenM New York Bowery Hotel | Skyline Views | Book now"
+        },
+        "seoDescription": {
+          "en-US": "Rooftop bar ✔ fantastic location ✔ stunning views ✔ XL beds ✔ designer living room ✔ 24/7 food ✔ Book your New York Bowery hotel now"
+        },
+        "noIndexNoFollow": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "5cbSq8YcHvX4ND9HSBeTx6",
+        "type": "Entry",
+        "createdAt": "2024-01-10T14:51:15.219Z",
+        "updatedAt": "2024-01-10T14:52:46.637Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-10T14:52:46.637Z",
+        "firstPublishedAt": "2024-01-10T14:52:46.637Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0pDwxAN1MjfN7vyHww0bNi"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0pDwxAN1MjfN7vyHww0bNi"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0pDwxAN1MjfN7vyHww0bNi"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "automatedCollection"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Demo Automated Collection"
+        },
+        "collectionTitle": {
+          "en-US": "Demo Collection (A)"
+        },
+        "types": {
+          "en-US": [
+            "hotel"
+          ]
+        },
+        "displayAs": {
+          "en-US": "list"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "78gO17BFx1rTA8Ddr0SXK2",
+        "type": "Entry",
+        "createdAt": "2024-01-10T14:57:48.771Z",
+        "updatedAt": "2024-01-10T14:58:58.380Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-10T14:58:58.380Z",
+        "firstPublishedAt": "2024-01-10T14:58:58.380Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5vSt2iU4jri7yDYXJDKtRZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5vSt2iU4jri7yDYXJDKtRZ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5vSt2iU4jri7yDYXJDKtRZ"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "curatedCollection"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Discover - New York"
+        },
+        "collectionTitle": {
+          "en-US": "Discover New York"
+        },
+        "items": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3xcC1vYHST0JpqMx1nTGhN"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "31vyzg1b5zAbNnfwcNZ7N3"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6caaofCPfh9TGZGeeSQfDZ"
+              }
+            }
+          ]
+        },
+        "displayAs": {
+          "en-US": "slider"
         }
       }
     }
@@ -8568,6 +10219,154 @@
             },
             "fileName": "Citizen M - coworking.jpeg",
             "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "dXSnDb0681sUMgGN6zpFN",
+        "type": "Asset",
+        "createdAt": "2024-01-09T09:15:03.472Z",
+        "updatedAt": "2024-01-09T09:15:37.200Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-09T09:15:37.200Z",
+        "firstPublishedAt": "2024-01-09T09:15:37.200Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "NYT - Times square interior"
+        },
+        "description": {
+          "en-US": "NYT - Times square interior"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/o3fhy4qi3ji7/dXSnDb0681sUMgGN6zpFN/a7c4c6c2f2ef039ae8420093853347d2/New_York_Times_Square-NewYorkTimesSquare_INT_14_high-1920x1080.webp",
+            "details": {
+              "size": 72716,
+              "image": {
+                "width": 780,
+                "height": 780
+              }
+            },
+            "fileName": "New_York_Times_Square-NewYorkTimesSquare_INT_14_high-1920x1080.webp",
+            "contentType": "image/webp"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "ijsMaNgoz8u5uRkjPMpu4",
+        "type": "Asset",
+        "createdAt": "2024-01-09T09:15:43.739Z",
+        "updatedAt": "2024-01-09T09:16:06.391Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-01-09T09:16:06.391Z",
+        "firstPublishedAt": "2024-01-09T09:16:06.391Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "NYT - Bowery interior"
+        },
+        "description": {
+          "en-US": "NYT - Bowery interior"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/o3fhy4qi3ji7/ijsMaNgoz8u5uRkjPMpu4/c4a7e4418e42ec73b9ddc3833e127552/New_York_Bowery-CitizenM_NYB_2-079_high-1920x1080.webp",
+            "details": {
+              "size": 70966,
+              "image": {
+                "width": 780,
+                "height": 780
+              }
+            },
+            "fileName": "New_York_Bowery-CitizenM_NYB_2-079_high-1920x1080.webp",
+            "contentType": "image/webp"
           }
         }
       }
