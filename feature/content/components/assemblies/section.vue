@@ -11,7 +11,7 @@ const { data } = defineProps<Props>()
 </script>
 
 <template>
-  <Section>
+  <Section :theme="data.fields.backgroundColour">
     <ContentComponentMapper
       :data="data"
     />
