@@ -9,7 +9,7 @@ interface Props {
 const { data } = defineProps<Props>()
 
 let heroImage
-const { media, description, title } = data.fields
+const { media, description, title, variation } = data.fields
 if (media) {
   if (isTypeImage(media)) {
     const assetUrl = media.fields.asset?.fields.file?.url
@@ -18,8 +18,9 @@ if (media) {
     }
   }
 }
+
 </script>
 
 <template>
-  <Hero v-if="title && heroImage" :title="title" :image="heroImage" :description="description" />
+  <Hero v-if="title && heroImage" :title="title" :image="heroImage" :description="description" :variation="variation" />
 </template>
