@@ -6,13 +6,14 @@ import type { TypeCuratedCollectionSkeleton } from "./TypeCuratedCollection";
 import type { TypeFormSkeleton } from "./TypeForm";
 import type { TypeImageSkeleton } from "./TypeImage";
 import type { TypeMediaTextSkeleton } from "./TypeMediaText";
+import type { TypeMembershipSkeleton } from "./TypeMembership";
 import type { TypeQuoteSkeleton } from "./TypeQuote";
 import type { TypeRichTextSkeleton } from "./TypeRichText";
 import type { TypeVideoSkeleton } from "./TypeVideo";
 
 export interface TypeSectionFields {
     name: EntryFieldTypes.Symbol;
-    content: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeAutomatedCollectionSkeleton | TypeBannerSkeleton | TypeCtaSkeleton | TypeCuratedCollectionSkeleton | TypeFormSkeleton | TypeImageSkeleton | TypeMediaTextSkeleton | TypeQuoteSkeleton | TypeRichTextSkeleton | TypeVideoSkeleton>>;
+    content: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeAutomatedCollectionSkeleton | TypeBannerSkeleton | TypeCtaSkeleton | TypeCuratedCollectionSkeleton | TypeFormSkeleton | TypeImageSkeleton | TypeMediaTextSkeleton | TypeMembershipSkeleton | TypeQuoteSkeleton | TypeRichTextSkeleton | TypeVideoSkeleton>>;
     backgroundColour: EntryFieldTypes.Symbol<"Dark" | "Light">;
 }
 

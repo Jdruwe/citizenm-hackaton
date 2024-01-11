@@ -3233,7 +3233,7 @@
         "id": "openingTimes",
         "type": "ContentType",
         "createdAt": "2024-01-11T09:28:18.258Z",
-        "updatedAt": "2024-01-11T09:28:18.528Z",
+        "updatedAt": "2024-01-11T12:59:00.113Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -3241,8 +3241,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2024-01-11T09:28:18.528Z",
+        "publishedVersion": 25,
+        "publishedAt": "2024-01-11T12:59:00.113Z",
         "firstPublishedAt": "2024-01-11T09:28:18.528Z",
         "createdBy": {
           "sys": {
@@ -3255,16 +3255,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "16UklEGmqiD4hmuIcRq40y"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 13,
+        "version": 26,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "16UklEGmqiD4hmuIcRq40y"
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
           }
         }
       },
@@ -3284,22 +3284,66 @@
           "omitted": false
         },
         {
-          "id": "start",
-          "name": "start",
-          "type": "Date",
+          "id": "startDayOfWeek",
+          "name": "startDayOfWeek",
+          "type": "Symbol",
           "localized": false,
-          "required": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "mon",
+                "tue",
+                "wed",
+                "thu",
+                "fri",
+                "sat",
+                "sun"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "startTimeOfWeek",
+          "name": "startTimeOfWeek",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
           "validations": [
           ],
           "disabled": false,
           "omitted": false
         },
         {
-          "id": "end",
-          "name": "end",
-          "type": "Date",
+          "id": "endDayOfWeek",
+          "name": "endDayOfWeek",
+          "type": "Symbol",
           "localized": false,
           "required": false,
+          "validations": [
+            {
+              "in": [
+                "mon",
+                "tue",
+                "wed",
+                "thu",
+                "fri",
+                "sat",
+                "sun"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "endTimeOfWeek",
+          "name": "endTimeOfWeek",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
           "validations": [
           ],
           "disabled": false,
@@ -4935,7 +4979,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 26,
         "createdAt": "2024-01-11T09:28:18.716Z",
         "createdBy": {
           "sys": {
@@ -4944,10 +4988,10 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-11T09:28:19.167Z",
+        "updatedAt": "2024-01-11T12:59:00.903Z",
         "updatedBy": {
           "sys": {
-            "id": "16UklEGmqiD4hmuIcRq40y",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr",
             "type": "Link",
             "linkType": "User"
           }
@@ -4974,13 +5018,29 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "start",
-          "widgetId": "datePicker",
+          "fieldId": "startDayOfWeek",
+          "widgetId": "radio",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "end",
-          "widgetId": "datePicker",
+          "fieldId": "startTimeOfWeek",
+          "settings": {
+            "helpText": "10:00 (would be 10 o'clock)"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "endDayOfWeek",
+          "widgetId": "radio",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "endTimeOfWeek",
+          "settings": {
+            "helpText": "10:00 (would be 10 o'clock)"
+          },
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
       ]
@@ -7070,7 +7130,7 @@
         "id": "17cdgywlWHserpx8Mhh7M1",
         "type": "Entry",
         "createdAt": "2024-01-10T10:20:43.291Z",
-        "updatedAt": "2024-01-11T10:26:24.986Z",
+        "updatedAt": "2024-01-11T12:04:41.640Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7078,8 +7138,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 22,
-        "publishedAt": "2024-01-10T15:45:47.718Z",
+        "publishedVersion": 27,
+        "publishedAt": "2024-01-11T11:53:05.458Z",
         "firstPublishedAt": "2024-01-10T10:30:14.127Z",
         "createdBy": {
           "sys": {
@@ -7095,8 +7155,8 @@
             "id": "1tFLQb4BCP8A5ho8YAyBKw"
           }
         },
-        "publishedCounter": 4,
-        "version": 26,
+        "publishedCounter": 5,
+        "version": 29,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -7178,6 +7238,17 @@
             }
           }
         },
+        "amenities": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2YQwV42p3KKfF3XM49XOLZ"
+              }
+            }
+          ]
+        },
         "artCollection": {
           "en-US": [
             {
@@ -7218,6 +7289,17 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "2tQUDbNMK4qLJ9CmyLIknH"
+              }
+            }
+          ]
+        },
+        "canteenM": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "74SrtvU8iiKu0sfB6GZEeb"
               }
             }
           ]
@@ -7934,7 +8016,7 @@
         "id": "2tQUDbNMK4qLJ9CmyLIknH",
         "type": "Entry",
         "createdAt": "2024-01-10T15:21:02.745Z",
-        "updatedAt": "2024-01-11T09:37:25.805Z",
+        "updatedAt": "2024-01-11T12:40:22.454Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7942,8 +8024,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 37,
-        "publishedAt": "2024-01-11T09:37:25.805Z",
+        "publishedVersion": 41,
+        "publishedAt": "2024-01-11T11:52:14.379Z",
         "firstPublishedAt": "2024-01-10T15:44:21.740Z",
         "createdBy": {
           "sys": {
@@ -7956,11 +8038,11 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+            "id": "5pQQGJXIe04n1R2y9EKsdM"
           }
         },
-        "publishedCounter": 5,
-        "version": 38,
+        "publishedCounter": 6,
+        "version": 43,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8011,26 +8093,26 @@
         },
         "longDescription": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Make our living room your office! Choose from two easy-to-reach our Rotterdam location - perfect for creatives and entrepreneurs, just like you.\n\nThese inspiring co-working spaces come with cafe-style and long table seating options, superfast Wi-Fi, free filtered water, power outlets and plenty of food and drink options.\n\nRemember, this is your community – make yourself at home!",
                     "marks": [
                     ],
-                    "value": "Make our living room your office! Choose form two easy-to-reach our Rotterdam location - perfect for creatives and entrepreneurs, just like you.\n\nThese inspiring co-working spaces come with cafe-style and long table seating options, superfast Wi-Fi, free filtered water, power outlets and plenty of food and drink options.\n\nRemember, this is your community – make yourself at home!",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         },
         "images": {
@@ -8305,7 +8387,7 @@
         "id": "4G1XTtzJbIMEqyomrMJU4v",
         "type": "Entry",
         "createdAt": "2024-01-10T15:44:38.660Z",
-        "updatedAt": "2024-01-10T15:45:43.739Z",
+        "updatedAt": "2024-01-11T13:09:23.190Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8313,8 +8395,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-01-10T15:45:43.739Z",
+        "publishedVersion": 15,
+        "publishedAt": "2024-01-11T13:09:23.190Z",
         "firstPublishedAt": "2024-01-10T15:45:43.739Z",
         "createdBy": {
           "sys": {
@@ -8327,16 +8409,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 3,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
           }
         },
         "automationTags": [
@@ -8356,13 +8438,97 @@
         "title": {
           "en-US": "Rotterdam meeting rooms"
         },
+        "shortDescription": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Located above Rotterdam Blaak train and metro station, societyM is super-easy to find. Rotterdam Central is 10 minutes away by train or, if you’re a rugged globe-trotter, Den Hague Airport is 20 mins in a taxi. Here for a conference? De Doelen International Conference is 22 mins from our door on foot. Hear that? Wherever you’re coming in from, we have a cup of barista-brewed coffee calling your name.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "longDescription": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Style, bold colours and a sprinkling of pizzazz. Just what you’d want in a meeting room, right? We read your mind and created societyM: the next generation of meeting spaces in Rotterdam, here to blow minds and inspire the world. Not a boring beige wall in sight. Thank goodness for that.\n\nRotterdam is a city that’s dripping with ‘cool’. Think ultra-modern architecture, the Cube Houses and dance-way-into-the-next-day nightlife. So it needed meeting rooms to match. societyM has 9 spaces to rent for business professionals looking to show off their creative side. Each workspace comes with designer Vitra furniture and bright boundary-pushing art to kickstart your imagination. Go boardroom-style for groups of up to 16 people or rent our event room (up to 100 people) for extra-special announcements. Black tie optional.\n\n‘Best-meeting-ever’ status is within your reach. societyM has:\n- all the tech essentials – smart TV, Clickshare, Apple TV and Windows Wireless, HDMI and VGA cables – to keep you in the flow\n- superfast Wi-Fi in every meeting and event room\n- flipcharts and huge draw-on walls for when the ideas just keep coming\n- free tea, coffee and water all day long – no caffeine crashes here\n\nBusy brains need happy stomachs – our locally-sourced catering packages will keep the energy as high as the vibes. Breakfast, lunch, dinner or snacks: you choose the fuel. We cater for all dietary requirements too – tell us what you need 48 hours in advance and prepare to be wowed by creamy sweet treats, flavour-packed sandwiches and fresh, crunchy salads.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
         "images": {
           "en-US": [
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "76sziPcqjEOkz2q0jx3tvh"
+                "id": "3eIGohkegspsh2qGPJk2hO"
+              }
+            }
+          ]
+        },
+        "facilities": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4BM114zTqDhw9SSDasIREq"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2YQwV42p3KKfF3XM49XOLZ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2Kj6iqsN4qUkF6HtJCnv3U"
+              }
+            }
+          ]
+        },
+        "faq": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6EpDT8y1VGKL9jWzPIQOUH"
               }
             }
           ]
@@ -8372,6 +8538,13 @@
     {
       "metadata": {
         "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "featureusp"
+            }
+          }
         ]
       },
       "sys": {
@@ -8385,7 +8558,7 @@
         "id": "YXhSJa1QSCzfmlSiHHHfS",
         "type": "Entry",
         "createdAt": "2024-01-11T08:55:27.520Z",
-        "updatedAt": "2024-01-11T10:42:28.361Z",
+        "updatedAt": "2024-01-11T11:53:38.376Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8393,8 +8566,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 9,
-        "publishedAt": "2024-01-11T10:42:28.361Z",
+        "publishedVersion": 11,
+        "publishedAt": "2024-01-11T11:53:38.376Z",
         "firstPublishedAt": "2024-01-11T08:57:02.131Z",
         "createdBy": {
           "sys": {
@@ -8407,16 +8580,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
           }
         },
-        "publishedCounter": 2,
-        "version": 10,
+        "publishedCounter": 3,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
           }
         },
         "automationTags": [
@@ -8673,7 +8846,7 @@
         "id": "5q3XV7kaplGqCCo9CNvDSD",
         "type": "Entry",
         "createdAt": "2024-01-11T09:28:43.634Z",
-        "updatedAt": "2024-01-11T09:29:11.646Z",
+        "updatedAt": "2024-01-11T13:03:05.441Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8681,8 +8854,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-01-11T09:29:11.646Z",
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-11T13:03:05.441Z",
         "firstPublishedAt": "2024-01-11T09:29:11.646Z",
         "createdBy": {
           "sys": {
@@ -8695,16 +8868,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 2,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
           }
         },
         "automationTags": [
@@ -8738,6 +8911,35 @@
                   {
                     "nodeType": "text",
                     "value": "Spaces are limited so you do need to reserve in advance. Just login to the member section of the app to save your seat!",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-asset-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "4IadrdzRMZ6YhdDWiuW2yM",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
                     "data": {
@@ -8859,7 +9061,7 @@
         "id": "4mTvjnP8qLXGfloO2lTSig",
         "type": "Entry",
         "createdAt": "2024-01-11T09:31:17.450Z",
-        "updatedAt": "2024-01-11T09:32:41.377Z",
+        "updatedAt": "2024-01-11T13:00:20.028Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8867,8 +9069,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2024-01-11T09:32:41.377Z",
+        "publishedVersion": 15,
+        "publishedAt": "2024-01-11T13:00:20.028Z",
         "firstPublishedAt": "2024-01-11T09:32:41.377Z",
         "createdBy": {
           "sys": {
@@ -8884,8 +9086,8 @@
             "id": "1tFLQb4BCP8A5ho8YAyBKw"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 3,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -8905,7 +9107,19 @@
       },
       "fields": {
         "internalName": {
-          "en-US": "RTM coworking openin time"
+          "en-US": "RTM coworking opening time"
+        },
+        "startDayOfWeek": {
+          "en-US": "mon"
+        },
+        "startTimeOfWeek": {
+          "en-US": "09:00"
+        },
+        "endDayOfWeek": {
+          "en-US": "fri"
+        },
+        "endTimeOfWeek": {
+          "en-US": "18:00"
         }
       }
     },
@@ -9507,7 +9721,7 @@
         "id": "6FlYTzclcBOoV8L0IigREt",
         "type": "Entry",
         "createdAt": "2024-01-11T09:46:42.469Z",
-        "updatedAt": "2024-01-11T09:47:40.985Z",
+        "updatedAt": "2024-01-11T12:36:01.488Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9515,8 +9729,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-01-11T09:47:40.985Z",
+        "publishedVersion": 8,
+        "publishedAt": "2024-01-11T12:36:01.488Z",
         "firstPublishedAt": "2024-01-11T09:46:59.719Z",
         "createdBy": {
           "sys": {
@@ -9532,8 +9746,8 @@
             "id": "6cAdUBpqLb5Ab7DoFtWRyf"
           }
         },
-        "publishedCounter": 2,
-        "version": 6,
+        "publishedCounter": 3,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -9572,6 +9786,35 @@
                   {
                     "nodeType": "text",
                     "value": "Spaces are limited so you do need to reserve in advance. Just login to the member section of the app to save your seat!",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-asset-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "37cO4eDQ1NXUZcLPqNUljk",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
                     "data": {
@@ -10306,7 +10549,7 @@
         "id": "3H1S9LjTeD6cEFNP3IkpEz",
         "type": "Entry",
         "createdAt": "2024-01-11T10:36:15.127Z",
-        "updatedAt": "2024-01-11T10:37:09.198Z",
+        "updatedAt": "2024-01-11T13:00:43.628Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -10314,8 +10557,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-01-11T10:37:09.198Z",
+        "publishedVersion": 23,
+        "publishedAt": "2024-01-11T13:00:43.628Z",
         "firstPublishedAt": "2024-01-11T10:37:09.198Z",
         "createdBy": {
           "sys": {
@@ -10331,8 +10574,8 @@
             "id": "6cAdUBpqLb5Ab7DoFtWRyf"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 7,
+        "version": 24,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -10352,7 +10595,7 @@
       },
       "fields": {
         "name": {
-          "en-US": "coworking - NYB "
+          "en-US": "coworking - RTM opening times"
         },
         "question": {
           "en-US": "How long can I access the co-working space for? Is it 24/7?"
@@ -10370,7 +10613,44 @@
                 "content": [
                   {
                     "nodeType": "text",
-                    "value": "Co-working is open Monday to Friday at our New York Bowery location for morning, afternoon and full day sessions. At Bowery hours run from 11.00 AM to 6.00PM (EST).",
+                    "value": "Co-working is open Monday to Friday at our Rotterdam location for morning, afternoon and full day sessions. At Rotterdam hours run from ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "embedded-entry-inline",
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "4mTvjnP8qLXGfloO2lTSig",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [
+                    ]
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": ".",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": ".",
                     "marks": [
                     ],
                     "data": {
@@ -11181,6 +11461,1120 @@
         },
         "altText": {
           "en-US": "reservation calendar "
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "74SrtvU8iiKu0sfB6GZEeb",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:04:36.156Z",
+        "updatedAt": "2024-01-11T12:05:04.168Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-11T12:05:04.168Z",
+        "firstPublishedAt": "2024-01-11T12:05:04.168Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "canteenM"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "RTM canteenM"
+        },
+        "title": {
+          "en-US": "Rotterdam canteenM"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "3n14CPVzyY4mgLiiHgqmZR",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:14:19.155Z",
+        "updatedAt": "2024-01-11T12:27:58.332Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-11T12:23:16.309Z",
+        "firstPublishedAt": "2024-01-11T12:23:16.309Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "ambassadors"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Ambassadors "
+        },
+        "title": {
+          "en-US": "Elevating Experiences, One Connection at a Time: Your Ambassador to Exceptional Service."
+        },
+        "shortDescription": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Meet our Hospitality Ambassadors, your dedicated guides to a personalized and unforgettable stay. From seamless check-ins to curated recommendations, they craft moments of joy, ensuring your every need is met. Experience a world of unparalleled service where you're not just a guest but a cherished member of our family.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "longDescription": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Embark on a Journey of Unrivaled Hospitality with Our Dedicated Ambassadors, Your Pinnacle Partners in Personalized Service and Comfort. From the moment you step through our doors, our Hospitality Ambassadors stand ready as the guardians of your experience, weaving a tapestry of warmth, care, and attention to detail.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "With an unwavering commitment to exceeding expectations, our Ambassadors are not just hosts but companions on your voyage, anticipating your needs, and curating moments of joy throughout your stay. From seamless check-ins to curated recommendations, they are the architects of your memorable moments, ensuring that every aspect of your stay is tailored to perfection.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Your comfort is their priority, and their genuine warmth transforms your visit into an extraordinary sojourn. Beyond providing assistance, they craft an atmosphere where you are not just a guest but an esteemed member of our extended family.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Experience the epitome of personalized hospitality with our extraordinary Ambassadors, where every stay is an invitation to indulge in a world of unparalleled service, making our hotel your home away from home",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6GIlKB1YXYzc6iobqUwOi"
+              }
+            }
+          ]
+        },
+        "faq": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "zZx4xfjvIJxoGfXtJuloo"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3S6KDRKy7xomstUIqBC75P"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1MRqOVtJE0yafnLgw6Zpfw"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3vf4gMh0g8X7Jh7ZsbYW3l"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7LJ6kasmKgESloRdt3Fl1a"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "6GIlKB1YXYzc6iobqUwOi",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:22:09.915Z",
+        "updatedAt": "2024-01-11T12:22:58.248Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-11T12:22:58.248Z",
+        "firstPublishedAt": "2024-01-11T12:22:58.248Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "name"
+          }
+        }
+      },
+      "fields": {
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3Au4e9KFU2eR9gbTFLmgmz"
+            }
+          }
+        },
+        "name": {
+          "en-US": "ambassador"
+        },
+        "altText": {
+          "en-US": "ambassador"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "zZx4xfjvIJxoGfXtJuloo",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:23:20.570Z",
+        "updatedAt": "2024-01-11T12:25:18.604Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-11T12:25:18.604Z",
+        "firstPublishedAt": "2024-01-11T12:25:18.604Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Who are ambassadors"
+        },
+        "question": {
+          "en-US": "Who are the Ambassadors, and what is their role in the hotel?"
+        },
+        "answer": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Our Ambassadors are highly trained and dedicated professionals who serve as the face of our hotel. Their primary role is to ensure that every guest enjoys a personalized and memorable stay by offering assistance, guidance, and creating an atmosphere of warmth and hospitality",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "3S6KDRKy7xomstUIqBC75P",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:25:25.486Z",
+        "updatedAt": "2024-01-11T12:26:13.129Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-01-11T12:26:13.129Z",
+        "firstPublishedAt": "2024-01-11T12:26:13.129Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "How do ambassasors enhance the experience"
+        },
+        "question": {
+          "en-US": "How do the Ambassadors enhance my overall stay experience?"
+        },
+        "answer": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Our Ambassadors are here to anticipate and fulfill your needs, going above and beyond to make your stay extraordinary. From personalized recommendations to seamless assistance, they are committed to ensuring that your experience with us is not just comfortable but truly exceptional.",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "1MRqOVtJE0yafnLgw6Zpfw",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:26:20.460Z",
+        "updatedAt": "2024-01-11T12:26:54.813Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-11T12:26:54.813Z",
+        "firstPublishedAt": "2024-01-11T12:26:54.813Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "What services do ambassadors offer"
+        },
+        "question": {
+          "en-US": "What specific services or assistance can I expect from the Ambassadors?"
+        },
+        "answer": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Our Ambassadors offer a wide range of services, including personalized check-ins, local recommendations, assistance with special requests, and ensuring your overall well-being during your stay. They are here to cater to your needs and enhance every aspect of your visit.",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "3vf4gMh0g8X7Jh7ZsbYW3l",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:27:02.065Z",
+        "updatedAt": "2024-01-11T12:27:46.739Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-11T12:27:46.739Z",
+        "firstPublishedAt": "2024-01-11T12:27:46.739Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Are ambassadors always available"
+        },
+        "question": {
+          "en-US": "Are the Ambassadors available around the clock, and how can I reach out to them?"
+        },
+        "answer": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Yes, our Ambassadors are available 24/7 to assist you. You can reach out to them through the hotel's front desk, in-person during your stay, or through dedicated communication channels, such as phone or messaging services, ensuring that assistance is always just a call or message away.",
+                    "marks": [
+                      {
+                        "type": "italic"
+                      }
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "7LJ6kasmKgESloRdt3Fl1a",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:27:52.145Z",
+        "updatedAt": "2024-01-11T12:39:25.138Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 21,
+        "publishedAt": "2024-01-11T12:39:25.138Z",
+        "firstPublishedAt": "2024-01-11T12:30:38.568Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 22,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Can ambassadors help with local recommendations"
+        },
+        "question": {
+          "en-US": "Can the Ambassadors help with local recommendations?"
+        },
+        "answer": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Absolutely! Our Ambassadors are well-versed in the local scene and can provide personalized recommendations for dining, entertainment, and attractions. ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Next to our ambassadors you can also check out our city guides ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-entry-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "7vybvi5xfPppGKNHO04gqW",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "3eIGohkegspsh2qGPJk2hO",
+        "type": "Entry",
+        "createdAt": "2024-01-11T13:06:13.806Z",
+        "updatedAt": "2024-01-11T13:06:59.125Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-11T13:06:59.125Z",
+        "firstPublishedAt": "2024-01-11T13:06:59.125Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "name"
+          }
+        }
+      },
+      "fields": {
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4r4jyo5hwtjgeD65nhHbNQ"
+            }
+          }
+        },
+        "name": {
+          "en-US": "RTM meeting room 3"
+        },
+        "altText": {
+          "en-US": "meeting room 3 Rotterdam"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "4BM114zTqDhw9SSDasIREq",
+        "type": "Entry",
+        "createdAt": "2024-01-11T13:07:09.272Z",
+        "updatedAt": "2024-01-11T13:08:18.809Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-11T13:08:18.809Z",
+        "firstPublishedAt": "2024-01-11T13:08:18.809Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "amenity"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Air conditioning"
+        },
+        "title": {
+          "en-US": "Air conditioning"
+        },
+        "icon": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2wGUXtuBX1u9xKKBpvvYqY"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "2Kj6iqsN4qUkF6HtJCnv3U",
+        "type": "Entry",
+        "createdAt": "2024-01-11T13:08:24.466Z",
+        "updatedAt": "2024-01-11T13:08:47.952Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-11T13:08:47.952Z",
+        "firstPublishedAt": "2024-01-11T13:08:47.952Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "amenity"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Whiteboard"
+        },
+        "title": {
+          "en-US": "Whiteboard"
+        },
+        "icon": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "43sJGvWX64deQa1enYY6SY"
+            }
+          }
         }
       }
     }
@@ -12366,6 +13760,302 @@
             },
             "fileName": "reservation__white.svg",
             "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "3Au4e9KFU2eR9gbTFLmgmz",
+        "type": "Asset",
+        "createdAt": "2024-01-11T12:22:13.870Z",
+        "updatedAt": "2024-01-11T12:22:41.849Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-11T12:22:41.849Z",
+        "firstPublishedAt": "2024-01-11T12:22:41.849Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Paris Champs Elysees-20210903 citizenM-Ambassadors-JoniIsraeli-034-5D4 6839-1920x1080"
+        },
+        "description": {
+          "en-US": "ambassador"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/fzp55rkrsa7v/3Au4e9KFU2eR9gbTFLmgmz/97c2d32d60edc54a52cdb43c55b11b9c/Paris_Champs_Elysees-20210903_citizenM-Ambassadors-JoniIsraeli-034-5D4_6839-1920x1080.jpg",
+            "details": {
+              "size": 135530,
+              "image": {
+                "width": 1620,
+                "height": 1080
+              }
+            },
+            "fileName": "Paris_Champs_Elysees-20210903_citizenM-Ambassadors-JoniIsraeli-034-5D4_6839-1920x1080.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "37cO4eDQ1NXUZcLPqNUljk",
+        "type": "Asset",
+        "createdAt": "2024-01-11T12:34:54.719Z",
+        "updatedAt": "2024-01-11T12:35:54.002Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-11T12:35:54.002Z",
+        "firstPublishedAt": "2024-01-11T12:35:54.002Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "app screenshot member space coworking"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/fzp55rkrsa7v/37cO4eDQ1NXUZcLPqNUljk/124c9cc82dcb35f800ec014e8c7ca14a/Screenshot_2024-01-11_133538.png",
+            "details": {
+              "size": 46395,
+              "image": {
+                "width": 619,
+                "height": 461
+              }
+            },
+            "fileName": "Screenshot 2024-01-11 133538.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "4IadrdzRMZ6YhdDWiuW2yM",
+        "type": "Asset",
+        "createdAt": "2024-01-11T13:01:25.635Z",
+        "updatedAt": "2024-01-11T13:02:18.067Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-11T13:02:18.067Z",
+        "firstPublishedAt": "2024-01-11T13:02:18.067Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "screenshot of app with membership coworking"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/fzp55rkrsa7v/4IadrdzRMZ6YhdDWiuW2yM/b16658b5768cf69ce4ecd835ab32db35/Screenshot_2024-01-11_133538.png",
+            "details": {
+              "size": 46395,
+              "image": {
+                "width": 619,
+                "height": 461
+              }
+            },
+            "fileName": "Screenshot 2024-01-11 133538.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "4r4jyo5hwtjgeD65nhHbNQ",
+        "type": "Asset",
+        "createdAt": "2024-01-11T13:06:17.169Z",
+        "updatedAt": "2024-01-11T13:06:38.954Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-01-11T13:06:38.954Z",
+        "firstPublishedAt": "2024-01-11T13:06:38.954Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0EwQ6qMNHYUpPbBRDUK6st"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Rotterdam-societyM-CitizenM Rott Mtg-0166-2560x1440"
+        },
+        "description": {
+          "en-US": "RTM meeting room 3"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/fzp55rkrsa7v/4r4jyo5hwtjgeD65nhHbNQ/824926d3248cf98a02134128dbb2cd1f/Rotterdam-societyM-CitizenM_Rott_Mtg-0166-2560x1440.jpg",
+            "details": {
+              "size": 329164,
+              "image": {
+                "width": 2021,
+                "height": 1440
+              }
+            },
+            "fileName": "Rotterdam-societyM-CitizenM_Rott_Mtg-0166-2560x1440.jpg",
+            "contentType": "image/jpeg"
           }
         }
       }

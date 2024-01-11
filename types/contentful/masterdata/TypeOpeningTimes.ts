@@ -2,8 +2,10 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 
 export interface TypeOpeningTimesFields {
     internalName?: EntryFieldTypes.Symbol;
-    start?: EntryFieldTypes.Date;
-    end?: EntryFieldTypes.Date;
+    startDayOfWeek: EntryFieldTypes.Symbol<"fri" | "mon" | "sat" | "sun" | "thu" | "tue" | "wed">;
+    startTimeOfWeek: EntryFieldTypes.Symbol;
+    endDayOfWeek?: EntryFieldTypes.Symbol<"fri" | "mon" | "sat" | "sun" | "thu" | "tue" | "wed">;
+    endTimeOfWeek: EntryFieldTypes.Symbol;
 }
 
 export type TypeOpeningTimesSkeleton = EntrySkeletonType<TypeOpeningTimesFields, "openingTimes">;

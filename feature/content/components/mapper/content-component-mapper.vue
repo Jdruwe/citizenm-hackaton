@@ -4,11 +4,13 @@ import CuratedCollection from '~/feature/content/components/assemblies/curated-c
 import TypeForm from '~/feature/content/components/content/type-form.vue'
 import MediaText from '~/feature/content/components/assemblies/media-text.vue'
 import Hero from '~/feature/content/components/content/hero.vue'
+import Membership from '~/feature/content/components/content/membership.vue'
 import {
   isTypeCuratedCollection,
   isTypeForm,
   isTypeHero,
   isTypeMediaText,
+  isTypeMembership,
   isTypeSection,
 } from '~/types/contentful/marketing'
 import type { ContentComponentProps, ContentComponentTypes } from '~/feature/content/types/content-component.types'
@@ -45,6 +47,9 @@ const mappedContent = getMappedContent(data)
       </template>
       <template v-if="isTypeHero(contentItem)">
         <Hero :data="contentItem" />
+      </template>
+      <template v-if="isTypeMembership(contentItem)">
+        <Membership :data="contentItem" />
       </template>
     </template>
   </template>

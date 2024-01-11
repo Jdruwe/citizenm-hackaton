@@ -250,7 +250,7 @@
         "id": "section",
         "type": "ContentType",
         "createdAt": "2024-01-02T12:01:37.177Z",
-        "updatedAt": "2024-01-11T09:14:30.011Z",
+        "updatedAt": "2024-01-11T12:41:38.939Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -258,8 +258,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2024-01-11T09:14:30.011Z",
+        "publishedVersion": 15,
+        "publishedAt": "2024-01-11T12:41:38.939Z",
         "firstPublishedAt": "2024-01-02T12:01:37.357Z",
         "createdBy": {
           "sys": {
@@ -275,8 +275,8 @@
             "id": "6QLLK1TTKYBTd5byaaUORL"
           }
         },
-        "publishedCounter": 7,
-        "version": 14,
+        "publishedCounter": 8,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -327,7 +327,8 @@
                   "automatedCollection",
                   "curatedCollection",
                   "form",
-                  "mediaText"
+                  "mediaText",
+                  "membership"
                 ]
               }
             ],
@@ -2386,7 +2387,7 @@
         "id": "contentCard",
         "type": "ContentType",
         "createdAt": "2024-01-02T12:01:38.588Z",
-        "updatedAt": "2024-01-02T12:01:38.765Z",
+        "updatedAt": "2024-01-11T12:23:16.591Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2394,8 +2395,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2024-01-02T12:01:38.765Z",
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-11T12:23:16.591Z",
         "firstPublishedAt": "2024-01-02T12:01:38.765Z",
         "createdBy": {
           "sys": {
@@ -2408,16 +2409,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 4,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         }
       },
@@ -2477,23 +2478,50 @@
           "required": false,
           "validations": [
             {
-              "message": "Marks are not allowed",
-              "enabledMarks": [
-              ]
-            },
-            {
-              "message": "Nodes are not allowed",
-              "enabledNodeTypes": [
-              ]
-            },
-            {
               "size": {
                 "max": 500
               },
               "message": "Please add no more than 500 characters"
             },
             {
+              "enabledMarks": [
+              ],
+              "message": "Marks are not allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "embedded-resource-block"
+              ],
+              "message": "Only block entry from a different space nodes are allowed"
+            },
+            {
               "nodes": {
+                "embedded-resource-block": {
+                  "validations": [
+                  ],
+                  "allowedResources": [
+                    {
+                      "type": "Contentful:Entry",
+                      "source": "crn:contentful:::content:spaces/fzp55rkrsa7v",
+                      "contentTypes": [
+                        "ambassadors"
+                      ]
+                    }
+                  ]
+                },
+                "embedded-resource-inline": {
+                  "validations": [
+                  ],
+                  "allowedResources": [
+                    {
+                      "type": "Contentful:Entry",
+                      "source": "crn:contentful:::content:spaces/fzp55rkrsa7v",
+                      "contentTypes": [
+                        "ambassadors"
+                      ]
+                    }
+                  ]
+                }
               }
             }
           ],
@@ -4931,6 +4959,240 @@
           ]
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "screen",
+        "type": "ContentType",
+        "createdAt": "2024-01-11T12:17:16.074Z",
+        "updatedAt": "2024-01-11T12:20:34.537Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-11T12:20:34.537Z",
+        "firstPublishedAt": "2024-01-11T12:17:16.350Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0pDwxAN1MjfN7vyHww0bNi"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0pDwxAN1MjfN7vyHww0bNi"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0pDwxAN1MjfN7vyHww0bNi"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Screen",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Internal name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "media",
+          "name": "Media",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "qr",
+          "name": "QR",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "membership",
+        "type": "ContentType",
+        "createdAt": "2024-01-11T12:41:25.477Z",
+        "updatedAt": "2024-01-11T12:41:26.371Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-01-11T12:41:26.371Z",
+        "firstPublishedAt": "2024-01-11T12:41:26.371Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Membership",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "membershipMasterdata",
+          "name": "Membership Masterdata",
+          "type": "ResourceLink",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "allowedResources": [
+            {
+              "type": "Contentful:Entry",
+              "source": "crn:contentful:::content:spaces/fzp55rkrsa7v",
+              "contentTypes": [
+                "membership"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "tags": [
@@ -5096,7 +5358,7 @@
             "linkType": "Space"
           }
         },
-        "version": 14,
+        "version": 16,
         "createdAt": "2024-01-02T12:01:37.571Z",
         "createdBy": {
           "sys": {
@@ -5105,7 +5367,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-11T09:14:30.696Z",
+        "updatedAt": "2024-01-11T12:41:39.657Z",
         "updatedBy": {
           "sys": {
             "id": "6QLLK1TTKYBTd5byaaUORL",
@@ -6222,7 +6484,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 8,
         "createdAt": "2024-01-02T12:01:38.961Z",
         "createdBy": {
           "sys": {
@@ -6231,10 +6493,10 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-02T12:01:40.632Z",
+        "updatedAt": "2024-01-11T12:23:17.213Z",
         "updatedBy": {
           "sys": {
-            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "id": "16UklEGmqiD4hmuIcRq40y",
             "type": "Link",
             "linkType": "User"
           }
@@ -7810,6 +8072,133 @@
           "widgetNamespace": "builtin"
         }
       ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "o3fhy4qi3ji7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2024-01-11T12:17:16.476Z",
+        "createdBy": {
+          "sys": {
+            "id": "0pDwxAN1MjfN7vyHww0bNi",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-11T12:20:35.186Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0pDwxAN1MjfN7vyHww0bNi",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "screen",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "media",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "qr",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "o3fhy4qi3ji7",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-01-11T12:41:26.525Z",
+        "createdBy": {
+          "sys": {
+            "id": "6QLLK1TTKYBTd5byaaUORL",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-11T12:41:26.940Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6QLLK1TTKYBTd5byaaUORL",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "membership",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "membershipMasterdata",
+          "widgetId": "resourceLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
     }
   ],
   "entries": [
@@ -7829,7 +8218,7 @@
         "id": "31vyzg1b5zAbNnfwcNZ7N3",
         "type": "Entry",
         "createdAt": "2024-01-04T09:49:22.993Z",
-        "updatedAt": "2024-01-08T09:42:04.186Z",
+        "updatedAt": "2024-01-11T12:36:23.249Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -7837,8 +8226,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 9,
-        "publishedAt": "2024-01-08T09:42:04.186Z",
+        "publishedVersion": 12,
+        "publishedAt": "2024-01-11T12:36:23.249Z",
         "firstPublishedAt": "2024-01-04T09:49:37.301Z",
         "createdBy": {
           "sys": {
@@ -7851,16 +8240,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "28ONK4rzDHRCGNj9RyF2he"
           }
         },
-        "publishedCounter": 4,
-        "version": 10,
+        "publishedCounter": 5,
+        "version": 13,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "28ONK4rzDHRCGNj9RyF2he"
           }
         },
         "automationTags": [
@@ -7875,7 +8264,7 @@
       },
       "fields": {
         "name": {
-          "en-US": "Hotel - NYT"
+          "en-US": "NYT - New York Times Square"
         },
         "hotelMasterdata": {
           "en-US": {
@@ -8369,7 +8758,7 @@
         "id": "6caaofCPfh9TGZGeeSQfDZ",
         "type": "Entry",
         "createdAt": "2024-01-05T10:34:56.578Z",
-        "updatedAt": "2024-01-05T10:36:20.729Z",
+        "updatedAt": "2024-01-11T12:36:02.340Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8377,8 +8766,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-01-05T10:36:20.729Z",
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-11T12:36:02.340Z",
         "firstPublishedAt": "2024-01-05T10:36:12.325Z",
         "createdBy": {
           "sys": {
@@ -8391,16 +8780,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "28ONK4rzDHRCGNj9RyF2he"
           }
         },
-        "publishedCounter": 2,
-        "version": 6,
+        "publishedCounter": 3,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "28ONK4rzDHRCGNj9RyF2he"
           }
         },
         "automationTags": [
@@ -8415,7 +8804,7 @@
       },
       "fields": {
         "name": {
-          "en-US": "Art - NYT - Queen Beatrix of the Netherlands"
+          "en-US": "NYT - Andy Warhol Queen Beatrix of the Netherlands"
         },
         "artMasterdata": {
           "en-US": {
@@ -8444,7 +8833,7 @@
         "id": "d0QS4JcoArrDb6FiuPKxb",
         "type": "Entry",
         "createdAt": "2024-01-05T10:39:19.694Z",
-        "updatedAt": "2024-01-08T14:11:09.304Z",
+        "updatedAt": "2024-01-11T12:35:17.681Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -8452,8 +8841,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 19,
-        "publishedAt": "2024-01-08T14:11:09.304Z",
+        "publishedVersion": 21,
+        "publishedAt": "2024-01-11T12:35:17.681Z",
         "firstPublishedAt": "2024-01-05T10:46:43.997Z",
         "createdBy": {
           "sys": {
@@ -8466,16 +8855,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "28ONK4rzDHRCGNj9RyF2he"
           }
         },
-        "publishedCounter": 3,
-        "version": 20,
+        "publishedCounter": 4,
+        "version": 22,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "28ONK4rzDHRCGNj9RyF2he"
           }
         },
         "automationTags": [
@@ -8490,7 +8879,7 @@
       },
       "fields": {
         "name": {
-          "en-US": "Content card - NYT - CloudM Rooftop bar"
+          "en-US": "Experience the clouds at CloudM Rooftop bar"
         },
         "media": {
           "en-US": {
@@ -9383,7 +9772,7 @@
         "id": "BW6gEPtwhPV6qhmKlQhZH",
         "type": "Entry",
         "createdAt": "2024-01-08T21:33:52.727Z",
-        "updatedAt": "2024-01-08T21:34:10.595Z",
+        "updatedAt": "2024-01-11T12:36:39.750Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9391,8 +9780,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2024-01-08T21:34:10.595Z",
+        "publishedVersion": 6,
+        "publishedAt": "2024-01-11T12:36:39.750Z",
         "firstPublishedAt": "2024-01-08T21:34:10.595Z",
         "createdBy": {
           "sys": {
@@ -9405,16 +9794,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "28ONK4rzDHRCGNj9RyF2he"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 2,
+        "version": 7,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "28ONK4rzDHRCGNj9RyF2he"
           }
         },
         "automationTags": [
@@ -9428,6 +9817,9 @@
         }
       },
       "fields": {
+        "name": {
+          "en-US": "Global - Book, modify, cancel reservation"
+        },
         "faqMasterdata": {
           "en-US": {
             "sys": {
@@ -9436,9 +9828,6 @@
               "urn": "crn:contentful:::content:spaces/fzp55rkrsa7v/environments/master/entries/vWAcAkzgAGGAJvRY6boTm"
             }
           }
-        },
-        "name": {
-          "en-US": "Faq - Booking"
         }
       }
     },
@@ -13275,6 +13664,86 @@
             "id": "o3fhy4qi3ji7"
           }
         },
+        "id": "6lzltOmNuogUIDGUacUPMB",
+        "type": "Entry",
+        "createdAt": "2024-01-11T09:57:13.133Z",
+        "updatedAt": "2024-01-11T12:42:52.725Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-11T12:42:52.725Z",
+        "firstPublishedAt": "2024-01-11T12:42:52.725Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "section"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Global - membership info dark"
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4UJMNk3FpS6QFttUR0CS8q"
+              }
+            }
+          ]
+        },
+        "backgroundColour": {
+          "en-US": "Dark"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
         "id": "6Pj3bvYCjLwaFghVFQ72b6",
         "type": "Entry",
         "createdAt": "2024-01-11T10:03:41.454Z",
@@ -13818,7 +14287,7 @@
         "id": "2AsmBV88ClT0NHJPHpbOLC",
         "type": "Entry",
         "createdAt": "2024-01-11T10:14:45.148Z",
-        "updatedAt": "2024-01-11T10:15:58.230Z",
+        "updatedAt": "2024-01-11T12:23:59.554Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -13826,8 +14295,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2024-01-11T10:15:58.230Z",
+        "publishedVersion": 14,
+        "publishedAt": "2024-01-11T12:23:59.554Z",
         "firstPublishedAt": "2024-01-11T10:15:58.230Z",
         "createdBy": {
           "sys": {
@@ -13840,16 +14309,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 4,
+        "version": 15,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         },
         "automationTags": [
@@ -13891,7 +14360,36 @@
                 "content": [
                   {
                     "nodeType": "text",
-                    "value": "Head to the hotel and check in with an ambassador. Then, it’s up to you! Barista-brewed coffee and superfast Wi-Fi await, citizen.  ",
+                    "value": "Head to the hotel and check in with an ambassador . Then, it’s up to you! Barista-brewed coffee and superfast Wi-Fi await, citizen.  ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-resource-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "urn": "crn:contentful:::content:spaces/fzp55rkrsa7v/environments/master/entries/3n14CPVzyY4mgLiiHgqmZR",
+                      "type": "ResourceLink",
+                      "linkType": "Contentful:Entry"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
                     "marks": [
                     ],
                     "data": {
@@ -14528,10 +15026,10 @@
             "id": "o3fhy4qi3ji7"
           }
         },
-        "id": "4G0bNFcJUM9qtK43W64Uig",
+        "id": "3M3h3IL3kXjhJuQQyoAOD3",
         "type": "Entry",
-        "createdAt": "2024-01-11T10:22:29.938Z",
-        "updatedAt": "2024-01-11T10:25:11.795Z",
+        "createdAt": "2024-01-11T10:21:29.559Z",
+        "updatedAt": "2024-01-11T12:28:45.027Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -14539,8 +15037,101 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2024-01-11T10:25:11.795Z",
+        "publishedVersion": 11,
+        "publishedAt": "2024-01-11T12:28:45.027Z",
+        "firstPublishedAt": "2024-01-11T12:28:45.027Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "RTM - Coworking Landing Page "
+        },
+        "pageTitle": {
+          "en-US": "your office, in Rotterdam"
+        },
+        "slug": {
+          "en-US": "coworking/rotterdam"
+        },
+        "pageMetadata": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4G0bNFcJUM9qtK43W64Uig"
+            }
+          }
+        },
+        "pageType": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1K8lX4sprR4WHulgBvlKVo"
+            }
+          }
+        },
+        "hideInSearch": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "4G0bNFcJUM9qtK43W64Uig",
+        "type": "Entry",
+        "createdAt": "2024-01-11T10:22:29.938Z",
+        "updatedAt": "2024-01-11T11:52:40.073Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2024-01-11T11:52:40.073Z",
         "firstPublishedAt": "2024-01-11T10:25:11.795Z",
         "createdBy": {
           "sys": {
@@ -14556,8 +15147,8 @@
             "id": "6cAdUBpqLb5Ab7DoFtWRyf"
           }
         },
-        "publishedCounter": 1,
-        "version": 7,
+        "publishedCounter": 2,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -14577,13 +15168,13 @@
       },
       "fields": {
         "name": {
-          "en-US": "NYB coworking "
+          "en-US": "RTM coworking "
         },
         "seoTitle": {
-          "en-US": "coworking New York Bowery | Work Smart, Stay Inspired | citizenM"
+          "en-US": "coworking Rotterdam | Work Smart, Stay Inspired | citizenM"
         },
         "seoDescription": {
-          "en-US": "Discover coworking at citizenM New York Bowery. Elevate your work experience in our modern spaces. Get a membership and enjoy free coworking. "
+          "en-US": "Discover coworking at citizenM Rotterdam. Elevate your work experience in our modern spaces. Get a membership and enjoy free coworking. "
         },
         "noIndexNoFollow": {
           "en-US": false
@@ -14606,7 +15197,7 @@
         "id": "1K8lX4sprR4WHulgBvlKVo",
         "type": "Entry",
         "createdAt": "2024-01-11T10:25:53.249Z",
-        "updatedAt": "2024-01-11T10:39:00.579Z",
+        "updatedAt": "2024-01-11T11:59:05.191Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -14614,8 +15205,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2024-01-11T10:39:00.579Z",
+        "publishedVersion": 11,
+        "publishedAt": "2024-01-11T11:59:05.191Z",
         "firstPublishedAt": "2024-01-11T10:39:00.579Z",
         "createdBy": {
           "sys": {
@@ -14631,8 +15222,8 @@
             "id": "6cAdUBpqLb5Ab7DoFtWRyf"
           }
         },
-        "publishedCounter": 1,
-        "version": 7,
+        "publishedCounter": 2,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -14652,7 +15243,7 @@
       },
       "fields": {
         "name": {
-          "en-US": "NYB - coworking page"
+          "en-US": "RTM - coworking page"
         },
         "hero": {
           "en-US": {
@@ -14713,7 +15304,7 @@
         "id": "1NHCxqFgFB6HNdn7zIl4Eq",
         "type": "Entry",
         "createdAt": "2024-01-11T10:26:21.394Z",
-        "updatedAt": "2024-01-11T10:31:03.468Z",
+        "updatedAt": "2024-01-11T13:09:28.394Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -14721,8 +15312,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 10,
-        "publishedAt": "2024-01-11T10:31:03.468Z",
+        "publishedVersion": 17,
+        "publishedAt": "2024-01-11T13:09:28.394Z",
         "firstPublishedAt": "2024-01-11T10:31:03.468Z",
         "createdBy": {
           "sys": {
@@ -14738,8 +15329,8 @@
             "id": "6cAdUBpqLb5Ab7DoFtWRyf"
           }
         },
-        "publishedCounter": 1,
-        "version": 11,
+        "publishedCounter": 3,
+        "version": 18,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -14759,7 +15350,7 @@
       },
       "fields": {
         "name": {
-          "en-US": "Hero - coworking - your office, in New York"
+          "en-US": "Hero - coworking - your office, in Rotterdam"
         },
         "media": {
           "en-US": {
@@ -14775,71 +15366,71 @@
         },
         "description": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "heading-2",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "nodeType": "text",
                     "value": "make our living room your office",
-                    "nodeType": "text"
+                    "marks": [
+                    ],
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "heading-2"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "citizenM Rotterdam can be used as your new co-working space for all mycitizenM+ members. Our inspiring spaces come with cafe-style and long table seating options, superfast Wi-Fi, free filtered water, power outlets and plenty of food and drink options.",
                     "marks": [
                     ],
-                    "value": "citizenM New York Bowery Hotel can be used as your new co-working space for all mycitizenM+ members. Our inspiring spaces come with cafe-style and long table seating options, superfast Wi-Fi, free filtered water, power outlets and plenty of food and drink options.",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "nodeType": "text",
                     "value": "Open Monday - Friday ",
-                    "nodeType": "text"
+                    "marks": [
+                    ],
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "9 AM - 6PM",
                     "marks": [
                     ],
-                    "value": "9 AM - 6PM",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         },
         "callToAction": {
@@ -14950,7 +15541,7 @@
         "id": "7eS6JsOTNd3C7kuUWy3cl1",
         "type": "Entry",
         "createdAt": "2024-01-11T10:29:08.836Z",
-        "updatedAt": "2024-01-11T10:30:55.757Z",
+        "updatedAt": "2024-01-11T11:54:17.637Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -14958,8 +15549,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2024-01-11T10:30:55.757Z",
+        "publishedVersion": 10,
+        "publishedAt": "2024-01-11T11:54:17.637Z",
         "firstPublishedAt": "2024-01-11T10:30:55.757Z",
         "createdBy": {
           "sys": {
@@ -14975,8 +15566,8 @@
             "id": "6cAdUBpqLb5Ab7DoFtWRyf"
           }
         },
-        "publishedCounter": 1,
-        "version": 8,
+        "publishedCounter": 2,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -14996,7 +15587,7 @@
       },
       "fields": {
         "name": {
-          "en-US": "NYB - wide view of living room"
+          "en-US": "RTM - wide view of living room"
         },
         "asset": {
           "en-US": {
@@ -15008,7 +15599,7 @@
           }
         },
         "altText": {
-          "en-US": "citizenM living room in New York Bowery"
+          "en-US": "citizenM living room in Rotterdam"
         }
       }
     },
@@ -15444,7 +16035,7 @@
         "id": "3rlrBZfgGW8ls3POj0QN5y",
         "type": "Entry",
         "createdAt": "2024-01-11T10:34:40.198Z",
-        "updatedAt": "2024-01-11T10:38:38.040Z",
+        "updatedAt": "2024-01-11T11:59:25.552Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -15452,8 +16043,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2024-01-11T10:38:38.040Z",
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-11T11:59:25.552Z",
         "firstPublishedAt": "2024-01-11T10:38:38.040Z",
         "createdBy": {
           "sys": {
@@ -15469,8 +16060,8 @@
             "id": "6cAdUBpqLb5Ab7DoFtWRyf"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 2,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -15490,7 +16081,7 @@
       },
       "fields": {
         "name": {
-          "en-US": "FAQ- NYB - coworking"
+          "en-US": "FAQ- RTM - coworking"
         },
         "content": {
           "en-US": [
@@ -15524,7 +16115,7 @@
         "id": "WcBTSaqYYCjeGLgdftMZn",
         "type": "Entry",
         "createdAt": "2024-01-11T10:35:01.501Z",
-        "updatedAt": "2024-01-11T10:38:27.713Z",
+        "updatedAt": "2024-01-11T11:59:22.254Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -15532,8 +16123,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2024-01-11T10:38:27.713Z",
+        "publishedVersion": 9,
+        "publishedAt": "2024-01-11T11:59:22.254Z",
         "firstPublishedAt": "2024-01-11T10:38:27.713Z",
         "createdBy": {
           "sys": {
@@ -15549,8 +16140,8 @@
             "id": "6cAdUBpqLb5Ab7DoFtWRyf"
           }
         },
-        "publishedCounter": 1,
-        "version": 8,
+        "publishedCounter": 2,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -15570,7 +16161,7 @@
       },
       "fields": {
         "name": {
-          "en-US": "FAQ - NYB - coworking"
+          "en-US": "FAQ - RTM - coworking"
         },
         "collectionTitle": {
           "en-US": "faq"
@@ -15642,7 +16233,7 @@
         "id": "6yNUwtT4AOCTbdPfD2dVAz",
         "type": "Entry",
         "createdAt": "2024-01-11T10:37:21.987Z",
-        "updatedAt": "2024-01-11T10:37:39.745Z",
+        "updatedAt": "2024-01-11T11:58:55.017Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -15650,8 +16241,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2024-01-11T10:37:39.745Z",
+        "publishedVersion": 6,
+        "publishedAt": "2024-01-11T11:58:55.017Z",
         "firstPublishedAt": "2024-01-11T10:37:39.745Z",
         "createdBy": {
           "sys": {
@@ -15667,8 +16258,8 @@
             "id": "6cAdUBpqLb5Ab7DoFtWRyf"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 7,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -15688,7 +16279,7 @@
       },
       "fields": {
         "name": {
-          "en-US": "FAQ - NYB - coworking opening times"
+          "en-US": "FAQ - RTM - coworking opening times"
         },
         "faqMasterdata": {
           "en-US": {
@@ -15698,6 +16289,1136 @@
               "urn": "crn:contentful:::content:spaces/fzp55rkrsa7v/environments/master/entries/3H1S9LjTeD6cEFNP3IkpEz"
             }
           }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "4VJuXT2mkXuGFlBlooZtqo",
+        "type": "Entry",
+        "createdAt": "2024-01-11T11:59:26.936Z",
+        "updatedAt": "2024-01-11T11:59:43.991Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-11T11:59:43.991Z",
+        "firstPublishedAt": "2024-01-11T11:59:43.991Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "location"
+          }
+        }
+      },
+      "fields": {
+        "internalName": {
+          "en-US": "RTM property location"
+        },
+        "locationMasterdata": {
+          "en-US": {
+            "sys": {
+              "type": "ResourceLink",
+              "linkType": "Contentful:Entry",
+              "urn": "crn:contentful:::content:spaces/fzp55rkrsa7v/environments/master/entries/6jCFJzwHCVHvzGwvYTJbO"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "1T2h8m1i3rs5RXav3DGAhG",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:19:14.434Z",
+        "updatedAt": "2024-01-11T12:27:49.476Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2024-01-11T12:27:49.476Z",
+        "firstPublishedAt": "2024-01-11T12:27:22.898Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "homepage with off grid banner and news&deals"
+        },
+        "pageTitle": {
+          "en-US": "homepage"
+        },
+        "slug": {
+          "en-US": "homepage"
+        },
+        "pageType": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5Gbn64THLrHSxZi8PhVhFD"
+            }
+          }
+        },
+        "hideInSearch": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "5Gbn64THLrHSxZi8PhVhFD",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:19:28.958Z",
+        "updatedAt": "2024-01-11T12:27:18.830Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2024-01-11T12:27:18.830Z",
+        "firstPublishedAt": "2024-01-11T12:27:18.830Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "contentCanvas"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "homepage"
+        },
+        "hero": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2GPzRcayMaMHdyYpdADApM"
+            }
+          }
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "73MWQwE8IBrTSxi9LONhcA"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "2ZeCD82NRIQzgfsd8x8IFM",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:20:47.067Z",
+        "updatedAt": "2024-01-11T12:23:22.776Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2024-01-11T12:23:22.776Z",
+        "firstPublishedAt": "2024-01-11T12:23:22.776Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0pDwxAN1MjfN7vyHww0bNi"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0pDwxAN1MjfN7vyHww0bNi"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0pDwxAN1MjfN7vyHww0bNi"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "screen"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Screen Demo"
+        },
+        "media": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3Bflvpfh4Z8d5wnV5KozEw"
+            }
+          }
+        },
+        "title": {
+          "en-US": "try co working at citizenM"
+        },
+        "description": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "heading-2",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "This is an example headline",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "and and example text",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "qr": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6aP7L0AqHiWxlRY9ic52Bc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "73MWQwE8IBrTSxi9LONhcA",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:24:34.180Z",
+        "updatedAt": "2024-01-11T12:29:14.427Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-01-11T12:29:14.427Z",
+        "firstPublishedAt": "2024-01-11T12:29:14.427Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "section"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "news and deals homepage"
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "273ewrzLaBdwCDpePpeoMK"
+              }
+            }
+          ]
+        },
+        "backgroundColour": {
+          "en-US": "Light"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "273ewrzLaBdwCDpePpeoMK",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:24:43.731Z",
+        "updatedAt": "2024-01-11T13:17:32.084Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-11T12:29:09.336Z",
+        "firstPublishedAt": "2024-01-11T12:29:09.336Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "curatedCollection"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "news and deals"
+        },
+        "collectionTitle": {
+          "en-US": "news & deals"
+        },
+        "items": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5p53GZsn6TGbX6z7liGfEm"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "124Llskyl4tPWDy5XtJnTo"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "45V5qfEPHrukdc7zYjj9my"
+              }
+            }
+          ]
+        },
+        "displayAs": {
+          "en-US": "grid"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "2GPzRcayMaMHdyYpdADApM",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:24:57.495Z",
+        "updatedAt": "2024-01-11T12:29:30.531Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-01-11T12:29:30.531Z",
+        "firstPublishedAt": "2024-01-11T12:26:52.683Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hero"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Global - coworking hero off grid"
+        },
+        "media": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2hbW13UXydaJ1ecO02GToK"
+            }
+          }
+        },
+        "title": {
+          "en-US": "co-work at citizenM"
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "it’s time for a home office upgrade",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-2"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Make our living room your office! Every citizenM hotel around the world (yes, all 31 of them) can be used as your new co-working space for all mycitizenM+ members. These inspiring spaces come with cafe-style and long table seating options, superfast Wi-Fi, free filtered water, power outlets and plenty of food and drink options.\n\nRemember, this is your community – make yourself at home!",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "callToAction": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5GhZkMxv9mUdjMEldUFv1C"
+            }
+          }
+        },
+        "variation": {
+          "en-US": "off-grid"
+        },
+        "topline": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3OxcOiWl0UBSnu35pGwuT9"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "5p53GZsn6TGbX6z7liGfEm",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:25:23.338Z",
+        "updatedAt": "2024-01-11T12:28:00.960Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2024-01-11T12:28:00.960Z",
+        "firstPublishedAt": "2024-01-11T12:28:00.960Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "contentCard"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "news - co-work at citizenM"
+        },
+        "media": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3W4vkm2jPd3GWeqlvVM2ve"
+            }
+          }
+        },
+        "title": {
+          "en-US": "co-work at citizenM"
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Make our living room your office! Every citizenM hotel around the world (yes, all 31 of them) can be used as your new co-working space for all mycitizenM+ members. These inspiring spaces come with cafe-style and long table seating options, superfast Wi-Fi, free filtered water, power outlets and plenty of food and drink options.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "callToAction": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "21ptVsG9MQL2Sw2mOA13Z2"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "21ptVsG9MQL2Sw2mOA13Z2",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:27:24.652Z",
+        "updatedAt": "2024-01-11T12:27:55.188Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-01-11T12:27:55.188Z",
+        "firstPublishedAt": "2024-01-11T12:27:55.188Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "cta"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Global - find out more - coworking"
+        },
+        "label": {
+          "en-US": "find out more"
+        },
+        "link": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7FcWrYRqjLeojMYm5NDmU5"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "4UJMNk3FpS6QFttUR0CS8q",
+        "type": "Entry",
+        "createdAt": "2024-01-11T12:41:56.714Z",
+        "updatedAt": "2024-01-11T12:42:40.930Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-11T12:42:40.930Z",
+        "firstPublishedAt": "2024-01-11T12:42:40.930Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6QLLK1TTKYBTd5byaaUORL"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "membership"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Membership - plus"
+        },
+        "membershipMasterdata": {
+          "en-US": {
+            "sys": {
+              "type": "ResourceLink",
+              "linkType": "Contentful:Entry",
+              "urn": "crn:contentful:::content:spaces/fzp55rkrsa7v/environments/master/entries/11bur9B3JZw9ytBK5b8FIl"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "124Llskyl4tPWDy5XtJnTo",
+        "type": "Entry",
+        "createdAt": "2024-01-11T13:14:16.693Z",
+        "updatedAt": "2024-01-11T13:17:09.610Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 12,
+        "publishedAt": "2024-01-11T13:17:09.610Z",
+        "firstPublishedAt": "2024-01-11T13:17:09.610Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "contentCard"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "news - rome"
+        },
+        "media": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7utU38UBvltIJGyAQEhEOi"
+            }
+          }
+        },
+        "title": {
+          "en-US": "ciao, citizenM Rome!"
+        },
+        "description": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Life is dolce. Get up to 30% stays in our newest citizenM Rome hotel. Book now, stay before  31 March.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "7utU38UBvltIJGyAQEhEOi",
+        "type": "Entry",
+        "createdAt": "2024-01-11T13:15:52.182Z",
+        "updatedAt": "2024-01-11T13:17:05.628Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-11T13:17:05.628Z",
+        "firstPublishedAt": "2024-01-11T13:17:05.628Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "image"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "RIT campaign sale image"
+        },
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "29bbkEY0LE4FPxH9mrjgtg"
+            }
+          }
+        },
+        "altText": {
+          "en-US": "rome citizenM sale image"
         }
       }
     }
@@ -16607,7 +18328,7 @@
         "id": "5emmSoX2xq1hczbLDgzdOo",
         "type": "Asset",
         "createdAt": "2024-01-11T10:30:00.893Z",
-        "updatedAt": "2024-01-11T10:30:39.216Z",
+        "updatedAt": "2024-01-11T11:54:07.867Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -16615,8 +18336,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2024-01-11T10:30:39.216Z",
+        "publishedVersion": 8,
+        "publishedAt": "2024-01-11T11:54:07.867Z",
         "firstPublishedAt": "2024-01-11T10:30:39.216Z",
         "createdBy": {
           "sys": {
@@ -16632,8 +18353,8 @@
             "id": "6cAdUBpqLb5Ab7DoFtWRyf"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -16644,23 +18365,23 @@
       },
       "fields": {
         "title": {
-          "en-US": "NYB - wide view of living room"
+          "en-US": "RTM - wide view of living room"
         },
         "description": {
           "en-US": ""
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/o3fhy4qi3ji7/5emmSoX2xq1hczbLDgzdOo/f026c04a20a8b43359d7ce8e0777d8ba/Screenshot_2024-01-11_112958.png",
+            "url": "//images.ctfassets.net/o3fhy4qi3ji7/5emmSoX2xq1hczbLDgzdOo/ebe7a6a8a87d90f0fe884d0de694af19/Rotterdam-Rotterdam_INT_06_high-1920x1080.jpg",
             "details": {
-              "size": 1088608,
+              "size": 328982,
               "image": {
-                "width": 982,
-                "height": 553
+                "width": 1517,
+                "height": 1080
               }
             },
-            "fileName": "Screenshot 2024-01-11 112958.png",
-            "contentType": "image/png"
+            "fileName": "Rotterdam-Rotterdam_INT_06_high-1920x1080.jpg",
+            "contentType": "image/jpeg"
           }
         }
       }
@@ -16735,6 +18456,154 @@
             },
             "fileName": "Screenshot 2024-01-11 113319.png",
             "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "6aP7L0AqHiWxlRY9ic52Bc",
+        "type": "Asset",
+        "createdAt": "2024-01-11T12:22:43.912Z",
+        "updatedAt": "2024-01-11T12:23:04.726Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-11T12:23:04.726Z",
+        "firstPublishedAt": "2024-01-11T12:23:04.726Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0pDwxAN1MjfN7vyHww0bNi"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0pDwxAN1MjfN7vyHww0bNi"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0pDwxAN1MjfN7vyHww0bNi"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "QR Code"
+        },
+        "description": {
+          "en-US": "Test QR code"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/o3fhy4qi3ji7/6aP7L0AqHiWxlRY9ic52Bc/18d36d27529f6c1ec112d9dd0cb5b51a/Prototype-Demo-QR-code.ppm.png",
+            "details": {
+              "size": 1876,
+              "image": {
+                "width": 300,
+                "height": 300
+              }
+            },
+            "fileName": "Prototype-Demo-QR-code.ppm.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o3fhy4qi3ji7"
+          }
+        },
+        "id": "29bbkEY0LE4FPxH9mrjgtg",
+        "type": "Asset",
+        "createdAt": "2024-01-11T13:16:05.509Z",
+        "updatedAt": "2024-01-11T13:17:01.449Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2024-01-11T13:17:01.449Z",
+        "firstPublishedAt": "2024-01-11T13:16:26.181Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "RIT campaign image"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/o3fhy4qi3ji7/29bbkEY0LE4FPxH9mrjgtg/5f5e0d26e602770235c49398c735aa14/Insert_image_here__1_.webp",
+            "details": {
+              "size": 80862,
+              "image": {
+                "width": 1120,
+                "height": 640
+              }
+            },
+            "fileName": "Insert image here (1).webp",
+            "contentType": "image/webp"
           }
         }
       }

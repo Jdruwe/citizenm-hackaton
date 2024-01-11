@@ -6,7 +6,6 @@ import {
 } from '~/types/contentful/marketing'
 import Hero from '~/feature/content/components/content/hero.vue'
 import ContentComponentMapper from '~/feature/content/components/mapper/content-component-mapper.vue'
-import Membership from '~/feature/content/components/content/membership.vue'
 
 interface Props {
   slug: string
@@ -42,9 +41,6 @@ const hero = contentCanvas && (contentCanvas as TypeContentCanvas<'WITHOUT_UNRES
   <template v-if="isContentCanvas">
     <Section v-if="hero">
       <Hero :data="hero" />
-    </Section>
-    <Section>
-      <Membership />
     </Section>
     <ContentComponentMapper
       :data="contentCanvas"
