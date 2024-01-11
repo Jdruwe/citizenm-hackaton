@@ -24,14 +24,16 @@ const { data: membership } = await useAsyncData(`membership-${membershipId}`, ()
 </script>
 
 <template>
-  <div v-if="membership" class="flex">
-    <div class="basis-4/6">
+  <div v-if="membership" class="flex flex-col md:flex-row">
+    <div class="mb-5 md:basis-4/6 md:mb-0">
       <h2 class="max-w-lg text-5xl mb-10">
         {{ (membership as Membership).commercialTitle }}
       </h2>
-      <RichText v-if="(membership as Membership).commercialText" :document="(membership as Membership).commercialText" />
+      <div class="mb-5">
+        <RichText v-if="(membership as Membership).commercialText" :document="(membership as Membership).commercialText" />
+      </div>
     </div>
-    <div class="basis-2/5 ml-10">
+    <div class="md:basis-2/5 md:ml-10">
       <IconList :items="(membership as Membership).features" />
     </div>
   </div>

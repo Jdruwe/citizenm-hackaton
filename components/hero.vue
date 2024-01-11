@@ -26,7 +26,7 @@ function renderNodes() {
 
 <template>
   <div v-if="isOffGrid">
-    <div class="relative mt-28 lg:mt-44">
+    <div class="relative mt-16 md:mt-28">
       <h1 class="text-4xl sm:text-6xl lg:text-8xl max-w-60 sm:max-w-sm md:max-w-md lg:max-w-md absolute -mt-14 lg:-mt-28 z-10">
         {{ title }}
       </h1>
@@ -44,8 +44,8 @@ function renderNodes() {
     </div>
   </div>
   <div v-else>
-    <div class="relative mt-28 lg:mt-44">
-      <h1 class="text-4xl lg:-mt-28 mb-4">
+    <div class="relative">
+      <h1 class="text-4xl mb-4">
         {{ title }}
       </h1>
       <div class="md:max-w-screen-sm lg:max-w-screen-lg  relative z-0">
