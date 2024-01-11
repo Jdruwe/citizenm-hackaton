@@ -21,8 +21,6 @@ const isSlider = data.fields.displayAs === 'slider'
 const isList = data.fields.displayAs === 'list'
 const isGrid = data.fields.displayAs === 'grid'
 
-// TODO [HACKATHON]: provide support for grid rendering, you could use: https://tailwindcss.com/docs/grid-template-columns
-
 function renderNodes() {
   return {
     [BLOCKS.HEADING_4]: (node: any) => {

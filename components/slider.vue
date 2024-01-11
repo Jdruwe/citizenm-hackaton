@@ -12,10 +12,6 @@ interface Props {
 }
 
 const { title, items } = defineProps<Props>()
-
-let swiperInstance: typeof Swiper | undefined
-
-// TODO [HACKATHON]: remove the filter and provide proper rendering for FAQ inside the slider
 const filteredItems = items.filter(item => item.type !== 'faq')
 
 const breakpoints = {

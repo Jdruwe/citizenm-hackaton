@@ -1,15 +1,18 @@
 <script setup lang="ts">
-interface Props {
-  theme: 'Light' | 'Dark'
-}
+import { defineProps } from 'vue'
 
-const { theme } = defineProps<Props>()
+const props = defineProps({
+  theme: {
+    type: String,
+    default: 'Light',
+  },
+})
 
-const isLight = theme === 'Light'
+const isLight = props.theme === 'Light'
 </script>
 
 <template>
-  <div :class="`${isLight ? 'bg-black text-white' : 'bg-white text-black'}`">
+  <div :class="`${isLight ? 'bg-white text-black' : 'bg-black text-white'}`">
     <div class="mx-auto w-full max-w-screen-xl px-6 py-14">
       <slot />
     </div>

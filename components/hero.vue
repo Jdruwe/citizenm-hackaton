@@ -22,50 +22,43 @@ function renderNodes() {
     },
   }
 }
-
-
 </script>
 
 <template>
   <div v-if="isOffGrid">
-
-    <div class="relative mt-28 lg:mt-44">
-      <h1 class="text-4xl lg:-mt-28 mb-4">
-       {{ title }}
-      </h1>
-      <div class="md:max-w-screen-sm lg:max-w-screen-lg  relative z-0">
-        <NuxtImg
-            provider="contentful"
-            class="aspect-[4/2] w-full object-cover"
-            :src="image"
-            width="800"
-        />
-        <div class="">
-          <RichText v-if="description" :document="description" :node-renderers="renderNodes()" />
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <div v-else>
-
     <div class="relative mt-28 lg:mt-44">
       <h1 class="text-4xl sm:text-6xl lg:text-8xl max-w-60 sm:max-w-sm md:max-w-md lg:max-w-md absolute -mt-14 lg:-mt-28 z-10">
         {{ title }}
-
       </h1>
       <div class="md:max-w-screen-sm lg:max-w-screen-lg mx-auto relative z-0">
         <NuxtImg
-            provider="contentful"
-            class="aspect-[4/2] w-full object-cover"
-            :src="image"
-            width="600"
+          provider="contentful"
+          class="aspect-[4/2] w-full object-cover"
+          :src="image"
+          width="600"
         />
-        <div class="mt-10 lg:-ml-4 text-sm">
+        <div class="mt-10 lg:-ml-4 text-lg">
           <RichText v-if="description" :document="description" :node-renderers="renderNodes()" />
         </div>
       </div>
     </div>
   </div>
-
+  <div v-else>
+    <div class="relative mt-28 lg:mt-44">
+      <h1 class="text-4xl lg:-mt-28 mb-4">
+        {{ title }}
+      </h1>
+      <div class="md:max-w-screen-sm lg:max-w-screen-lg  relative z-0">
+        <NuxtImg
+          provider="contentful"
+          class="aspect-[4/2] w-full object-cover"
+          :src="image"
+          width="800"
+        />
+        <div class="max-w-screen-md">
+          <RichText v-if="description" :document="description" :node-renderers="renderNodes()" />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

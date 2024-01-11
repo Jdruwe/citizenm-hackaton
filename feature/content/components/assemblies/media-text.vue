@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { data } = defineProps<Props>()
-const { media, title, content, layout } = data.fields
+const { media, title, content, layout, topline } = data.fields
 
 let imageUrl
 if (media && isTypeImage(media)) {
@@ -17,6 +17,11 @@ if (media && isTypeImage(media)) {
 let description
 if (content) {
   description = content.fields.content
+}
+
+let toplineText
+if (topline && topline.fields.text) {
+  toplineText = topline.fields.text
 }
 </script>
 
@@ -31,7 +36,10 @@ if (content) {
       />
     </div>
     <div class="flex-1">
-      <div class="md:ml-10 md:mt-10 lg:ml-20 lg:mt-20">
+      <div class="md:ml-10 lg:ml-20">
+        <div class="mb-10">
+          <Topline v-if="toplineText" :text="toplineText" />
+        </div>
         <h2 class="text-4xl lg:text-6xl font-extrabold max-w-sm mb-10">
           {{ title }}
         </h2>
@@ -41,7 +49,10 @@ if (content) {
   </div>
   <div v-if="data && layout === 'Media right'" class="flex flex-col md:flex-row">
     <div class="flex-1">
-      <div class="md:mr-10 md:mt-10 lg:mr-20 lg:mt-20">
+      <div class="md:mr-10 lg:mr-20">
+        <div class="mb-10">
+          <Topline v-if="toplineText" :text="toplineText" />
+        </div>
         <h2 class="text-4xl lg:text-6xl font-extrabold max-w-sm mb-10">
           {{ title }}
         </h2>

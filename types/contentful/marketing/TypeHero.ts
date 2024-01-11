@@ -1,6 +1,7 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
 import type { TypeCtaSkeleton } from "./TypeCta";
 import type { TypeImageSkeleton } from "./TypeImage";
+import type { TypeToplineSkeleton } from "./TypeTopline";
 import type { TypeVideoSkeleton } from "./TypeVideo";
 
 export interface TypeHeroFields {
@@ -10,6 +11,7 @@ export interface TypeHeroFields {
     description?: EntryFieldTypes.RichText;
     callToAction?: EntryFieldTypes.EntryLink<TypeCtaSkeleton>;
     variation: EntryFieldTypes.Symbol<"minimal" | "off-grid">;
+    topline?: EntryFieldTypes.EntryLink<TypeToplineSkeleton>;
 }
 
 export type TypeHeroSkeleton = EntrySkeletonType<TypeHeroFields, "hero">;

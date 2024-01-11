@@ -2,6 +2,7 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 import type { TypeAmenitySkeleton } from "./TypeAmenity";
 import type { TypeFaqSkeleton } from "./TypeFaq";
 import type { TypeNameSkeleton } from "./TypeName";
+import type { TypeOpeningTimesSkeleton } from "./TypeOpeningTimes";
 
 export interface TypeCoworkingFields {
     name?: EntryFieldTypes.Symbol;
@@ -11,6 +12,7 @@ export interface TypeCoworkingFields {
     images?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeNameSkeleton>>;
     facilities?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeAmenitySkeleton>>;
     faq?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeFaqSkeleton>>;
+    openingTime?: EntryFieldTypes.EntryLink<TypeOpeningTimesSkeleton>;
 }
 
 export type TypeCoworkingSkeleton = EntrySkeletonType<TypeCoworkingFields, "coworking">;

@@ -5,12 +5,14 @@ import type { TypeContentCardSkeleton } from "./TypeContentCard";
 import type { TypeExperienceSkeleton } from "./TypeExperience";
 import type { TypeFaqSkeleton } from "./TypeFaq";
 import type { TypeHotelSkeleton } from "./TypeHotel";
+import type { TypeToplineSkeleton } from "./TypeTopline";
 
 export interface TypeCuratedCollectionFields {
     name: EntryFieldTypes.Symbol;
     collectionTitle: EntryFieldTypes.Symbol;
     items: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeArtSkeleton | TypeContentCanvasSkeleton | TypeContentCardSkeleton | TypeExperienceSkeleton | TypeFaqSkeleton | TypeHotelSkeleton>>;
     displayAs: EntryFieldTypes.Symbol<"grid" | "list" | "slider">;
+    topline?: EntryFieldTypes.EntryLink<TypeToplineSkeleton>;
 }
 
 export type TypeCuratedCollectionSkeleton = EntrySkeletonType<TypeCuratedCollectionFields, "curatedCollection">;

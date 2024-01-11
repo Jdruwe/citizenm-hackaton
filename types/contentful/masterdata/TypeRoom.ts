@@ -1,5 +1,5 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
-import type { TypeAmenitiesSkeleton } from "./TypeAmenities";
+import type { TypeAmenitySkeleton } from "./TypeAmenity";
 import type { TypeFaqSkeleton } from "./TypeFaq";
 import type { TypeNameSkeleton } from "./TypeName";
 
@@ -10,7 +10,7 @@ export interface TypeRoomFields {
     longDescription?: EntryFieldTypes.RichText;
     images?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeNameSkeleton>>;
     faq?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeFaqSkeleton>>;
-    amenities?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeAmenitiesSkeleton>>;
+    amenities?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeAmenitySkeleton>>;
 }
 
 export type TypeRoomSkeleton = EntrySkeletonType<TypeRoomFields, "room">;
