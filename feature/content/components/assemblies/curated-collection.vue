@@ -19,6 +19,7 @@ const { data: items } = await useAsyncData(`collectionItems-${data.sys.id}`, () 
 
 const isSlider = data.fields.displayAs === 'slider'
 const isList = data.fields.displayAs === 'list'
+const isGrid = data.fields.displayAs === 'grid'
 
 // TODO [HACKATHON]: provide support for grid rendering, you could use: https://tailwindcss.com/docs/grid-template-columns
 
@@ -54,6 +55,9 @@ function renderNodes() {
           <span v-else>{{ (item as Item).text }}</span>
         </template>
       </Accordion>
+    </template>
+    <template v-if="isGrid">
+      <Grid :items="items" :title="data.fields.collectionTitle" />
     </template>
   </template>
 </template>
