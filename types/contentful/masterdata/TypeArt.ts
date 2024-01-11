@@ -7,6 +7,8 @@ export interface TypeArtFields {
     title: EntryFieldTypes.Symbol;
     image: EntryFieldTypes.EntryLink<TypeNameSkeleton>;
     artist: EntryFieldTypes.EntryLink<TypeArtistSkeleton>;
+    shortDescription?: EntryFieldTypes.RichText;
+    longDescription?: EntryFieldTypes.RichText;
 }
 
 export type TypeArtSkeleton = EntrySkeletonType<TypeArtFields, "art">;

@@ -272,7 +272,7 @@
         "id": "hotel",
         "type": "ContentType",
         "createdAt": "2024-01-04T08:21:19.952Z",
-        "updatedAt": "2024-01-09T11:09:04.294Z",
+        "updatedAt": "2024-01-10T15:20:50.903Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -280,8 +280,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2024-01-09T11:09:04.294Z",
+        "publishedVersion": 21,
+        "publishedAt": "2024-01-10T15:20:50.903Z",
         "firstPublishedAt": "2024-01-04T08:21:20.290Z",
         "createdBy": {
           "sys": {
@@ -294,16 +294,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         },
-        "publishedCounter": 7,
-        "version": 14,
+        "publishedCounter": 11,
+        "version": 22,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "6QLLK1TTKYBTd5byaaUORL"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         }
       },
@@ -461,7 +461,7 @@
         },
         {
           "id": "amenities",
-          "name": "Amenities",
+          "name": "Facilities",
           "type": "Array",
           "localized": false,
           "required": false,
@@ -519,6 +519,148 @@
               {
                 "linkContentType": [
                   "faq"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "roomtypes",
+          "name": "Roomtypes",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "room"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "ambassadors",
+          "name": "Ambassadors",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "ambassadors"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "societyM",
+          "name": "SocietyM",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "societyM"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "coworking",
+          "name": "Coworking",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "max": 1
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "coworking"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "canteenM",
+          "name": "CanteenM",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "canteenM"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "rooftopBar",
+          "name": "Rooftop Bar",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "max": 1
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "rooftopBar"
                 ]
               }
             ],
@@ -745,7 +887,7 @@
         "id": "art",
         "type": "ContentType",
         "createdAt": "2024-01-05T10:23:00.818Z",
-        "updatedAt": "2024-01-05T10:25:50.098Z",
+        "updatedAt": "2024-01-10T15:12:57.143Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -753,8 +895,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2024-01-05T10:25:50.098Z",
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-10T15:12:57.143Z",
         "firstPublishedAt": "2024-01-05T10:23:01.198Z",
         "createdBy": {
           "sys": {
@@ -767,16 +909,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         },
-        "publishedCounter": 2,
-        "version": 4,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         }
       },
@@ -842,6 +984,102 @@
           "disabled": false,
           "omitted": false,
           "linkType": "Entry"
+        },
+        {
+          "id": "shortDescription",
+          "name": "Short Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "longDescription",
+          "name": "Long Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
         }
       ]
     },
@@ -1097,7 +1335,7 @@
         "id": "experience",
         "type": "ContentType",
         "createdAt": "2024-01-05T12:55:19.034Z",
-        "updatedAt": "2024-01-05T13:12:35.601Z",
+        "updatedAt": "2024-01-10T15:44:00.131Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1105,8 +1343,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 17,
-        "publishedAt": "2024-01-05T13:12:35.601Z",
+        "publishedVersion": 21,
+        "publishedAt": "2024-01-10T15:44:00.131Z",
         "firstPublishedAt": "2024-01-05T12:55:19.368Z",
         "createdBy": {
           "sys": {
@@ -1119,22 +1357,22 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         },
-        "publishedCounter": 9,
-        "version": 18,
+        "publishedCounter": 11,
+        "version": 22,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         }
       },
       "displayField": "name",
-      "name": "🎡 Experience",
-      "description": "",
+      "name": "🎡 Cityguide",
+      "description": "will be deleted",
       "fields": [
         {
           "id": "name",
@@ -1276,10 +1514,10 @@
             "id": "fzp55rkrsa7v"
           }
         },
-        "id": "coworkingSpace",
+        "id": "amenity",
         "type": "ContentType",
-        "createdAt": "2024-01-08T11:35:21.468Z",
-        "updatedAt": "2024-01-08T11:43:55.856Z",
+        "createdAt": "2024-01-08T11:40:19.475Z",
+        "updatedAt": "2024-01-10T14:55:01.880Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1287,9 +1525,9 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-01-08T11:43:55.856Z",
-        "firstPublishedAt": "2024-01-08T11:35:21.824Z",
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-10T14:55:01.880Z",
+        "firstPublishedAt": "2024-01-08T11:40:19.828Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -1301,21 +1539,21 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         }
       },
       "displayField": "name",
-      "name": "🏢 Coworking space",
+      "name": "👌 Facilities",
       "description": "",
       "fields": [
         {
@@ -1333,27 +1571,10 @@
           "omitted": false
         },
         {
-          "id": "location",
-          "name": "Location",
-          "type": "Link",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "linkContentType": [
-                "location"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        },
-        {
-          "id": "totalDesks",
-          "name": "Total desks",
-          "type": "Integer",
-          "localized": false,
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
           "required": true,
           "validations": [
           ],
@@ -1361,8 +1582,218 @@
           "omitted": false
         },
         {
-          "id": "amenities",
-          "name": "Amenities",
+          "id": "icon",
+          "name": "Icon",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkContentType": [
+                "name"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "coworking",
+        "type": "ContentType",
+        "createdAt": "2024-01-10T15:08:18.487Z",
+        "updatedAt": "2024-01-10T15:10:15.734Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-10T15:10:15.734Z",
+        "firstPublishedAt": "2024-01-10T15:08:18.802Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "🏢 Coworking",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "shortDescription",
+          "name": "Short Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "heading-3",
+                "heading-1",
+                "heading-2"
+              ],
+              "message": "Only heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, inline entry, heading 3, heading 1, and heading 2 nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "longDescription",
+          "name": "Long Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "images",
+          "name": "Images",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "name"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "facilities",
+          "name": "Facilities",
           "type": "Array",
           "localized": false,
           "required": false,
@@ -1381,6 +1812,28 @@
             ],
             "linkType": "Entry"
           }
+        },
+        {
+          "id": "faq",
+          "name": "FAQ",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "faq"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
         }
       ]
     },
@@ -1393,10 +1846,247 @@
             "id": "fzp55rkrsa7v"
           }
         },
-        "id": "amenity",
+        "id": "room",
         "type": "ContentType",
-        "createdAt": "2024-01-08T11:40:19.475Z",
-        "updatedAt": "2024-01-08T11:40:19.828Z",
+        "createdAt": "2024-01-10T15:11:57.178Z",
+        "updatedAt": "2024-01-10T15:36:29.426Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2024-01-10T15:36:29.426Z",
+        "firstPublishedAt": "2024-01-10T15:11:57.484Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5pQQGJXIe04n1R2y9EKsdM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "🛏️ Room",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "shortDescription",
+          "name": "Short Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "heading-3",
+                "heading-1",
+                "heading-2"
+              ],
+              "message": "Only heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, inline entry, heading 3, heading 1, and heading 2 nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "longDescription",
+          "name": "Long Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "images",
+          "name": "Images",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "name"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "faq",
+          "name": "FAQ",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "faq"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "amenities",
+          "name": "Amenities",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "amenities"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "societyM",
+        "type": "ContentType",
+        "createdAt": "2024-01-10T15:11:59.791Z",
+        "updatedAt": "2024-01-10T15:12:00.187Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1405,20 +2095,20 @@
           }
         },
         "publishedVersion": 1,
-        "publishedAt": "2024-01-08T11:40:19.828Z",
-        "firstPublishedAt": "2024-01-08T11:40:19.828Z",
+        "publishedAt": "2024-01-10T15:12:00.187Z",
+        "firstPublishedAt": "2024-01-10T15:12:00.187Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         },
         "publishedCounter": 1,
@@ -1427,12 +2117,938 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+            "id": "16UklEGmqiD4hmuIcRq40y"
           }
         }
       },
       "displayField": "name",
-      "name": "👌 Amenity",
+      "name": "🗒️ societyM",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "shortDescription",
+          "name": "Short Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "heading-3",
+                "heading-1",
+                "heading-2"
+              ],
+              "message": "Only heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, inline entry, heading 3, heading 1, and heading 2 nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "longDescription",
+          "name": "Long Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "images",
+          "name": "Images",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "name"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "facilities",
+          "name": "Facilities",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "amenity"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "faq",
+          "name": "FAQ",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "faq"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "rooftopBar",
+        "type": "ContentType",
+        "createdAt": "2024-01-10T15:13:23.495Z",
+        "updatedAt": "2024-01-10T15:14:40.879Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-01-10T15:14:40.879Z",
+        "firstPublishedAt": "2024-01-10T15:13:23.875Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5pQQGJXIe04n1R2y9EKsdM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "🍹 Rooftop bar",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "shortDescription",
+          "name": "Short Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "heading-3",
+                "heading-1",
+                "heading-2"
+              ],
+              "message": "Only heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, inline entry, heading 3, heading 1, and heading 2 nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "longDescription",
+          "name": "Long Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "images",
+          "name": "Images",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "name"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "facilities",
+          "name": "Facilities",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "amenity"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "faq",
+          "name": "FAQ",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "faq"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "ambassadors",
+        "type": "ContentType",
+        "createdAt": "2024-01-10T15:14:11.927Z",
+        "updatedAt": "2024-01-10T15:40:22.882Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-10T15:40:22.882Z",
+        "firstPublishedAt": "2024-01-10T15:14:12.200Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "👥 Ambassadors",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "shortDescription",
+          "name": "Short Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "heading-3",
+                "heading-1",
+                "heading-2"
+              ],
+              "message": "Only heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, inline entry, heading 3, heading 1, and heading 2 nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "longDescription",
+          "name": "Long Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "images",
+          "name": "Images",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "name"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "faq",
+          "name": "FAQ",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "faq"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "canteenM",
+        "type": "ContentType",
+        "createdAt": "2024-01-10T15:20:01.225Z",
+        "updatedAt": "2024-01-10T15:20:01.524Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-01-10T15:20:01.524Z",
+        "firstPublishedAt": "2024-01-10T15:20:01.524Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "🍔  canteenM",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "shortDescription",
+          "name": "Short Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "heading-3",
+                "heading-1",
+                "heading-2"
+              ],
+              "message": "Only heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, inline entry, heading 3, heading 1, and heading 2 nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "longDescription",
+          "name": "Long Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "images",
+          "name": "Images",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "name"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "facilities",
+          "name": "Facilities",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "amenity"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "faq",
+          "name": "FAQ",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "faq"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "amenities",
+        "type": "ContentType",
+        "createdAt": "2024-01-10T15:32:25.965Z",
+        "updatedAt": "2024-01-10T15:32:26.286Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-01-10T15:32:26.286Z",
+        "firstPublishedAt": "2024-01-10T15:32:26.286Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "16UklEGmqiD4hmuIcRq40y"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "👌 Amenities",
       "description": "",
       "fields": [
         {
@@ -1558,6 +3174,45 @@
         "visibility": "public"
       },
       "name": "hotel:nyt"
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "hotelrtm",
+        "type": "Tag",
+        "createdAt": "2024-01-10T14:55:20.239Z",
+        "updatedAt": "2024-01-10T14:55:20.239Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5vSt2iU4jri7yDYXJDKtRZ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5vSt2iU4jri7yDYXJDKtRZ"
+          }
+        },
+        "version": 1,
+        "visibility": "public"
+      },
+      "name": "hotel:rtm"
     }
   ],
   "editorInterfaces": [
@@ -1749,7 +3404,7 @@
             "linkType": "Space"
           }
         },
-        "version": 14,
+        "version": 22,
         "createdAt": "2024-01-04T08:21:20.404Z",
         "createdBy": {
           "sys": {
@@ -1758,10 +3413,10 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-09T11:09:05.126Z",
+        "updatedAt": "2024-01-10T15:20:51.619Z",
         "updatedBy": {
           "sys": {
-            "id": "6QLLK1TTKYBTd5byaaUORL",
+            "id": "16UklEGmqiD4hmuIcRq40y",
             "type": "Link",
             "linkType": "User"
           }
@@ -1839,6 +3494,36 @@
         },
         {
           "fieldId": "faqs",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "roomtypes",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "ambassadors",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "societyM",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "coworking",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "canteenM",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "rooftopBar",
           "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         }
@@ -1987,7 +3672,7 @@
             "linkType": "Space"
           }
         },
-        "version": 4,
+        "version": 6,
         "createdAt": "2024-01-05T10:23:01.388Z",
         "createdBy": {
           "sys": {
@@ -1996,10 +3681,10 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-05T10:25:50.815Z",
+        "updatedAt": "2024-01-10T15:12:57.893Z",
         "updatedBy": {
           "sys": {
-            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "id": "16UklEGmqiD4hmuIcRq40y",
             "type": "Link",
             "linkType": "User"
           }
@@ -2038,6 +3723,16 @@
         {
           "fieldId": "artist",
           "widgetId": "entryCardEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "shortDescription",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "longDescription",
+          "widgetId": "richTextEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -2175,7 +3870,7 @@
             "linkType": "Space"
           }
         },
-        "version": 18,
+        "version": 22,
         "createdAt": "2024-01-05T12:55:19.529Z",
         "createdBy": {
           "sys": {
@@ -2184,10 +3879,10 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-05T13:12:36.237Z",
+        "updatedAt": "2024-01-10T15:44:01.207Z",
         "updatedBy": {
           "sys": {
-            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "id": "16UklEGmqiD4hmuIcRq40y",
             "type": "Link",
             "linkType": "User"
           }
@@ -2240,8 +3935,6 @@
         },
         {
           "disabled": true,
-          "settings": {
-          },
           "widgetId": "releases-widget",
           "widgetNamespace": "sidebar-builtin"
         }
@@ -2290,8 +3983,8 @@
             "linkType": "Space"
           }
         },
-        "version": 6,
-        "createdAt": "2024-01-08T11:35:22.013Z",
+        "version": 4,
+        "createdAt": "2024-01-08T11:40:20.005Z",
         "createdBy": {
           "sys": {
             "id": "22SIYlNyBUO3I2yPIQP7Vr",
@@ -2299,17 +3992,17 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-08T11:43:56.521Z",
+        "updatedAt": "2024-01-10T14:55:02.584Z",
         "updatedBy": {
           "sys": {
-            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "id": "16UklEGmqiD4hmuIcRq40y",
             "type": "Link",
             "linkType": "User"
           }
         },
         "contentType": {
           "sys": {
-            "id": "coworkingSpace",
+            "id": "amenity",
             "type": "Link",
             "linkType": "ContentType"
           }
@@ -2329,13 +4022,170 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "location",
-          "widgetId": "entryLinkEditor",
+          "fieldId": "title",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "totalDesks",
-          "widgetId": "numberEditor",
+          "fieldId": "icon",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "fzp55rkrsa7v",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2024-01-10T15:08:18.956Z",
+        "createdBy": {
+          "sys": {
+            "id": "16UklEGmqiD4hmuIcRq40y",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-10T15:10:16.679Z",
+        "updatedBy": {
+          "sys": {
+            "id": "16UklEGmqiD4hmuIcRq40y",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "coworking",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "shortDescription",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "longDescription",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "images",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "facilities",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "faq",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "fzp55rkrsa7v",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2024-01-10T15:11:57.645Z",
+        "createdBy": {
+          "sys": {
+            "id": "5pQQGJXIe04n1R2y9EKsdM",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-10T15:36:30.067Z",
+        "updatedBy": {
+          "sys": {
+            "id": "16UklEGmqiD4hmuIcRq40y",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "room",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "shortDescription",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "longDescription",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "images",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "faq",
+          "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -2357,25 +4207,344 @@
           }
         },
         "version": 2,
-        "createdAt": "2024-01-08T11:40:20.005Z",
+        "createdAt": "2024-01-10T15:12:00.400Z",
         "createdBy": {
           "sys": {
-            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "id": "16UklEGmqiD4hmuIcRq40y",
             "type": "Link",
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-01-08T11:40:20.637Z",
+        "updatedAt": "2024-01-10T15:12:00.645Z",
         "updatedBy": {
           "sys": {
-            "id": "22SIYlNyBUO3I2yPIQP7Vr",
+            "id": "16UklEGmqiD4hmuIcRq40y",
             "type": "Link",
             "linkType": "User"
           }
         },
         "contentType": {
           "sys": {
-            "id": "amenity",
+            "id": "societyM",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "shortDescription",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "longDescription",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "images",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "facilities",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "faq",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "fzp55rkrsa7v",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2024-01-10T15:13:24.040Z",
+        "createdBy": {
+          "sys": {
+            "id": "5pQQGJXIe04n1R2y9EKsdM",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-10T15:14:41.524Z",
+        "updatedBy": {
+          "sys": {
+            "id": "16UklEGmqiD4hmuIcRq40y",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "rooftopBar",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "shortDescription",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "longDescription",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "images",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "facilities",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "faq",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "fzp55rkrsa7v",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-01-10T15:14:12.372Z",
+        "createdBy": {
+          "sys": {
+            "id": "16UklEGmqiD4hmuIcRq40y",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-10T15:40:23.579Z",
+        "updatedBy": {
+          "sys": {
+            "id": "16UklEGmqiD4hmuIcRq40y",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "ambassadors",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "shortDescription",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "longDescription",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "images",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "faq",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "fzp55rkrsa7v",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-01-10T15:20:01.692Z",
+        "createdBy": {
+          "sys": {
+            "id": "16UklEGmqiD4hmuIcRq40y",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-10T15:20:02.236Z",
+        "updatedBy": {
+          "sys": {
+            "id": "16UklEGmqiD4hmuIcRq40y",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "canteenM",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "shortDescription",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "longDescription",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "images",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "facilities",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "faq",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "fzp55rkrsa7v",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-01-10T15:32:26.433Z",
+        "createdBy": {
+          "sys": {
+            "id": "16UklEGmqiD4hmuIcRq40y",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-01-10T15:32:26.720Z",
+        "updatedBy": {
+          "sys": {
+            "id": "16UklEGmqiD4hmuIcRq40y",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "amenities",
             "type": "Link",
             "linkType": "ContentType"
           }
@@ -4239,10 +6408,440 @@
             "id": "fzp55rkrsa7v"
           }
         },
-        "id": "3J143dL54WLPNIzNDO8fF9",
+        "id": "6pnXGtA556RbHacPZhHPWC",
         "type": "Entry",
-        "createdAt": "2024-01-08T11:45:42.638Z",
-        "updatedAt": "2024-01-08T11:46:07.347Z",
+        "createdAt": "2024-01-10T10:14:34.110Z",
+        "updatedAt": "2024-01-10T10:33:22.205Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2024-01-10T10:33:22.205Z",
+        "firstPublishedAt": "2024-01-10T10:26:44.911Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hotel"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "NYB - New York Bowery"
+        },
+        "title": {
+          "en-US": "New York Bowery Hotel"
+        },
+        "code": {
+          "en-US": "NYB"
+        },
+        "shortDescription": {
+          "en-US": "Slide into our luxury beds at the citizenM New York Bowery – affordable boutique hotel on the Lower East Side."
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Our Lower East Side hotel is in the perfect spot – away from big crowds, but still close to big fun and big business of the Big Apple. You’ve got Chinatown and Little Italy on the left, SoHo in front, Greenwich Village to the right. Got itchy feet? Brooklyn Bridge, Manhattan Bridge, and Battery Park are right on your walking playlist. Fancy some open-air magic? Swing by our 20th-floor rooftop bar for the best views of New York City’s skyline.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "location": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5L9SpLbC49PsDHMTB1uB1B"
+            }
+          }
+        },
+        "mainImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4KpUGyk3WZG6fNK5yUS4yF"
+            }
+          }
+        },
+        "heroImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4KpUGyk3WZG6fNK5yUS4yF"
+            }
+          }
+        },
+        "amenities": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2YQwV42p3KKfF3XM49XOLZ"
+              }
+            }
+          ]
+        },
+        "faqs": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6EpDT8y1VGKL9jWzPIQOUH"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "vWAcAkzgAGGAJvRY6boTm"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "5L9SpLbC49PsDHMTB1uB1B",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:16:17.921Z",
+        "updatedAt": "2024-01-10T10:20:23.460Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-01-10T10:20:23.460Z",
+        "firstPublishedAt": "2024-01-10T10:20:23.460Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "location"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "NYB - Location"
+        },
+        "city": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7b6f6wj9c3DJWxM4wMb3pc"
+            }
+          }
+        },
+        "coordinates": {
+          "en-US": {
+            "lon": -73.9935,
+            "lat": 40.72057
+          }
+        },
+        "street": {
+          "en-US": "189 Bowery"
+        },
+        "postalCode": {
+          "en-US": "NY 10002"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Tag",
+              "id": "hotelrtm"
+            }
+          }
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "17cdgywlWHserpx8Mhh7M1",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:20:43.291Z",
+        "updatedAt": "2024-01-10T15:45:47.718Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 22,
+        "publishedAt": "2024-01-10T15:45:47.718Z",
+        "firstPublishedAt": "2024-01-10T10:30:14.127Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 23,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hotel"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "RTM - Rotterdam hotel"
+        },
+        "title": {
+          "en-US": "Rotterdam hotel"
+        },
+        "code": {
+          "en-US": "RTM"
+        },
+        "shortDescription": {
+          "en-US": "citizenM Rotterdam city centre hotel welcomes all business and leisure travellers who love affordable luxury."
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Wherever you go in Rotterdam, you're never far from your dreamy XL bed and cloud-like pillows. Step outside and bump into the coolest bars, famous architecture, and charming history. Cube Houses, Markthal, Old Harbour? They're basically your neighbours. And for iconic spots like Erasmus Bridge and Delfshaven, just strut over to Blaak and jump on whatever moves—train, tram, bus or metro. How fab is that?",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "location": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6jCFJzwHCVHvzGwvYTJbO"
+            }
+          }
+        },
+        "mainImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "75yv1y8n2eG6hpSFrU2yC3"
+            }
+          }
+        },
+        "heroImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "75yv1y8n2eG6hpSFrU2yC3"
+            }
+          }
+        },
+        "amenities": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2YQwV42p3KKfF3XM49XOLZ"
+              }
+            }
+          ]
+        },
+        "artCollection": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2HnGO4MLLe2iBU6RJbLaBp"
+              }
+            }
+          ]
+        },
+        "faqs": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "vWAcAkzgAGGAJvRY6boTm"
+              }
+            }
+          ]
+        },
+        "societyM": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4G1XTtzJbIMEqyomrMJU4v"
+              }
+            }
+          ]
+        },
+        "coworking": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2tQUDbNMK4qLJ9CmyLIknH"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "4KpUGyk3WZG6fNK5yUS4yF",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:21:25.329Z",
+        "updatedAt": "2024-01-10T10:22:50.342Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4251,8 +6850,838 @@
           }
         },
         "publishedVersion": 4,
-        "publishedAt": "2024-01-08T11:46:07.347Z",
-        "firstPublishedAt": "2024-01-08T11:46:07.347Z",
+        "publishedAt": "2024-01-10T10:22:50.342Z",
+        "firstPublishedAt": "2024-01-10T10:22:50.342Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "name"
+          }
+        }
+      },
+      "fields": {
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "optI47zDkHAL6sYomVpSU"
+            }
+          }
+        },
+        "name": {
+          "en-US": "NYB living room image"
+        },
+        "altText": {
+          "en-US": "citizenM New York Bowery Living Room with Art and Bar"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "6jCFJzwHCVHvzGwvYTJbO",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:22:01.704Z",
+        "updatedAt": "2024-01-10T10:26:42.001Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-10T10:26:42.001Z",
+        "firstPublishedAt": "2024-01-10T10:26:42.001Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "location"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Rotterdam hotel location - RTM"
+        },
+        "city": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4MFtcRnteH6IK82xe99jg6"
+            }
+          }
+        },
+        "coordinates": {
+          "en-US": {
+            "lat": 51.91922,
+            "lon": 4.490301
+          }
+        },
+        "street": {
+          "en-US": "Gelderseplein 50, 3011 WZ Rotterdam"
+        },
+        "postalCode": {
+          "en-US": "3011 WZ"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "4MFtcRnteH6IK82xe99jg6",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:22:22.996Z",
+        "updatedAt": "2024-01-10T14:38:34.348Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-10T14:38:34.348Z",
+        "firstPublishedAt": "2024-01-10T10:25:38.157Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "city"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Rotterdam"
+        },
+        "code": {
+          "en-US": "rotterdam"
+        },
+        "localizedName": {
+          "en-US": "Rotterdam"
+        },
+        "country": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1XP3AWudNsux0RKkPcBKlV"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "1XP3AWudNsux0RKkPcBKlV",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:22:37.264Z",
+        "updatedAt": "2024-01-10T10:25:04.377Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-10T10:25:04.377Z",
+        "firstPublishedAt": "2024-01-10T10:24:06.874Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "country"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Netherlands"
+        },
+        "continent": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "GCb2gRHzAV7BSroDI6ViS"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "GCb2gRHzAV7BSroDI6ViS",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:23:49.628Z",
+        "updatedAt": "2024-01-10T10:23:54.942Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-01-10T10:23:54.942Z",
+        "firstPublishedAt": "2024-01-10T10:23:54.942Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "continent"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Europe"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "6EpDT8y1VGKL9jWzPIQOUH",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:24:24.445Z",
+        "updatedAt": "2024-01-10T10:25:58.227Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2024-01-10T10:25:58.227Z",
+        "firstPublishedAt": "2024-01-10T10:25:58.227Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "NYB - How do I get to the hotel?"
+        },
+        "question": {
+          "en-US": "How do I get to the hotel?"
+        },
+        "answer": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "heading-4",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "What's your address?",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-entry-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "5L9SpLbC49PsDHMTB1uB1B",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "heading-4",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Do you have a shuttle?",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Unfortunately, citizenM does not provide shuttles. But feel free to arrange your own. Most airports provide these services.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "75yv1y8n2eG6hpSFrU2yC3",
+        "type": "Entry",
+        "createdAt": "2024-01-10T10:28:30.817Z",
+        "updatedAt": "2024-01-10T10:29:39.860Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-10T10:29:39.860Z",
+        "firstPublishedAt": "2024-01-10T10:29:39.860Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "name"
+          }
+        }
+      },
+      "fields": {
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "ImH7zfMbFCc8zY36X8lNo"
+            }
+          }
+        },
+        "name": {
+          "en-US": "Rotterdam exterior"
+        },
+        "altText": {
+          "en-US": "citizenM Rotterdam hotel exterior"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "voZeWyNcFHimC32lumbnH",
+        "type": "Entry",
+        "createdAt": "2024-01-10T15:20:48.828Z",
+        "updatedAt": "2024-01-10T15:44:11.346Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-01-10T15:44:11.346Z",
+        "firstPublishedAt": "2024-01-10T15:44:11.346Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "amenity"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "coworking - facility - F&B discount"
+        },
+        "title": {
+          "en-US": "10% off food and drinks"
+        },
+        "icon": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5Ovflqz1vBVwkvUjwMKitS"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "2tQUDbNMK4qLJ9CmyLIknH",
+        "type": "Entry",
+        "createdAt": "2024-01-10T15:21:02.745Z",
+        "updatedAt": "2024-01-10T15:44:21.740Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2024-01-10T15:44:21.740Z",
+        "firstPublishedAt": "2024-01-10T15:44:21.740Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "coworking"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "RTM - coworking space"
+        },
+        "title": {
+          "en-US": "co-work at Rotterdam"
+        },
+        "shortDescription": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Turn our living room into your hustle haven! Pick your spot tailor-made for cool creatives and boss-like entrepreneurs.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "longDescription": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Make our living room your office! Choose form two easy-to-reach our Rotterdam location - perfect for creatives and entrepreneurs, just like you.\n\nThese inspiring co-working spaces come with cafe-style and long table seating options, superfast Wi-Fi, free filtered water, power outlets and plenty of food and drink options.\n\nRemember, this is your community – make yourself at home!",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "76sziPcqjEOkz2q0jx3tvh"
+              }
+            }
+          ]
+        },
+        "facilities": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "voZeWyNcFHimC32lumbnH"
+              }
+            }
+          ]
+        },
+        "faq": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "vWAcAkzgAGGAJvRY6boTm"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "20pP2Ziq4R7bufXKJM7MD8",
+        "type": "Entry",
+        "createdAt": "2024-01-10T15:28:01.974Z",
+        "updatedAt": "2024-01-10T15:29:24.657Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-10T15:29:24.657Z",
+        "firstPublishedAt": "2024-01-10T15:29:24.657Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -4282,36 +7711,261 @@
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "coworkingSpace"
+            "id": "name"
+          }
+        }
+      },
+      "fields": {
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1JEr59p7SQxiijZbRrCIM7"
+            }
+          }
+        },
+        "name": {
+          "en-US": "Champions pizza"
+        },
+        "altText": {
+          "en-US": "Champions pizza plate"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "76sziPcqjEOkz2q0jx3tvh",
+        "type": "Entry",
+        "createdAt": "2024-01-10T15:28:53.022Z",
+        "updatedAt": "2024-01-10T15:31:09.582Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-10T15:31:09.582Z",
+        "firstPublishedAt": "2024-01-10T15:31:09.582Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "name"
+          }
+        }
+      },
+      "fields": {
+        "asset": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3YJxK1pkAyFt50jySE57Yb"
+            }
+          }
+        },
+        "name": {
+          "en-US": "coworking"
+        },
+        "altText": {
+          "en-US": "coworking"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "4G1XTtzJbIMEqyomrMJU4v",
+        "type": "Entry",
+        "createdAt": "2024-01-10T15:44:38.660Z",
+        "updatedAt": "2024-01-10T15:45:43.739Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-10T15:45:43.739Z",
+        "firstPublishedAt": "2024-01-10T15:45:43.739Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "societyM"
           }
         }
       },
       "fields": {
         "name": {
-          "en-US": "NYT - Coworking space"
+          "en-US": "RTM societyM"
         },
-        "location": {
-          "en-US": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "29noBR271L5quL2NSnvacr"
-            }
-          }
+        "title": {
+          "en-US": "Rotterdam meeting rooms"
         },
-        "totalDesks": {
-          "en-US": 10
-        },
-        "amenities": {
+        "images": {
           "en-US": [
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Entry",
-                "id": "2YQwV42p3KKfF3XM49XOLZ"
+                "id": "76sziPcqjEOkz2q0jx3tvh"
               }
             }
           ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "YXhSJa1QSCzfmlSiHHHfS",
+        "type": "Entry",
+        "createdAt": "2024-01-11T08:55:27.520Z",
+        "updatedAt": "2024-01-11T08:57:02.131Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2024-01-11T08:57:02.131Z",
+        "firstPublishedAt": "2024-01-11T08:57:02.131Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "amenity"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "coworking facilities - barista coffee"
+        },
+        "title": {
+          "en-US": "barista coffee"
+        },
+        "icon": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "5Ovflqz1vBVwkvUjwMKitS"
+            }
+          }
         }
       }
     }
@@ -4683,6 +8337,302 @@
             },
             "fileName": "wifi-icon.svg",
             "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "optI47zDkHAL6sYomVpSU",
+        "type": "Asset",
+        "createdAt": "2024-01-10T10:22:14.314Z",
+        "updatedAt": "2024-01-10T10:22:38.944Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-10T10:22:38.944Z",
+        "firstPublishedAt": "2024-01-10T10:22:38.944Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6cAdUBpqLb5Ab7DoFtWRyf"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "NYB living room image with bar"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/fzp55rkrsa7v/optI47zDkHAL6sYomVpSU/cfde92fe702cc83b8144bc86b34689b3/New_York_Bowery-CitizenM_NYB-163-2560x1440.jpg",
+            "details": {
+              "size": 433532,
+              "image": {
+                "width": 1841,
+                "height": 1440
+              }
+            },
+            "fileName": "New York Bowery-CitizenM_NYB-163-2560x1440.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "ImH7zfMbFCc8zY36X8lNo",
+        "type": "Asset",
+        "createdAt": "2024-01-10T10:28:36.001Z",
+        "updatedAt": "2024-01-10T10:29:03.431Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-01-10T10:29:03.431Z",
+        "firstPublishedAt": "2024-01-10T10:29:03.431Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Rotterdam exterior"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/fzp55rkrsa7v/ImH7zfMbFCc8zY36X8lNo/10ebf8b4db98d973e7a88360914b7be0/Rotterdam-Rotterdam_EXT_01_high-1920x1080.jpg",
+            "details": {
+              "size": 237842,
+              "image": {
+                "width": 1547,
+                "height": 1080
+              }
+            },
+            "fileName": "Rotterdam-Rotterdam_EXT_01_high-1920x1080.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "1JEr59p7SQxiijZbRrCIM7",
+        "type": "Asset",
+        "createdAt": "2024-01-10T15:28:05.608Z",
+        "updatedAt": "2024-01-10T15:29:02.375Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-10T15:29:02.375Z",
+        "firstPublishedAt": "2024-01-10T15:29:02.375Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "22SIYlNyBUO3I2yPIQP7Vr"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Champions pizza"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/fzp55rkrsa7v/1JEr59p7SQxiijZbRrCIM7/a7c4691c2f1dfe4b0d52d2cd70fd92bb/champion-pizza-1480x960.jpg",
+            "details": {
+              "size": 1649652,
+              "image": {
+                "width": 1480,
+                "height": 960
+              }
+            },
+            "fileName": "champion-pizza-1480x960.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "fzp55rkrsa7v"
+          }
+        },
+        "id": "3YJxK1pkAyFt50jySE57Yb",
+        "type": "Asset",
+        "createdAt": "2024-01-10T15:28:57.072Z",
+        "updatedAt": "2024-01-10T15:31:14.884Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-01-10T15:31:14.884Z",
+        "firstPublishedAt": "2024-01-10T15:31:14.884Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1tFLQb4BCP8A5ho8YAyBKw"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "coworking"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/fzp55rkrsa7v/3YJxK1pkAyFt50jySE57Yb/da6c0f1b3e73b764ea79c130adff0d4a/citizenM_coworking_shoot-9.jpg",
+            "details": {
+              "size": 11446501,
+              "image": {
+                "width": 2859,
+                "height": 3812
+              }
+            },
+            "fileName": "citizenM coworking shoot-9.jpg",
+            "contentType": "image/jpeg"
           }
         }
       }

@@ -13,7 +13,7 @@ import type { TypeVideoSkeleton } from "./TypeVideo";
 export interface TypeSectionFields {
     name: EntryFieldTypes.Symbol;
     content: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeAutomatedCollectionSkeleton | TypeBannerSkeleton | TypeCtaSkeleton | TypeCuratedCollectionSkeleton | TypeFormSkeleton | TypeImageSkeleton | TypeMediaTextSkeleton | TypeQuoteSkeleton | TypeRichTextSkeleton | TypeVideoSkeleton>>;
-    backgroundColour: EntryFieldTypes.Symbol<"Black" | "Bright" | "Dark" | "Light" | "White (default)">;
+    backgroundColour: EntryFieldTypes.Symbol<"Dark" | "Light">;
 }
 
 export type TypeSectionSkeleton = EntrySkeletonType<TypeSectionFields, "section">;

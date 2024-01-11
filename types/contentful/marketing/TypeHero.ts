@@ -9,6 +9,7 @@ export interface TypeHeroFields {
     title: EntryFieldTypes.Symbol;
     description?: EntryFieldTypes.RichText;
     callToAction?: EntryFieldTypes.EntryLink<TypeCtaSkeleton>;
+    variation: EntryFieldTypes.Symbol<"minimal" | "off-grid">;
 }
 
 export type TypeHeroSkeleton = EntrySkeletonType<TypeHeroFields, "hero">;

@@ -12,6 +12,8 @@ export { isTypeContentCanvas } from "./TypeContentCanvas";
 export type { TypeContentCanvas, TypeContentCanvasFields, TypeContentCanvasSkeleton } from "./TypeContentCanvas";
 export { isTypeContentCard } from "./TypeContentCard";
 export type { TypeContentCard, TypeContentCardFields, TypeContentCardSkeleton } from "./TypeContentCard";
+export { isTypeCoworking } from "./TypeCoworking";
+export type { TypeCoworking, TypeCoworkingFields, TypeCoworkingSkeleton } from "./TypeCoworking";
 export { isTypeCta } from "./TypeCta";
 export type { TypeCta, TypeCtaFields, TypeCtaSkeleton } from "./TypeCta";
 export { isTypeCuratedCollection } from "./TypeCuratedCollection";
